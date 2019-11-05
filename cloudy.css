@@ -1,0 +1,46 @@
+body {
+    margin: 3% 15%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header,
+footer, 
+section { 
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 1px black;
+    margin: 20px;
+}
+h1 {
+    color: forestgreen;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 40px;
+    text-align: center;
+}  
+
+p {
+    color: blue;
+}
+
+/* 
+this is a comment
+font-family doesn't work on txt embeds
+*/ 
+embed {
+    width: 100%;
+    font-family: cursive;
+}
+
+.buttons a {
+    border: solid 2px olive;
+    padding: 10px;
+    background: forestgreen;
+    color: black;
+    margin: 10px;
+    align-items: center;
+}
+
+.buttons a:hover {
+    background: slategray;
+}

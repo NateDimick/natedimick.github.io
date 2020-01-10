@@ -104,7 +104,7 @@ footer {
 }
 
 .home {
-    background: url(Photos/banner.jpg);
+    background: url(Pictures/banner.jpg);
     background-position: left;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;

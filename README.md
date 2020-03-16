@@ -5,4 +5,12 @@ In October of 2019 I decided that I wanted to learn about web development and th
 
 So here it is.
 
-Right now it's just source html/css. I'm not hosted anywhere right now. eventually I'll add some javasript to make it fun.
+Imagine how blown away I was when I learned Github can host static websites FOR FREE! That's my favorite price! What a steal.
+
+So if you're reading this readme yu might as well go to the site and look at it...
+
+Future features...?
+
+* Poll page
+* twitter bot recent tweets
+* a browser game?

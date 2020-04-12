@@ -53,6 +53,9 @@ footer {
     margin: 10px;
     align-items: center;
     border-radius: 50%;
+    height: 2%;
+    width: 2%;
+    background-color: rgb(129, 148, 84);
 }
 /*
 .external a {
@@ -103,6 +106,10 @@ footer {
     font-family: cursive;
 }
 
+.banner p {
+    font-family: None;
+}
+
 .home {
     background: url(Pictures/banner.jpg);
     background-position: left;
@@ -118,13 +125,17 @@ footer {
     background: lightgrey;
 }
 
-.flexbox p {
+.flexbox p,
+.flexbox a {
     display: block;
     width: 12%;
     padding: 1%;
     margin: 1.5%;
     background: forestgreen;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .twitter img{
@@ -150,4 +161,21 @@ footer {
 .steam img {
     color: white;
     background: linear-gradient(135deg, #66C0F4, #2A475e, #1B2838, #171A21);
+}
+
+.twitter-timeline {
+    width: 20%;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 20%;
+    height: 20%;
+}
+
+.timeline {
+    width: 80%;
+    height: 150%;
+    align-content: center;
+    padding-left: 10%;
 }

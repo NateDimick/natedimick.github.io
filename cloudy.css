@@ -117,18 +117,33 @@ footer {
     background-size: cover;
 }
 
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
 .flexbox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background: lightgrey;
+    word-wrap: break-word;
 }
 
 .flexbox p,
 .flexbox a {
     display: block;
-    width: 12%;
+    width: 15%;
     padding: 1%;
     margin: 1.5%;
     background: forestgreen;

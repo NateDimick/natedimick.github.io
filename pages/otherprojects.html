@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Portfolio, Starboardfolio
+        </title>
+        <link href="../cloudy.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="icon" href="../Pictures/icon.png">
+    </head>
+    <body>
+        <header class="banner home">
+            <div class="buttons">
+                <a href="../index.html">
+                    <img src="https://image.flaticon.com/icons/svg/25/25694.svg" alt="Go Home">
+                </a>
+            </div>
+
+        </header>
+        <section>
+            <div class="profile-pic">
+                <img class="profile-pic" src="../Pictures/ctf.jpg"/>
+            </div>
+            <h1>Independant Projects</h1>
+            <p>Watch this page grow as I come up with new ideas</p>
+        </section>
+        <section id="horizons">
+            <h1>The Horizons Toolkit</h1>
+            <p>The closest thing I've felt to love is to Horizons Day Camp. In 2019 I joined the leadership team, which came with a bundle of extra paperwork to do in preparation for each session. I wasted a lot of time manually parsing lists and filling in documents by hand. One morning a co-counselor asked me: "can't you just write scripts to do thses things for you?" which felt wrong - I find camp to be diametrically opposed to software development, based purely on the metric of screen time. With my free time in my senior year, I set out to automete and improve some functions. I set out with the following goals:</p>
+            <ul>
+                <li>To be easy to use for those who are not tech savvy. Aim for usability that an elemtary or preschool educator would be familiar with</li>
+                <li>To be mildly future proof and usable even after I was no longer a counselor</li>
+                <li>To produce an equivalent or better product to if a human were doing the same tasks</li>
+            </ul>
+            <p>So, I settled on using email as the main user interface, because everyone knows how to use email. I also plotted to make the bodies of emails formatted in yaml, becuase it's syntacticaly simple and easy enough to teach without ever telling someone that it's a markup language. The end result has impressed our camp leadership and will greatly improve our workflow</p>
+        </section>
+        <section id="website">
+            <h1>natedimick.github.io</h1>
+            <p>Here you are! on a whim I decided I needed some sort of web presence and needed to learn how basic frontend web technologies work. this site is the fruits of my labors. I'm not an artisit, so this site might not look amazing. I'm not trained in UI, so it might not be the most friendly website. I also consider this a side project, so I don't put as much effort into this as some other projects. With all that said, I believe this site gets the job done</p>
+        </section>
+        <section id="banker">
+            <h1>Solving the Deal or No Deal Banker Algorithm</h1>
+            <p>On a Friday in 2019 I made a quick and dirty playable version of deal or not deal. The catch was that it was only playable if the operator played the role of the banker - which made it a good party game that evening, but not great for single-player endeavors. There's some online discussion about the banker's algorithm, but nothing conclusive. <a href="http://commcognition.blogspot.com/2007/06/deal-or-no-deal-bankers-formula.html">This guy</a> claims to have a 99% accurate algorithm, becuase he watched two episodes and ran a regression. It sucks - compare it to almost any episode and it falls apart. I've watched most of the first season and I'll watch more episodes until I get something that effectively emulates the banker's offers. Presently, the following influences my algorithm:</p>
+            <ul>
+                <li>EXPECTED VALUE: The bread and butter of the algorithm. The banker's offer tends to be increasing fractions of EV, but there is no simple pattern like 10% increase each offer. It seems that the Banker's offer will never exceed 110% of EV</li>
+                <li>RECENT PERFORMANCE: How good was the previous round the contestant played? More specifically, if you played out every permutation of the previous round's possible outcomes, in what percentile does the player's current position lie?</li>
+                <li>EV CHANGE: Did the EV of the player's case rise or fall? It's possible for the player to fall in the upper 50th percentile even if they decrease the EV of their case, if the odds were stacked agains them. it's also possible for a player to knock out one of the small big numbers and increase EV. So this metric and the recent performance play off each other and create a balance</li>
+                <li>EV POTENTIAL: If the player plays the next round, is the EV of their case more likely to rise or fall? if it's more likely to rise, the banker has incentive to give a higher offer now to prevent an even higher offer later.</li>
+            </ul>
+            <p>Once I feel confident in my algorithm. I'll post it. I'll settle for nothing less than being the foremost Deal or No Deal expert on the internet</p>
+        </section>
+    </body>
+    <footer>
+
+    </footer>
+</html>

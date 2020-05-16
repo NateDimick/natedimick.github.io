@@ -28,7 +28,9 @@ var titlelist = [
     "You're the best",
     "You think I won't come up with over 100 titles? Watch me.",
     "wakka wakka, who wants to hear a joke?",
-    "You fell for one of the classic blunders!"
+    "You fell for one of the classic blunders!",
+    "This isn't my world. . . DISAPPOINTED!",
+    "Yee"
 ];
 var ind = Math.floor(Math.random() * titlelist.length);
 var t = document.getElementById('title');
@@ -40,7 +42,7 @@ let resizeHandler = () => {
     var height = window.innerHeight;
     var width = window.innerWidth;
     size = Math.ceil(Math.min(width, height) * .1);
-    x = Math.random() * width;
+    x = Math.random() * (width * .7 - size) + width * .15;
     y = Math.random() * height;
     console.log(x, y, size);
 };
@@ -59,7 +61,8 @@ let handleMousemove = (event) => {
         colorLoop();
     }
 };
-if (window.location.pathname.split("/").pop() === "index.html") {
+var page = window.location.pathname.split("/").pop();
+if ( page === "index.html" || page === "") {
     window.onresize = resizeHandler;
     resizeHandler();
     document.addEventListener('mousemove', handleMousemove);

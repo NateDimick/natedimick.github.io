@@ -27,11 +27,11 @@ h1 {
 }  
 
 p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-family: 'memoriesregular';
     font-size: larger;
-    text-align: left;
+    text-align: justify;
     padding: 1% 10%;
-    font-weight: bold;
 }
 
 ul {
@@ -58,8 +58,6 @@ footer {
 .buttons img {
     border: solid 2px whitesmoke;
     padding: 1%;
-    /* background: forestgreen;
-    color: black; */
     margin: 10px;
     align-items: center;
     border-radius: 50%;
@@ -161,6 +159,7 @@ footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: larger;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .twitter img{
@@ -209,4 +208,21 @@ footer {
     height: 150%;
     align-content: center;
     padding-left: 10%;
+}
+
+.repo-link {
+    align-self: center;
+    background: #333;
+    overflow: auto;
+    border: solid 2px whitesmoke;
+    padding: 1%;
+    margin: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    align-items: center;
+    border-radius: 50%;
+}
+.repo-link img, .repo-link p{
+    display: inline;
+    
 }

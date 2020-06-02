@@ -30,7 +30,16 @@ var titlelist = [
     "wakka wakka, who wants to hear a joke?",
     "You fell for one of the classic blunders!",
     "This isn't my world. . . DISAPPOINTED!",
-    "Yee"
+    "Yee",
+    "There is no good or evil, only flavor", 
+    "Go dinosaur or go home!",
+    "Nate Pate Tuven",
+    "The Legend of Nate: A Link to the Source",
+    "Tyler, no! You're susceptable to damage!",
+    "Tastes like Home Depot",
+    "Look into the sun with zero fear",
+    
+
 ];
 var ind = Math.floor(Math.random() * titlelist.length);
 var t = document.getElementById('title');

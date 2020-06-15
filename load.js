@@ -1,6 +1,6 @@
 // script that I want to run when the page loads
 // first basic foray into JS: change the website title
-var titlelist = [
+var webtitles = [
     "Portfolio, Starboardflio",
     "Good Stuff!",
     "RTFM",
@@ -38,62 +38,120 @@ var titlelist = [
     "Tyler, no! You're susceptable to damage!",
     "Tastes like Home Depot",
     "Look into the sun with zero fear",
-    
-
+    "Hover over the my picture",
+    "Ideally you never see the same title twice",
+    "Huge improvement over my old website",
+    "Got Milk?",
+    "'Memba Chewbacca?",
+    "The Drum Solo from Phil Collin's 'In The Air Tonight'",
+    "Oh jeez my back hurts",
+    "What time is it, Mr. Fox?",
+    "Cookie Monster, are you hungry?",
+    "Fishy, fishy, cross my ocean",
+    "Swinging along, swinging along",
+    "The best thing that Aloha means...",
+    "What's new pussycat?",
+    "It's over. I have the high ground!",
+    "You killed my cactus!",
+    "Hello? my eyes are down there",
+    "Haha most of my javascript is just arrays of strings"
 ];
-var ind = Math.floor(Math.random() * titlelist.length);
-var t = document.getElementById('title');
-t.innerHTML = titlelist[ind];
+document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
 
-// part 2: create a "danger zone"
-var x, y, size;
-let resizeHandler = () => {
-    var height = window.innerHeight;
-    var width = window.innerWidth;
-    size = Math.ceil(Math.min(width, height) * .1);
-    x = Math.random() * (width * .7 - size) + width * .15;
-    y = Math.random() * height;
-    console.log(x, y, size);
-};
-
-
-
-
-var changeColor = false;
-let handleMousemove = (event) => {
-    //console.log(`mouse position: ${event.x}:${event.y}`);
-    if (Math.min(x, event.x) === x && Math.max(event.x, x + size) === x + size && Math.min(y, event.y) === y && Math.max(event.y, y + size) === y + size) {
-        console.log('mouse is in the range')
-        changeColor = true;
-        document.removeEventListener('mousemove', handleMousemove);
-        
-        colorLoop();
-    }
-};
-var page = window.location.pathname.split("/").pop();
-if ( page === "index.html" || page === "") {
-    window.onresize = resizeHandler;
-    resizeHandler();
-    document.addEventListener('mousemove', handleMousemove);
-};
-
+var personaltitles = [
+    "Economist.",
+    "Celtics Fan.",
+    "Steelers Fan.",
+    "Kahuna.",
+    "Lifeguard.",
+    "Redditor.",
+    "Tweeter.",
+    "Omnivore.",
+    "Brandeisian.",
+    "Power Forward.",
+    "Bug Slayer.",
+    "Raffle Winner.",
+    "Mistake Maker.",
+    "Heavy Sleeper.",
+    "Joker.",
+    "Hooligan.",
+    "Critic.",
+    "Inexorable.",
+    "Indominable.",
+    "Stump Jumper.",  // Urban Dictionary has an unflattering result for this, I swear it's a reference to a joke made by VT-based comedian The Logger 
+    "Cheeseburger Fan.",
+    "Kayaker.",
+    "Canoer.",
+    "Perdedor.",
+    "Risk Taker.",
+    "Zoomer.",
+    "Observer.",
+    "Independant.",
+    "Human.",
+    "Voter.",
+    "Decider.",
+    "Rule Follower.",
+    "Commuter.",
+    "Truth Seeker.",
+    "Settler (of Catan)."
+];
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+};
+async function titleloop() {
+    function compareFunction (a, b){
+        return  b.length - a.length;
+    };
+    var maxlen = personaltitles.sort(compareFunction)[0].length;
+    while (true) {
+        var ts = document.getElementById('my-titles');
+        ts.innerHTML = personaltitles[Math.floor(Math.random() * personaltitles.length)];
+        await sleep(3000);
+    };
+};
+
+var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg'];
+var pic_ind = 1;
+async function myPictureSlideshow(event){
+    event.target.src = pics[pic_ind];
+    pic_ind = (pic_ind + 1) % pics.length;
+    sleep(1000);
+};
+function revealPast(event){
+    var tm = document.getElementById("time-machine");
+    var past = document.createElement("IMG");
+    past.src = "./Pictures/past.jpg";
+    past.width = 500; // window.innerWidth * 0.75;
+    past.setAttribute("style","width:100%");
+    past.id = "ugly-past";
+    tm.appendChild(past);
+    event.target.removeEventListener("click", revealPast);
+    event.target.addEventListener("click", deletePast);
+    event.target.innerHTML = "Oh please no click again and make it stop!";
+};
+function deletePast(event){
+    var tm = document.getElementById("time-machine");
+    var past = document.getElementById("ugly-past");
+    tm.removeChild(past);
+    event.target.removeEventListener("click", deletePast);
+    event.target.addEventListener("click", revealPast);
+    event.target.innerHTML = "Wanna make the same mistake again?";
 }
-const colors = ['lightcoral', 'salmon', 'indianred', 'firebrick', 'crimson', 'red', 'orangered', 'coral', 'darkorange', 'orange', 'gold', 'yellow', 'khaki', 'lemonchiffon', 'lightyellow', 'palegreen', 'lightgreen', 'mediumspringgreen', 'springgreen', 'lawngreen', 'limegreen', 'green', 'darkgreen', 'darkolivegreen', 'seagreen', 'mediumseagreen', 'mediumaquamarine', 'lightseagreen', 'darkcyan', 'teal', 'steelblue', 'royalblue', 'blue', 'meduimblue', 'darkblue', 'navy', 'midnightblue', 'darkslateblue', 'slateblue', 'mediumslateblue', 'mediumpurple', 'blueviolet', 'darkviolet', 'darkmagenta', 'purple', 'mediumvioletred', 'fuchsia', 'magenta', 'deeppink', 'hotpink', 'palevioletred'];
-async function colorLoop() {
-    var celebrate = document.createElement("h1");
-    celebrate.innerHTML = "YOU FOUND THE SECRET SPOT!!!";
-    celebrate.addEventListener('mousedown', (e) => {changeColor = false;});
-    celebrate.style.cursor = "pointer";
-    document.getElementsByClassName('banner')[0].appendChild(celebrate);
-    while (changeColor) {
-        var nextColor = colors.shift();
-        Array.from(document.getElementsByTagName("h1")).map((x) => {x.style.color = nextColor;});
-        colors.push(nextColor);
-        console.log(nextColor);
-        await sleep(100);
-    }
-    
-}
+function onWindowLoad(){
+    titleloop();
+    /*
+    var sec = document.createElement("SECTION");
+    var p = document.createElement("P");
+    p.innerHTML = "look at this new section";
+    sec.appendChild(p);
+    document.body.appendChild(sec);
+    */
+    //handleLines();
+    var mypic = document.getElementById('my-picture');
+    mypic.addEventListener("mouseover", myPictureSlideshow);
+    var timeButton = document.getElementById("time-button");
+    timeButton.addEventListener("click", revealPast);
+};
+window.onload = onWindowLoad;
+

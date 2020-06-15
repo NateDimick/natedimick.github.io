@@ -1,0 +1,82 @@
+html {
+    font-family: 'memoriesregular';
+}
+
+body {
+    background-color:whitesmoke;
+    margin: 0%;
+}
+section, header {
+    background-color: white;
+    z-index: 1;
+    padding: 1% 0%;
+}
+
+h1, h2, h3, h4, header li, header ol, header ul {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    align-content: center;
+}
+
+section h1 {
+    color: forestgreen;
+    border-style: none none solid none;
+}
+
+li, li h2 {
+    display: inline-flex;
+    margin: 0% 1%;
+}
+
+a {
+    text-decoration: none;
+    color:forestgreen;
+}
+
+.social-media a {
+    color: black;
+}
+
+#sub-header {
+    background-image: url('./Pictures/banner.jpg');
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+section {
+    width: 75%;
+    margin: 0% 12.5%;
+    padding: 1%;
+}
+
+.descriptors h2 {
+    width: 23%;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav a {
+    vertical-align: top;
+    text-align: center;
+    color: forestgreen;
+    background-color: whitesmoke;
+    display: inline-block;
+    width: 17%;
+    margin: 1% 1%;
+}
+
+.project-text {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: justify;
+}
+
+.project-img {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}

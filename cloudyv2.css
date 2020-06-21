@@ -8,7 +8,6 @@ body {
 }
 section, header {
     background-color: white;
-    z-index: 1;
     padding: 1% 0%;
 }
 
@@ -23,9 +22,11 @@ section h1 {
     border-style: none none solid none;
 }
 
-li, li h2 {
-    display: inline-flex;
+li {
+    display: inline-block;
+    vertical-align: middle;
     margin: 0% 1%;
+    width: 15%;
 }
 
 a {
@@ -37,12 +38,9 @@ a {
     color: black;
 }
 
-#sub-header {
-    background-image: url('./Pictures/banner.jpg');
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+.social-media li {
+    margin: 0% 1%;
+    width: 4%;
 }
 
 section {
@@ -51,9 +49,8 @@ section {
     padding: 1%;
 }
 
-.descriptors h2 {
-    width: 23%;
-    display: inline-block;
+.descriptors li {
+    width: 17%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 

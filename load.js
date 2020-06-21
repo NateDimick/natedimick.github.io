@@ -4,7 +4,7 @@ var webtitles = [
     "Portfolio, Starboardflio",
     "Good Stuff!",
     "RTFM",
-    "This is a page on Nate's website",
+    "This is Nate's website",
     "Ranch it up, brotendo",
     "This is not the droid you're looking for",
     "No wheat = defeat",
@@ -13,7 +13,7 @@ var webtitles = [
     "Have you noticed that there's a different title every time?",
     "JSON > pickle, change my mind",
     "STONKS",
-    "follow @chupeverything please",
+    "Follow @chupeverything please",
     "Clever titles that fit in a tab are hard to come by these days",
     "Happy Thursday!",
     "Get those gavels going!",
@@ -29,7 +29,7 @@ var webtitles = [
     "You think I won't come up with over 100 titles? Watch me.",
     "wakka wakka, who wants to hear a joke?",
     "You fell for one of the classic blunders!",
-    "This isn't my world. . . DISAPPOINTED!",
+    "This isn't my world.N.. DISAPPOINTED!",
     "Yee",
     "There is no good or evil, only flavor", 
     "Go dinosaur or go home!",
@@ -54,7 +54,34 @@ var webtitles = [
     "It's over. I have the high ground!",
     "You killed my cactus!",
     "Hello? my eyes are down there",
-    "Haha most of my javascript is just arrays of strings"
+    "Haha most of my javascript is just arrays of strings",
+    "The Ice Clown from Ice Town",
+    "Try a dark mode extension",
+    "You are the ocean's gray waves",
+    "Oh no there's an AFR in the pool",
+    "Open 24 hours 7 days a week",
+    "Pepperspray? That sounds delicious!",
+    "PICK A GOD AND PRAY",
+    "Drake... Where's the door hole?",
+    "Cock-a-doodle-do the cow goes moo!",
+    "A unique assortment of inside jokes and media references",
+    "A dollap will do",
+    "Time to tip the scales",
+    "A seven nation army couldn't hold me back",
+    "Jet puffed mar-sham-ma-loos",
+    "Take charge of your destiny",
+    "I like turtles",
+    "Do yourself a favor and Google Los Colorados",
+    "Tough & ruthless > rough & toothless",
+    "Can't be trusty without being rusty",
+    "Battery low, please charge now",
+    "I remember when Twitter likes were Favorites and stars",
+    "Where's my tractor?",
+    "Lawful Awful",
+    "I found a carrot!",
+    "Everybody's cheating but Waluigi!",
+    "The swords that seals the darkness, the blade of evil's bane",
+    "If a title is too ... It's gets cut off"
 ];
 document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
 
@@ -93,7 +120,10 @@ var personaltitles = [
     "Rule Follower.",
     "Commuter.",
     "Truth Seeker.",
-    "Settler (of Catan)."
+    "Settler (of Catan).",
+    "Mastermind.",
+    "Tactician",
+    "Mug Collector"
 ];
 
 function sleep(ms) {
@@ -116,6 +146,7 @@ var pic_ind = 1;
 async function myPictureSlideshow(event){
     event.target.src = pics[pic_ind];
     pic_ind = (pic_ind + 1) % pics.length;
+    document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
     sleep(1000);
 };
 function revealPast(event){
@@ -140,14 +171,6 @@ function deletePast(event){
 }
 function onWindowLoad(){
     titleloop();
-    /*
-    var sec = document.createElement("SECTION");
-    var p = document.createElement("P");
-    p.innerHTML = "look at this new section";
-    sec.appendChild(p);
-    document.body.appendChild(sec);
-    */
-    //handleLines();
     var mypic = document.getElementById('my-picture');
     mypic.addEventListener("mouseover", myPictureSlideshow);
     var timeButton = document.getElementById("time-button");

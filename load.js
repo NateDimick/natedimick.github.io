@@ -81,7 +81,8 @@ var webtitles = [
     "I found a carrot!",
     "Everybody's cheating but Waluigi!",
     "The swords that seals the darkness, the blade of evil's bane",
-    "If a title is too ... It's gets cut off"
+    "If a title is too ... It's gets cut off",
+    "Living free or dying since 1998"
 ];
 document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
 
@@ -122,8 +123,17 @@ var personaltitles = [
     "Truth Seeker.",
     "Settler (of Catan).",
     "Mastermind.",
-    "Tactician",
-    "Mug Collector"
+    "Tactician.",
+    "Mug Collector.",
+    "Night Owl.",
+    "Juggernaut.",
+    "Handyman.",
+    "Developer.",
+    "Negotiator.",
+    "Tinkerer.",
+    "Happy Camper.",
+    "Idealist.",
+    "Debugger."
 ];
 
 function sleep(ms) {

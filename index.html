@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title id="title">title</title>
+        <title id="title">Nate Dimick's Personal Website</title>
         <link rel="stylesheet" href="./cloudyv2.css">
         <link rel="stylesheet" href="./memfont.css">
         <link rel="icon" href="./Pictures/icon.png">
         <script src="load.js"></script>
+        <meta charset="UTF-8">
+        <meta name="description" content="Everything Nate Dimick wants you to know about Nate Dimick">
+        <meta name="keywords" content="Nate Nathaniel J. Dimick Website Portfolio Orford Rivendell Brandeis Aloha Horizons">
+        <meta name=”robots” content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
@@ -29,7 +34,7 @@
             </h1>
             <div style="width: 49%; display: inline-block; vertical-align: middle;">
                 <p>
-                    I recently graduated from Brandeis University with a B.S. in Computer Science. While at Brandeis I was involved in the Autonomous Robotics Lab (ARL), where I worked on projects including the Campus Rover software stack, the Campus Rover Model 4 Hardware Interface, and the Robot Service Bridges for connecting ROS with other programming languages and frameworks, like Unity, on remote PCs. 
+                    In May of 2020 I graduated from Brandeis University with a B.S. in Computer Science. While at Brandeis I was involved in the Autonomous Robotics Lab (ARL), where I worked on projects including the Campus Rover software stack, the Campus Rover Model 4 Hardware Interface, and the Robot Service Bridges for connecting ROS with other programming languages and frameworks, like Unity, on remote PCs. 
                 </p>
                 <p>
                     When a global health crisis isn't ruining my summers, I have worked at Horizons Day Camp in Fairlee, VT. Horizons is one of the camps run by The Aloha Foundation. There, I am a swimming instructor and lifeguard, as well as a Kahuna - a member of the senior leadership team. In fact, I was the youngest Kahuna ever appointed to the group, and the first former camper to become a Kahuna. 
@@ -58,7 +63,7 @@
                 <a href="#CRS">Campus Rover Stack</a>
                 <a href="#CET">Twitterbot: @ChupEverything</a>
                 <a href="#GFS">Gazebo Fiducial Spawner</a>
-                <a href="#HTK">Horizons Toolkit</a>
+                <a href="#HOH">Horizons Office Homepage</a>
                 <a href="#WEB">natedimick.github.io</a>
                 <a href="#OTHER">Other Project Scraps</a>
             </div>
@@ -110,6 +115,9 @@
                     Campus Rover Stack
                 </h2>
                 <p>
+                    The Campus Rover Project is an ongoing project based around a robot capable of making on-campus autonomous deliveries, prompted by speech and a Flask-based web app. I became involved with the project in "Generation 3", when the hardware evolved from a Kobuki Turtlebot2 to a custom "mutant" robot based on Robotis Turtlebot3.
+                </p>
+                <p>
                     I was responsible for porting the Campus Rover Software Stack from Turtlebot2 hardware to Turtlebot3 hardware, along with acting as the intergration guru, assisting the voice recognition, facial detection and gesture recognition teams in integrating their features for our end-of-semester demo. Afterwards, I continued to work on improving the package, including adding a new state manager API, refactoring launch files into modules, navigation error handling, and text-to-speech interface improvements.
                 </p>
             </div>
@@ -148,13 +156,13 @@
                 </p>
             </div>
         </section>
-        <section id="HTK">
+        <section id="HOH">
             <div class="project-text">
                 <h2>
-                    Horizons Toolkit
+                    Horizons Office Homepage
                 </h2>
                 <p>
-                    My summer camp is still in the paperwork stone age. Everything is doen by hand, which is slow and error prone. I'm still a believer that camps should remain technology-free - on the surface. Behind the scenes, in the office, why can't our planning procedures be smarter, faster, even automatic? This package tries to automate some common and time-intensive procedures - like schedule making, lunch table assignments, and filling in notes that get sent home to camper's families.
+                    The Horizons Helper is the evolution of an idea I've had for a while called The Horizons Toolkit. The core idea behind both projects is to create an application that is user-friendly to anyone who has the technical literacy of an elementary school teacher. This materialized in the Helper as a Flask-based web app, designed to run on the local network of our camp's office for the director, program director and office manager to easily access on their personal computers with an easy to understand and Aloha Foundation themed graphical user interface. This web app allows users to upload files like camper lists and maser schedules in the standard formats that our office already uses, and quickly turn the information in those document into the documents that we derived from them each session, such as schedule notes that get sent home, lunch table assignments and cabin groups. This information gets stored in a SQLite3 database for easy queries. Generated documents get emailed using smtplib to the user. Most importantly, there is an open activity sign up tool, which streamlines the process of digitizing our daily afternoon activity sign-ups.
                 </p>
                 <p>
                     This is an ongoing project and has not been used in a summer yet.
@@ -176,7 +184,7 @@
                     There I was, in October 2019, months from graduating. I had no web presence besides social media accounts. I didn't know a lick of HTML, CSS or JavaScript. So, I set out to learn those technologies on my own, Since they had never been covered in any of the courses I had taken, which in retrospect seems completely wrong. The product of that endeavor is this site. Think what you want about it, I think it's suitable.
                 </p>
                 <p>
-                    My greatest takeaway, however, is that I really dislike front-end web development. One of the great things about programming is that there's almost always multiple ways to solve a problem. Unfortunately, in the world of HTML/CSS/JS it seems like there's not only too many ways to solve the same problem, but a myriad of pundits with their own blogs and whatnot that believe that they are the front-end web technolgy gurus, making the internet over saturated with mediocre instructions and tutorials that simply take space and don't help.
+                    My biggest takeaway from this project is that working with css is a chore. I also don't have the chops to be a good UI/UX designer. I was also too ambitious in my first go at this site (see the <a href="#time-machine" style="color: forestgreen;">Time Machine</a>). In summary, after finishing the site redo I was not interested in front end web development for a while, purely because of css.
                 </p>
             </div>
         </section>

@@ -1,4 +1,7 @@
 // script that I want to run when the page loads
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
 // first basic foray into JS: change the website title
 var webtitles = [
     "Portfolio, Starboardflio",
@@ -90,9 +93,19 @@ var webtitles = [
     "877 241 luuunaaaa",
     "Do you bake brownies or just one brownie?",
     "B is for the B in riot",
-    "Meatball, meatball, spagehetti underneath",
-    "Velociraptor = distanceraptor / timeraptor"
+    "Meatball, meatball, spaghetti underneath",
+    "Velociraptor = distanceraptor / timeraptor",
+    "THREE sanwiches!?",
+    "Mothman!",
+    "You probably need to drink more water",
+    "Leader of the \"Nate needs a job\" task force",
+    "Hooray for Horizons",
+    "Yeah this is just one page why would there be more?",
+    "Timelord will continue to punish linear conceptions of time",
+    "Not the criminal Nate Dimick from upstate New York",
+    "There are 100 possible titles and you got the 100th!"
 ];
+sleep(1000);
 document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
 
 var personaltitles = [
@@ -145,12 +158,14 @@ var personaltitles = [
     "Debugger.",
     "Job Searcher.",
     "Title Maker.",
-    "Dream Weaver."
+    "Dream Weaver.",
+    "List Writer",
+    "Competitor",
+    "Gambler",
+    "Waxing Poet"
 ];
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+
 async function titleloop() {
     function compareFunction (a, b){
         return  b.length - a.length;

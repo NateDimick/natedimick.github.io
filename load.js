@@ -159,10 +159,10 @@ var personaltitles = [
     "Job Searcher.",
     "Title Maker.",
     "Dream Weaver.",
-    "List Writer",
-    "Competitor",
-    "Gambler",
-    "Waxing Poet"
+    "List Writer.",
+    "Competitor.",
+    "Gambler.",
+    "Waxing Poet."
 ];
 
 

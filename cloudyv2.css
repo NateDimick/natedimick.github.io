@@ -11,7 +11,7 @@ section, header {
     padding: 1% 0%;
 }
 
-h1, h2, h3, h4, header li, header ol, header ul {
+h1, h2, h3, h4, header li, header ol, header ul, button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     align-content: center;
@@ -76,4 +76,28 @@ section {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+}
+
+.left-button {
+    margin-right: 0%;
+    background-color: forestgreen;
+    padding: 1%;
+    border-style: none;
+    border-radius: 1vh 0vh 0vh 1vh;
+    border: 0;
+    font-size: 12;
+}
+
+.right-button {
+    margin-right: 0%;
+    background-color: gainsboro;
+    padding: 1%;
+    border-style: none;
+    border-radius: 0vh 1vh 1vh 0vh ;
+    border: 0;
+    font-size: 12;
+}
+
+button:active, button:focus {
+    outline: none;
 }

@@ -18,8 +18,8 @@
             <ol class="descriptors" style="text-align: center;">
                 <li><h2>Software Engineer.</h2></li>
                 <li><h2>Roboticist.</h2></li>
-                <li><h2>Educator.</h2></li>
-                <li><h2 id="my-titles">Other.</h2></li>
+                <li><h2>Camp Counselor.</h2></li>
+                <li><h2 id="my-titles">Lifeguard.</h2></li>
             </ol>
             <ol class="social-media">
                 <li><a href="https://twitter.com/NateDimick">Twitter</a></li>
@@ -46,6 +46,11 @@
             <div style="width: 49%;display: inline-block; text-align: center; vertical-align: middle;">
                 <img src="./Pictures/me.jpg" alt="me" style="border-radius: 50%; width: 80%; height: 80%;" id="my-picture">
             </div>
+            <div style="text-align: center; font-size: 0;">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
+                <button id="business-button" class="left-button">Business Mode</button>
+                <button id="fun-button" class="right-button">Fun Mode</button>
+                <p id="hint" style="display: none; font-size: medium;"><br>(hover over my picture!)</p>
+            </div>
         </section>
         <section>
             <h1>
@@ -57,7 +62,7 @@
             <p style="text-align: center;">
                 All source code is available on my Github page, with a few exceptions.
             </p>
-            <div class="nav">
+            <div class="nav" style="text-align: center;">
                 <a href="#RSB">Robot Service Bridges</a>
                 <a href="#CR4">Campus Rover 4 Core</a>
                 <a href="#CRS">Campus Rover Stack</a>
@@ -83,7 +88,7 @@
                     RSB is a robust ROS package designed to provide an interface, through Redis, for non-ROS programmers to have an easy to understand interface with a robot without actually knowing the inner workings of the robot's system. 
                 </p>
                 <p>
-                    One of my bigger undetakings in this project was designing a method to turn a ROS map of an area into a det of line segments that represented the "walls" of the map. This was done using OpenCV Hough Transform and some proprietary algorithms to make consolidate noisy Hough output.
+                    One of my bigger undetakings in this project was designing a method to turn a ROS map of an area into a set of line segments that represented the "walls" of the map. This was done using OpenCV Hough Transform and some proprietary algorithms to make consolidate noisy Hough output.
                 </p>
                 <p>
                     This package was instrumental in research done at Brandeis which produced the paper "Situated Multimodal Control of a Mobile Robot: Navigation through a Virtual Environment" which was presented at RoboDIAL 2.0, part of SIGDIAL 2020. The video presentation is linked below in the <a href="#vids">video section</a> of this page.
@@ -207,11 +212,11 @@
             </div>
         </section>
         <section id="wayback-machine" style="text-align: center;">
-            <div id="time-machine">
+            <div id="time-machine" style="display: none;">
                 <h1>Time Machine</h1>
                 <button id="time-button" style="margin: 0.5%; padding: 0.5%; background-color: whitesmoke;">Push to see what this website use to look like</button>
             </div>
-            <h2 id="vids">Old Videos</h2>
+            <h1 id="vids">Old Videos</h1>
             <p>
                 2015 NH Wrap-Up Finals @ Pembroke Academy <a href="https://www.youtube.com/watch?v=BRisN3cG82U">Game 1</a>
             </p>

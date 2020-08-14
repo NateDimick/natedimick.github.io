@@ -1,4 +1,5 @@
 // script that I want to run when the page loads
+var nofun = true;
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -105,14 +106,13 @@ var webtitles = [
     "Not the criminal Nate Dimick from upstate New York",
     "There are 100 possible titles and you got the 100th!"
 ];
-sleep(1000);
-document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
 
 var personaltitles = [
     "Economist.",
     "Celtics Fan.",
     "Steelers Fan.",
     "Kahuna.",
+    "Educator.",
     "Lifeguard.",
     "Redditor.",
     "Tweeter.",
@@ -162,7 +162,13 @@ var personaltitles = [
     "List Writer.",
     "Competitor.",
     "Gambler.",
-    "Waxing Poet."
+    "Waxing Poet.",
+    "Navigator.",
+    "Puzzle Solver",
+    "Riddler.",
+    "WSI.",
+    "Grillmaster.",
+    "Reasoner."
 ];
 
 
@@ -172,19 +178,25 @@ async function titleloop() {
     };
     var maxlen = personaltitles.sort(compareFunction)[0].length;
     while (true) {
-        var ts = document.getElementById('my-titles');
-        ts.innerHTML = personaltitles[Math.floor(Math.random() * personaltitles.length)];
+        if (!nofun) {
+            var ts = document.getElementById('my-titles');
+            ts.innerHTML = personaltitles[Math.floor(Math.random() * personaltitles.length)];
+            
+        };
         await sleep(3000);
     };
 };
 
-var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg'];
+var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg', './Pictures/swim.png'];
 var pic_ind = 1;
 async function myPictureSlideshow(event){
-    event.target.src = pics[pic_ind];
-    pic_ind = (pic_ind + 1) % pics.length;
-    document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
-    sleep(1000);
+    if (!nofun){
+        event.target.src = pics[pic_ind];
+        pic_ind = (pic_ind + 1) % pics.length;
+        document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
+        sleep(1000);
+    }
+    
 };
 function revealPast(event){
     var tm = document.getElementById("time-machine");
@@ -207,6 +219,26 @@ function deletePast(event){
     event.target.innerHTML = "Wanna make the same mistake again?";
 }
 function onWindowLoad(){
+    document.getElementById("business-button").addEventListener("click", function (event) {
+        nofun = true;
+        document.title = "Nate Dimick's Personal Website";
+        event.target.style.backgroundColor = "forestgreen";
+        document.getElementById("fun-button").style.backgroundColor = "gainsboro";
+        document.getElementById('my-titles').innerHTML = "Lifeguard.";
+        document.getElementById('my-picture').src = './Pictures/me.jpg';
+        document.getElementById("time-machine").style.display = "none";
+        document.getElementById("hint").style.display = "none";
+    
+    })
+    document.getElementById("fun-button").addEventListener("click", function (event) {
+        nofun = false;
+        document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
+        event.target.style.backgroundColor = "forestgreen";
+        document.getElementById("business-button").style.backgroundColor = "gainsboro";
+        document.getElementById("time-machine").style.display = "inline";
+        document.getElementById("hint").style.display = "inline";
+    
+    })
     titleloop();
     var mypic = document.getElementById('my-picture');
     mypic.addEventListener("mouseover", myPictureSlideshow);

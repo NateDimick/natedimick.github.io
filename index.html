@@ -5,15 +5,18 @@
         <link rel="stylesheet" href="./cloudyv2.css">
         <link rel="stylesheet" href="./memfont.css">
         <link rel="icon" href="./Pictures/icon.png">
-        <script src="load.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="tricks.js"></script>
         <meta charset="UTF-8">
         <meta name="description" content="Everything Nate Dimick wants you to know about Nate Dimick">
         <meta name="keywords" content="Nate Nathaniel J. Dimick Website Portfolio Orford Rivendell Brandeis Aloha Horizons">
         <meta name=”robots” content="index, follow">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
         <meta name="google-site-verification" content="BnYoA-aVkFrik3jKktLjn15F5xg37WsT3bz8l_m5g-U" />
     </head>
     <body>
+        <svg id="rain", style="width: 100%; z-index: 1; height: 100%; position: fixed; background-color: whitesmoke;">
+        </svg>
         <header>
             <h1>Nate Dimick</h1>
             <ol class="descriptors" style="text-align: center;">
@@ -38,10 +41,13 @@
                     In May of 2020 I graduated from Brandeis University with a B.S. in Computer Science. While at Brandeis I was involved in the Autonomous Robotics Lab (ARL), where I worked on projects including the Campus Rover software stack, the Campus Rover Model 4 Hardware Interface, and the Robot Service Bridges for connecting ROS with other programming languages and frameworks, like Unity, on remote PCs. 
                 </p>
                 <p>
-                    When a global health crisis isn't ruining my summers, I have worked at Horizons Day Camp in Fairlee, VT. Horizons is one of the camps run by The Aloha Foundation. There, I am a swimming instructor and lifeguard, as well as a Kahuna - a member of the senior leadership team. In fact, I was the youngest Kahuna ever appointed to the group, and the first former camper to become a Kahuna. 
+                    Since 2013, I'v spent my summers working on the pristine shores of Lake Fairlee at Horizons Day Camp. Horizons is one of the camps run by The Aloha Foundation. There, I am a swimming instructor and lifeguard, as well as a Kahuna - a member of the senior leadership team. In fact, I was the youngest Kahuna ever appointed to the group, and the first former camper to become a Kahuna. I've used my position as a young leader to bring new perspectives to the group, and I've used my software engineering abilities to develop new, tailor-made productivity solutions for our team.
                 </p>
                 <p>
                     Before Brandeis I atteneded Rivendell Academy in Orford, NH. In 2015 my Vex team won the NH/VT state championship for the game Skyrise. Clips from our best positional finishes can be found in the <a href="#time-machine">time machine</a>.
+                </p>
+                <p>
+                    I'm in the middle of my post-college job hunt! I'm looking for Junior/ Entry-Level Software Engineering positions at large companies or startups (both excite me!). My concentration so far has been in robotics, but I'm open and eager to learn new skills and dive into new industries. Please peruse my portfolio below to discover what I've been working on, and check out my LinkedIn profile (link above)
                 </p>
             </div>
             <div style="width: 49%;display: inline-block; text-align: center; vertical-align: middle;">
@@ -237,7 +243,7 @@
         <footer style="padding: 1%; height: 2%; background-image: url(./Pictures/road.jpg); background-size: cover; background-position: center;">
             <ul style="text-align: center;">
                 <li style="background-color: whitesmoke; padding: 1%;">There might by typos on this page. Sorry.</li>
-                <li style="background-color: whitesmoke; padding: 1%;"><a href="https://www.fontspace.com/memories-font-f25917">Font: MemoriesRegular</a></li>
+                <li style="background-color: whitesmoke; padding: 1%;"><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
                 <li style="background-color: whitesmoke; padding: 1%;">Not Copyright Nate Dimick 2020</li>
             </ul>
         </footer>

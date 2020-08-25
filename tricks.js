@@ -1,5 +1,8 @@
-// script that I want to run when the page loads
+// this js file just contains a bunch of stupi stuff I want to happen on my page
+// all visual, not really functional
+// but this is a visual page
 var nofun = true;
+var onPage = true;
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -171,21 +174,53 @@ var personaltitles = [
     "Reasoner."
 ];
 
+function randInt(int) {
+    return Math.floor(Math.random() * int);
+}
 
-async function titleloop() {
+
+function titleloop() {
     function compareFunction (a, b){
         return  b.length - a.length;
     };
     var maxlen = personaltitles.sort(compareFunction)[0].length;
-    while (true) {
-        if (!nofun) {
-            var ts = document.getElementById('my-titles');
-            ts.innerHTML = personaltitles[Math.floor(Math.random() * personaltitles.length)];
-            
-        };
-        await sleep(3000);
+    if (!nofun) {
+        var ts = document.getElementById('my-titles');
+        ts.innerHTML = personaltitles[randInt(personaltitles.length)];
+        
     };
 };
+
+function rain() {
+    if (onPage) {
+        const svg = d3.select("#rain");
+        let startHeight = randInt(window.innerHeight * 1.5) - window.innerHeight / 2;
+        let startPosMod = 1 + randInt(2);
+        let startX = window.innerWidth / startPosMod;
+        let animateTime = 5000 + randInt(10000);
+        let size = 100 + randInt(1500);
+        
+
+        let l = svg.append("line")
+            .attr("x1", startX)
+            .attr("y1", startHeight)
+            .attr("x2", startX + size)
+            .attr("y2", startHeight - size)
+            .style("stroke", "forestgreen")
+            .style("stroke-width", 2);
+
+        l.transition()
+            .duration(animateTime)
+            .attr("x1", -size)
+            .attr("y1", startHeight + size + startX)
+            .attr("x2", 0)
+            .attr("y2", startHeight + startX)
+            .remove();
+    }
+    
+        
+}
+
 
 var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg', './Pictures/swim.png'];
 var pic_ind = 1;
@@ -228,6 +263,7 @@ function onWindowLoad(){
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("time-machine").style.display = "none";
         document.getElementById("hint").style.display = "none";
+        document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
     
     })
     document.getElementById("fun-button").addEventListener("click", function (event) {
@@ -237,13 +273,21 @@ function onWindowLoad(){
         document.getElementById("business-button").style.backgroundColor = "gainsboro";
         document.getElementById("time-machine").style.display = "inline";
         document.getElementById("hint").style.display = "inline";
+        document.getElementsByTagName("html")[0].style.fontFamily = 'memoriesregular';
     
     })
-    titleloop();
+    setInterval(titleloop, 3000);
+    setInterval(rain, 1000);
     var mypic = document.getElementById('my-picture');
     mypic.addEventListener("mouseover", myPictureSlideshow);
     var timeButton = document.getElementById("time-button");
     timeButton.addEventListener("click", revealPast);
+    window.onblur = () => {
+        onPage = false;
+    }
+    window.onfocus = () => {
+        onPage = true;
+    }
 };
 window.onload = onWindowLoad;
 

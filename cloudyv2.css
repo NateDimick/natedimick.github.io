@@ -1,14 +1,21 @@
 html {
-    font-family: 'memoriesregular';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color:whitesmoke;
     margin: 0%;
 }
+
+footer {
+    z-index: 2;
+    position: relative;
+}
 section, header {
     background-color: white;
     padding: 1% 0%;
+    z-index: 2;
+    position: relative;
 }
 
 h1, h2, h3, h4, header li, header ol, header ul, button {

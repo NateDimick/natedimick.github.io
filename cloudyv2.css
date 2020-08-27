@@ -18,6 +18,12 @@ section, header {
     position: relative;
 }
 
+section {
+    width: 75%;
+    margin: 0% 12.5%;
+    padding: 1%;
+}
+
 h1, h2, h3, h4, header li, header ol, header ul, button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
@@ -27,6 +33,15 @@ h1, h2, h3, h4, header li, header ol, header ul, button {
 section h1 {
     color: forestgreen;
     border-style: none none solid none;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 li {
@@ -50,25 +65,46 @@ a {
     width: 4%;
 }
 
-section {
-    width: 75%;
-    margin: 0% 12.5%;
-    padding: 1%;
-}
-
 .descriptors li {
     width: 17%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.nav a {
-    vertical-align: top;
+.nav li {
+    vertical-align: middle;
     text-align: center;
+    overflow-wrap: break-word;
     color: forestgreen;
     background-color: whitesmoke;
-    display: inline-block;
     width: 17%;
+    display: inline-block;
     margin: 1% 1%;
+}
+
+#my-picture {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.half {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#mode-toggle {
+    font-size: 0;
+    text-align: center;
+}
+
+#hint {
+    display: none;
+    font-size: medium;
+}
+
+#portfolio-header {
+    text-align: center;
 }
 
 .project-text {
@@ -76,6 +112,7 @@ section {
     display: inline-block;
     vertical-align: middle;
     text-align: justify;
+    overflow: visible;
 }
 
 .project-img {
@@ -83,6 +120,23 @@ section {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    overflow: visible;
+}
+
+.flip {
+    -webkit-transform:  rotate(180deg);
+    -moz-transform:  rotate(180deg);
+    -ms-transform:  rotate(180deg);
+    -o-transform:  rotate(180deg);
+    transform:  rotate(180deg);
+}
+
+.flip > div {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .left-button {
@@ -107,4 +161,68 @@ section {
 
 button:active, button:focus {
     outline: none;
+}
+
+#wayback-machine {
+    text-align: center;
+}
+
+#time-machine {
+    display: none;
+}
+
+#time-button {
+    margin: 0.5%; 
+    padding: 0.5%; 
+    background-color: whitesmoke;
+}
+
+footer {
+    padding: 1%; 
+    height: 2%; 
+    background-image: url(./Pictures/road.jpg); 
+    background-size: cover; 
+    background-position: center;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    background-color: whitesmoke; 
+    padding: 1%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    /*
+    css changes for tall displays (e.g. phones) 
+    */
+    li, .social-media li, .descriptors li, .nav li {
+        width: 40%;
+        margin: 1%;
+    }
+    section {
+        width: 90%;
+        margin: 0% 5%;
+    }
+    .half, .project-text, .project-img {
+        width: 99%;
+    }
+
+    .flip {
+        -webkit-transform:  rotate(0deg);
+        -moz-transform:  rotate(0deg);
+        -ms-transform:  rotate(0deg);
+        -o-transform:  rotate(0deg);
+        transform:  rotate(0deg);
+    }
+    
+    .flip > div {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 }

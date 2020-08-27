@@ -36,12 +36,17 @@
             <h1>
                 About Me
             </h1>
-            <div style="width: 49%; display: inline-block; vertical-align: middle;">
+        </section>
+        <section class="flip">
+            <div class="project-img">
+                <img src="./Pictures/me.jpg" alt="me" id="my-picture">
+            </div>
+            <div class="project-text">
                 <p>
                     In May of 2020 I graduated from Brandeis University with a B.S. in Computer Science. While at Brandeis I was involved in the Autonomous Robotics Lab (ARL), where I worked on projects including the Campus Rover software stack, the Campus Rover Model 4 Hardware Interface, and the Robot Service Bridges for connecting ROS with other programming languages and frameworks, like Unity, on remote PCs. 
                 </p>
                 <p>
-                    Since 2013, I'v spent my summers working on the pristine shores of Lake Fairlee at Horizons Day Camp. Horizons is one of the camps run by The Aloha Foundation. There, I am a swimming instructor and lifeguard, as well as a Kahuna - a member of the senior leadership team. In fact, I was the youngest Kahuna ever appointed to the group, and the first former camper to become a Kahuna. I've used my position as a young leader to bring new perspectives to the group, and I've used my software engineering abilities to develop new, tailor-made productivity solutions for our team.
+                    Since 2013, I've spent my summers working on the pristine shores of Lake Fairlee at Horizons Day Camp. Horizons is one of the camps run by The Aloha Foundation. There, I am a swimming instructor and lifeguard, as well as a Kahuna - a member of the senior leadership team. In fact, I was the youngest Kahuna ever appointed to the group, and the first former camper to become a Kahuna. I've used my position as a young leader to bring new perspectives to the group, and I've used my software engineering abilities to develop new, tailor-made productivity solutions for our team.
                 </p>
                 <p>
                     Before Brandeis I atteneded Rivendell Academy in Orford, NH. In 2015 my Vex team won the NH/VT state championship for the game Skyrise. Clips from our best positional finishes can be found in the <a href="#time-machine">time machine</a>.
@@ -50,35 +55,34 @@
                     I'm in the middle of my post-college job hunt! I'm looking for Junior/ Entry-Level Software Engineering positions at large companies or startups (both excite me!). My concentration so far has been in robotics, but I'm open and eager to learn new skills and dive into new industries. Please peruse my portfolio below to discover what I've been working on, and check out my LinkedIn profile (link above)
                 </p>
             </div>
-            <div style="width: 49%;display: inline-block; text-align: center; vertical-align: middle;">
-                <img src="./Pictures/me.jpg" alt="me" style="border-radius: 50%; width: 80%; height: 80%;" id="my-picture">
-            </div>
-            <div style="text-align: center; font-size: 0;">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
-                <button id="business-button" class="left-button">Business Mode</button>
-                <button id="fun-button" class="right-button">Fun Mode</button>
-                <p id="hint" style="display: none; font-size: medium;"><br>(hover over my picture!)</p>
-            </div>
         </section>
         <section>
+            <div id="mode-toggle">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
+                <button id="business-button" class="left-button">Business Mode</button>
+                <button id="fun-button" class="right-button">Fun Mode</button>
+                <p id="hint"><br>(hover over my picture!)</p>
+            </div>
+        </section>
+        <section id="portfolio-header">
             <h1>
                 Portfolio
             </h1>
-            <p style="text-align: center;">
+            <p>
                 Keep scrolling to see a selection of some of my best projects, or click one of the links
             </p>
-            <p style="text-align: center;">
+            <p>
                 All source code is available on my Github page, with a few exceptions.
             </p>
-            <div class="nav" style="text-align: center;">
-                <a href="#RSB">Robot Service Bridges</a>
-                <a href="#CR4">Campus Rover 4 Core</a>
-                <a href="#CRS">Campus Rover Stack</a>
-                <a href="#CET">Twitterbot: @ChupEverything</a>
-                <a href="#GFS">Gazebo Fiducial Spawner</a>
-                <a href="#HOH">Horizons Office Homepage</a>
-                <a href="#WEB">natedimick.github.io</a>
-                <a href="#OTHER">Other Project Scraps</a>
-            </div>
+            <ol class="nav">
+                <li><a href="#RSB">Robot Service Bridges</a></li>
+                <li><a href="#CR4">Campus Rover 4 Core</a></li>
+                <li><a href="#CRS">Campus Rover Stack</a></li>
+                <li><a href="#CET">Twitterbot: @ChupEverything</a></li>
+                <li><a href="#GFS">Gazebo Fiducial Spawner</a></li>
+                <li><a href="#HOH">Horizons Office Homepage</a></li>
+                <li><a href="#WEB">natedimick.github.io</a></li>
+                <li><a href="#OTHER">Other Project Scraps</a></li>
+            </ol>
         </section>
         <section>
             <h1>Autonomous Robotics Lab</h1>
@@ -102,7 +106,10 @@
                 </p>
             </div>
         </section>
-        <section id="CR4">
+        <section id="CR4" class="flip">
+            <div class="project-img">
+                <img src="./Pictures/cr4.jpg" alt="" width="80%">
+            </div>
             <div class="project-text">
                 <h2>
                     Campus Rover 4 Core
@@ -113,9 +120,6 @@
                 <p>
                     This project was not completed due to COVID-19. Picture to right is of a prototype model.
                 </p>
-            </div>
-            <div class="project-img">
-                <img src="./Pictures/cr4.jpg" alt="" width="80%">
             </div>
         </section>
         <section id="CRS">
@@ -139,7 +143,10 @@
                 Solo Projects
             </h1>
         </section>
-        <section id="CET">
+        <section id="CET" class="flip">
+            <div class="project-img">
+                <img src="./Pictures/colorfulchup.jpg" alt="" width="80%" style="border-radius: 10%;">
+            </div>
             <div class="project-text">
                 <h2>
                     @ChupEverything Twitterbot
@@ -147,9 +154,6 @@
                 <p>
                     The idea of this bot is to mock the terrible names of products like "mayochup" and "mayomust" by creating new types of "chup" and "must" that have random colors as well.
                 </p>
-            </div>
-            <div class="project-img">
-                <img src="./Pictures/colorfulchup.jpg" alt="" width="80%" style="border-radius: 10%;">
             </div>
         </section>
         <section id="GFS">
@@ -168,7 +172,11 @@
                 </p>
             </div>
         </section>
-        <section id="HOH">
+        <section id="HOH" class="flip">
+            <div class="project-img">
+                <img src="./Pictures/notehome.jpg" alt="" width="80%">
+                <p>Updated picture coming soon!</p>
+            </div>
             <div class="project-text">
                 <h2>
                     Horizons Office Homepage
@@ -179,10 +187,6 @@
                 <p>
                     This is an ongoing project and has not been used in a summer yet.
                 </p>
-            </div>
-            <div class="project-img">
-                <img src="./Pictures/notehome.jpg" alt="" width="80%">
-                <p>Updated picture coming soon!</p>
             </div>
         </section>
         <section id="WEB">
@@ -202,7 +206,10 @@
                 </p>
             </div>
         </section>
-        <section id="OTHER">
+        <section id="OTHER" class="flip">
+            <div class="project-img">
+                <img src="./Pictures/nodeal.jpg" alt="" width="80%">
+            </div>
             <div class="project-text">
                 <h2>
                     Other Small Projects
@@ -214,14 +221,11 @@
                     Pictured to the right - the one-day build of Deal or No Deal to go along with the banker algorithm
                 </p>
             </div>
-            <div class="project-img">
-                <img src="./Pictures/nodeal.jpg" alt="" width="80%">
-            </div>
         </section>
-        <section id="wayback-machine" style="text-align: center;">
-            <div id="time-machine" style="display: none;">
+        <section id="wayback-machine">
+            <div id="time-machine">
                 <h1>Time Machine</h1>
-                <button id="time-button" style="margin: 0.5%; padding: 0.5%; background-color: whitesmoke;">Push to see what this website use to look like</button>
+                <button id="time-button">Push to see what this website use to look like</button>
             </div>
             <h1 id="vids">Old Videos</h1>
             <p>
@@ -240,12 +244,12 @@
                 RoboDIAL 2.0 Paper Presentation <a href="https://www.youtube.com/watch?v=eB0yXORrRjw">Presented by one of my co-authors, Nikhil Krishnaswamy</a>
             </p>
         </section>
-        <footer style="padding: 1%; height: 2%; background-image: url(./Pictures/road.jpg); background-size: cover; background-position: center;">
-            <ul style="text-align: center;">
-                <li style="background-color: whitesmoke; padding: 1%;">There might by typos on this page. Sorry.</li>
-                <li style="background-color: whitesmoke; padding: 1%;"><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
-                <li style="background-color: whitesmoke; padding: 1%;">Not Copyright Nate Dimick 2020</li>
-            </ul>
+        <footer>
+            <ol>
+                <li>There might by typos on this page. Sorry.</li>
+                <li><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
+                <li>Not Copyright Nate Dimick 2020</li>
+            </ol>
         </footer>
     </body>
 </html>

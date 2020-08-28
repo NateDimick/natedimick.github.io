@@ -24,7 +24,7 @@ section {
     padding: 1%;
 }
 
-h1, h2, h3, h4, header li, header ol, header ul, button {
+h1, h2, h3, h4, header li, header ol, header ul, header div, button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     align-content: center;
@@ -68,6 +68,16 @@ a {
 .descriptors li {
     width: 17%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#holiday {
+    display: none;
+    text-align: center;
+    font-family: memoriesregular;
+}
+
+#holiday-box {
+    text-align: center;
 }
 
 .nav li {

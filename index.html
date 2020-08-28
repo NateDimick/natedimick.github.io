@@ -37,6 +37,11 @@
                 About Me
             </h1>
         </section>
+        <section id="holiday-box">
+            <div>
+                <h2 id="holiday"></h2>
+            </div>
+        </section>
         <section class="flip">
             <div class="project-img">
                 <img src="./Pictures/me.jpg" alt="me" id="my-picture">
@@ -81,6 +86,7 @@
                 <li><a href="#GFS">Gazebo Fiducial Spawner</a></li>
                 <li><a href="#HOH">Horizons Office Homepage</a></li>
                 <li><a href="#WEB">natedimick.github.io</a></li>
+                <li><a href="#FHA">Fun Holidays API</a></li>
                 <li><a href="#OTHER">Other Project Scraps</a></li>
             </ol>
         </section>
@@ -206,7 +212,23 @@
                 </p>
             </div>
         </section>
-        <section id="OTHER" class="flip">
+        <section id="FHA" class="flip">
+            <div class="project-img">
+                <img src="./Pictures/holiday.png" alt="" width="80%">
+            </div>
+            <div class="project-text">
+                <h2>
+                    Fun Holidays API
+                </h2>
+                <p>
+                    This one started out selfishly. As part of "Fun Mode" on this page (have you <a href="#mode-toggle">tried it</a> yet?) I wanted to display a message that said "Happy {something} Day!" becuase every day there are multiple fake, under the radar "holidays" and a message like that is my idea of fun. I thought there would have already been an API for this sort of thing, but I couldn't find one, only API's that reported real holidays and API's that cost more per year then I thought was worth it. So I built it myself using Flask and hosted on Heroku. It only took ~24 hours in total to build - this included webscraping for data collection with beautifulsoup, compiling all data into a tsv file, putting said data into a PostgreSQL database, building and deploying the app. I'm very happy with how it turned out.
+                </p>
+                <p>
+                    You can use the Fun Holidays API for free at <a href="https://fun-holiday-api.herokuapp.com">fun-holiday-api.herokuapp.com</a>. Please be nice to it.
+                </p>
+            </div>
+        </section>
+        <section id="OTHER">
             <div class="project-img">
                 <img src="./Pictures/nodeal.jpg" alt="" width="80%">
             </div>

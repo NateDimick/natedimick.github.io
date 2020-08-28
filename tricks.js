@@ -167,7 +167,7 @@ var personaltitles = [
     "Gambler.", // it's not a problem, though
     "Waxing Poet.",
     "Navigator.",  // I call shotgun
-    "Puzzle Solver",
+    "Puzzle Solver.",
     "Riddler.",
     "WSI.",  // water safety instructor
     "Grillmaster.",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
@@ -227,6 +227,20 @@ function rain() {
         
 }
 
+function happyDay() {
+    let holidayDiv = document.getElementById("holiday");
+    let date = new Date();
+    //let url = `https://192.168.1.23/api/date?month=${date.getMonth() + 1}&day=${date.getDate()}`;
+    let url = `https://fun-holiday-api.herokuapp.com/api/date?month=${date.getMonth() + 1}&day=${date.getDate()}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const day_index = randInt(data.holidays.length);
+        holidayDiv.innerHTML = `Happy ${data.holidays[day_index]}!`;
+    });
+    holidayDiv.innerHTML = "fetching today's holiday...";
+}
+
 
 var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg', './Pictures/swim.png']; // pictures that can appear in the profile-pic element
 var pic_ind = 1;
@@ -271,6 +285,7 @@ function onWindowLoad(){
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("time-machine").style.display = "none";
         document.getElementById("hint").style.display = "none";
+        document.getElementById("holiday").style.display = "none";
         document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
     
     })
@@ -281,6 +296,7 @@ function onWindowLoad(){
         document.getElementById("business-button").style.backgroundColor = "gainsboro";
         document.getElementById("time-machine").style.display = "inline";
         document.getElementById("hint").style.display = "inline";
+        document.getElementById("holiday").style.display = "inline";
         document.getElementsByTagName("html")[0].style.fontFamily = 'memoriesregular';
     
     })
@@ -298,6 +314,7 @@ function onWindowLoad(){
     window.onfocus = () => {
         onPage = true;
     }
+    happyDay();
 };
 // set the onload function to run and set the page up
 window.onload = onWindowLoad;

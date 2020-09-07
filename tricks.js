@@ -99,7 +99,7 @@ var webtitles = [
     "B is for the B in riot",
     "Meatball, meatball, spaghetti underneath",  // ravioli ravioli great barrier reef!!
     "Velociraptor = distanceraptor / timeraptor",  // math checks out
-    "THREE sanwiches!?",
+    "THREE sandwiches!?",
     "Mothman!",
     "You probably need to drink more water",
     "Leader of the \"Nate needs a job\" task force",
@@ -107,7 +107,12 @@ var webtitles = [
     "Yeah this is just one page why would there be more?",  // best choice I made. one quality page is all I need
     "Timelord will continue to punish linear conceptions of time",
     "Not the criminal Nate Dimick from upstate New York",  // he soils my good name
-    "There are 100 possible titles and you got the 100th!"
+    "There are 105 possible titles and you got the 100th!",
+    "Where's my train? Take me away, choo choo!",
+    "Hire me?",
+    "REEEEEEE",
+    "Take my by the hand lead me to the land",
+    "This website is only available until March 31st",  // Choose between this site and super mario 3d all stars, I guess
 ];
 
 var personaltitles = [

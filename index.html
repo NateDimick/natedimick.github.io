@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title id="title">Nate Dimick's Personal Website</title>
+        <title id="title">Nate Dimick's Webpage</title>
         <link rel="stylesheet" href="./cloudyv2.css">
         <link rel="stylesheet" href="./memfont.css">
         <link rel="icon" href="./Pictures/icon.png">
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="tricks.js"></script>
         <meta charset="UTF-8">
-        <meta name="description" content="Everything Nate Dimick wants you to know about Nate Dimick">
+        <meta name="description" content="Everything you need to know about Nathaniel (Nate) Dimick - Portfolio and More! (but not too much)">
         <meta name="keywords" content="Nate Nathaniel J. Dimick Website Portfolio Orford Rivendell Brandeis Aloha Horizons">
         <meta name=”robots” content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,7 @@
         </section>
         <section id="holiday-box">
             <div>
-                <h2 id="holiday"></h2>
+                <h2 ><a href="https://fun-holiday-api.herokuapp.com" id="holiday"></a></h2>
             </div>
         </section>
         <section class="flip">
@@ -65,7 +65,7 @@
             <div id="mode-toggle">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
                 <button id="business-button" class="left-button">Business Mode</button>
                 <button id="fun-button" class="right-button">Fun Mode</button>
-                <p id="hint"><br>(hover over my picture!)</p>
+                <p id="hint"><br>Try to find all of the fun mode changes on the site!<br>(hint: hover over my picture!)</p>
             </div>
         </section>
         <section id="portfolio-header">
@@ -205,10 +205,10 @@
                     This Website
                 </h2>
                 <p>
-                    There I was, in October 2019, months from graduating. I had no web presence besides social media accounts. I didn't know a lick of HTML, CSS or JavaScript. So, I set out to learn those technologies on my own, Since they had never been covered in any of the courses I had taken, which in retrospect seems completely wrong. The product of that endeavor is this site. Think what you want about it, I think it's suitable.
+                    In October of 2019, with graduation on the Horizon, I set out to build my own portfolio website to show off my abilities and showcase some projects to potential employers. The only problem was that I didn't know HTML, CSS, or Javascript, becuase I had always been working on back-end or similar applications! It was an easy problem to solve, but not quickly. I credit this project as a catalyst that triggered a wake up call to myself, exposing that I had a ton of gaps in my skillset that needed to be filled. Since then I've tightened the straps and become significantly more capable as a web developer.
                 </p>
                 <p>
-                    My biggest takeaway from this project is that working with css is a chore. I also don't have the chops to be a good UI/UX designer. I was also too ambitious in my first go at this site (see the <a href="#time-machine" style="color: forestgreen;">Time Machine</a>). In summary, after finishing the site redo I was not interested in front end web development for a while, purely because of css.
+                    I also learned that  just don't have "it" when it comes to styling a website. As long as it's functional and not plain text on a white background, I'm okay with the product.
                 </p>
             </div>
         </section>
@@ -221,7 +221,7 @@
                     Fun Holidays API
                 </h2>
                 <p>
-                    This one started out selfishly. As part of "Fun Mode" on this page (have you <a href="#mode-toggle">tried it</a> yet?) I wanted to display a message that said "Happy {something} Day!" becuase every day there are multiple fake, under the radar "holidays" and a message like that is my idea of fun. I thought there would have already been an API for this sort of thing, but I couldn't find one, only API's that reported real holidays and API's that cost more per year then I thought was worth it. So I built it myself using Flask and hosted on Heroku. It only took ~24 hours in total to build - this included webscraping for data collection with beautifulsoup, compiling all data into a tsv file, putting said data into a PostgreSQL database, building and deploying the app. I'm very happy with how it turned out.
+                    This one started out selfishly. As part of "Fun Mode" on this page (have you <a href="#mode-toggle">tried it</a> yet?) I wanted to display a message that said "Happy {something} Day!" becuase every day there are multiple fake, under the radar "holidays" and a message like that is my idea of fun. I thought there would have already been an API for this sort of thing, but I couldn't find one, only API's that reported real holidays and API's that cost more per year then I thought was worth it. So I built it myself using Flask and hosted on Heroku. It only took ~24 hours in total to initially build - this included webscraping for data collection with beautifulsoup, compiling all data into a tsv file, putting said data into a PostgreSQL database, building and deploying the app. After about 4 days I had amassed over 7,000 unique holidays, which I believe is the most complete list on the internet. I'm very happy with how it turned out.
                 </p>
                 <p>
                     You can use the Fun Holidays API for free at <a href="https://fun-holiday-api.herokuapp.com">fun-holiday-api.herokuapp.com</a>. Please be nice to it.

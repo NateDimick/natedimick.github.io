@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color:whitesmoke;
+    background-color:white;
     margin: 0%;
 }
 
@@ -12,6 +12,7 @@ footer {
     position: relative;
 }
 section, header {
+    /*background-color: white;*/
     background-color: white;
     padding: 1% 0%;
     z-index: 2;
@@ -113,6 +114,11 @@ a {
     font-size: medium;
 }
 
+#hell {
+    display: none;
+    font-size: medium;
+}
+
 #portfolio-header {
     text-align: center;
 }
@@ -149,24 +155,26 @@ a {
     transform: rotate(-180deg);
 }
 
-.left-button {
-    margin-right: 0%;
-    background-color: forestgreen;
-    padding: 1%;
-    border-style: none;
-    border-radius: 1vh 0vh 0vh 1vh;
-    border: 0;
-    font-size: 12;
-}
-
-.right-button {
+.button {
     margin-right: 0%;
     background-color: gainsboro;
     padding: 1%;
     border-style: none;
-    border-radius: 0vh 1vh 1vh 0vh ;
     border: 0;
     font-size: 12;
+}
+
+.left-button {
+    background-color: forestgreen;
+    border-radius: 1vh 0vh 0vh 1vh;
+}
+
+.middle-button {
+    border-style: none;
+}
+
+.right-button {
+    border-radius: 0vh 1vh 1vh 0vh ;
 }
 
 button:active, button:focus {

@@ -3,6 +3,7 @@
 // but this is a visual page
 var nofun = true;
 var onPage = true;
+var hell = false;
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -209,6 +210,7 @@ function rain() {
         // speed and size variable to make it seem more organic
         let animateTime = 5000 + randInt(10000); 
         let size = 100 + randInt(1500);  // size should probably scale by window size - long lines are massive on mobile
+        let color = hell ? "firebrick" : "forestgreen";
         
         // create a line 
         let l = svg.append("line")  // using d3's handy svg tools
@@ -216,7 +218,7 @@ function rain() {
             .attr("y1", startHeight)
             .attr("x2", startX + size)
             .attr("y2", startHeight - size)
-            .style("stroke", "forestgreen")
+            .style("stroke", color)
             .style("stroke-width", 2);
 
         // set the animation to cross the screen
@@ -258,6 +260,16 @@ async function myPictureSlideshow(event){
     }
     
 };
+
+function isInHeader(e) {
+    if (e.tagName === "HTML") {
+        return false;
+    } else if (e.tagName === "HEADER") {
+        return true;
+    } else {
+        return isInHeader(e.parentElement);
+    }
+}
 // time machine functions to make the picture appear and change the text of the time machine button
 function revealPast(event){
     var tm = document.getElementById("time-machine");
@@ -279,30 +291,96 @@ function deletePast(event){
     event.target.addEventListener("click", revealPast);
     event.target.innerHTML = "Wanna make the same mistake again?";
 }
-function onWindowLoad(){
-    // set up the business/fun mode buttons
-    document.getElementById("business-button").addEventListener("click", function (event) {
+
+function enableFun () {
+    if (nofun){
+        nofun = false;
+        document.getElementById("time-machine").style.display = "inline";
+        document.getElementById("hint").style.display = "inline";
+        document.getElementById("holiday").style.display = "inline";
+        document.getElementsByTagName("html")[0].style.fontFamily = 'memoriesregular';
+    }
+    
+}
+
+function disableFun () {
+    if (!nofun) {
         nofun = true;
-        document.title = "Nate Dimick's Personal Website";
-        event.target.style.backgroundColor = "forestgreen";
-        document.getElementById("fun-button").style.backgroundColor = "gainsboro";
+        document.title = "Nate Dimick's Webpage";
         document.getElementById('my-titles').innerHTML = "Lifeguard.";
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("time-machine").style.display = "none";
         document.getElementById("hint").style.display = "none";
         document.getElementById("holiday").style.display = "none";
         document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
+    }
+    
+}
+
+function enableHell () {
+    if (!hell) {
+        let hc = "firebrick";
+        let bc = "gray";
+        hell = true;
+        document.title = "Nate Dimick's Infernal Cave of Secrets";
+        document.getElementById("hell").style.display = "inline";
+        document.getElementById('my-titles').innerHTML = "Hellspawn.";
+        document.getElementsByTagName("html")[0].style.fontFamily = "hellveticaregular";
+        Array.from(document.getElementsByTagName("a")).forEach(e => isInHeader(e) ? null : e.style.color = hc);
+        Array.from(document.getElementsByTagName("h1")).forEach(e => isInHeader(e) ? null : e.style.color = hc);
+        Array.from(document.getElementsByTagName("li")).forEach(e => isInHeader(e) ? null : e.style.backgroundColor = bc);
+        Array.from(document.getElementsByTagName("section")).forEach(e =>  e.style.backgroundColor = bc);
+        Array.from(document.getElementsByTagName("header")).forEach(e => e.style.backgroundColor = bc);
+        document.querySelector("#rain").style.backgroundColor = "black";
+        document.getElementById('my-picture').src = './Pictures/meF.jpg'; 
+        document.getElementById("base").style.backgroundImage = "url(./Pictures/roadinv.png)";
+    }
+    
+}
+
+function disableHell () {
+    if (hell) {
+        let nc = "forestgreen";
+        let bc = "white";
+        hell = false;
+        document.title = "Nate Dimick's Webpage";
+        document.getElementById("hell").style.display = "none";
+        Array.from(document.getElementsByTagName("a")).forEach(e => isInHeader(e) ? null : e.style.color = nc);
+        Array.from(document.getElementsByTagName("h1")).forEach(e => isInHeader(e) ? null : e.style.color = nc);
+        Array.from(document.getElementsByTagName("li")).forEach(e => isInHeader(e) ? null : e.style.backgroundColor = bc);
+        document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
+        Array.from(document.getElementsByTagName("section")).forEach(e => e.style.backgroundColor = bc);
+        Array.from(document.getElementsByTagName("header")).forEach(e => e.style.backgroundColor = bc);
+        document.querySelector("#rain").style.backgroundColor = "whitesmoke";
+        document.getElementById('my-picture').src = './Pictures/me.jpg';
+        document.getElementById("base").style.backgroundImage = "url(./Pictures/road.jpg)";
+    }
+    
+}
+function onWindowLoad(){
+    // set up the business/fun mode buttons
+    document.getElementById("business-button").addEventListener("click", function (event) {
+        document.querySelectorAll(".button").forEach(button => button.style.backgroundColor = "gainsboro");
+        event.target.style.backgroundColor = "forestgreen";
+        disableFun();
+        disableHell();
     
     })
     document.getElementById("fun-button").addEventListener("click", function (event) {
-        nofun = false;
         document.title =  webtitles[Math.floor(Math.random() * webtitles.length)];
+        document.querySelectorAll(".button").forEach(button => button.style.backgroundColor = "gainsboro");
         event.target.style.backgroundColor = "forestgreen";
-        document.getElementById("business-button").style.backgroundColor = "gainsboro";
-        document.getElementById("time-machine").style.display = "inline";
-        document.getElementById("hint").style.display = "inline";
-        document.getElementById("holiday").style.display = "inline";
-        document.getElementsByTagName("html")[0].style.fontFamily = 'memoriesregular';
+        disableHell();
+        enableFun();
+        
+    
+    })
+    document.getElementById("hell-button").addEventListener("click", function (event) {
+        document.querySelectorAll(".button").forEach(button => button.style.backgroundColor = "gainsboro");
+        event.target.style.backgroundColor = "firebrick";
+        disableFun();
+        enableHell();
+        
     
     })
     // set up looping functions to run in the background

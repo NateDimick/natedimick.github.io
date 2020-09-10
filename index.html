@@ -4,6 +4,7 @@
         <title id="title">Nate Dimick's Webpage</title>
         <link rel="stylesheet" href="./cloudyv2.css">
         <link rel="stylesheet" href="./memfont.css">
+        <link rel="stylesheet" href="./hellvetica.css">
         <link rel="icon" href="./Pictures/icon.png">
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="tricks.js"></script>
@@ -18,7 +19,7 @@
         <svg id="rain", style="width: 100%; z-index: 1; height: 100%; position: fixed; background-color: whitesmoke;">
         </svg>
         <header>
-            <h1>Nate Dimick</h1>
+            <h1 id="my-name">Nate Dimick</h1>
             <ol class="descriptors" style="text-align: center;">
                 <li><h2>Software Engineer.</h2></li>
                 <li><h2>Roboticist.</h2></li>
@@ -57,15 +58,17 @@
                     Before Brandeis I atteneded Rivendell Academy in Orford, NH. In 2015 my Vex team won the NH/VT state championship for the game Skyrise. Clips from our best positional finishes can be found in the <a href="#time-machine">time machine</a>.
                 </p>
                 <p>
-                    I'm in the middle of my post-college job hunt! I'm looking for Junior/ Entry-Level Software Engineering positions at large companies or startups (both excite me!). My concentration so far has been in robotics, but I'm open and eager to learn new skills and dive into new industries. Please peruse my portfolio below to discover what I've been working on, and check out my LinkedIn profile (link above)
+                    I'm in the middle of my post-college job hunt! I'm looking for Junior/ Entry-Level Software Engineering positions at large companies or startups (both excite me!). My concentration so far has been in robotics, but I'm open and eager to learn new skills and dive into new industries. Please peruse my portfolio below to discover what I've been working on, and check out my <a href="https://linkedin.com/in/natedimick">LinkedIn profile</a>.
                 </p>
             </div>
         </section>
         <section>
             <div id="mode-toggle">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
-                <button id="business-button" class="left-button">Business Mode</button>
-                <button id="fun-button" class="right-button">Fun Mode</button>
+                <button id="business-button" class="left-button button">Business Mode</button>
+                <button id="fun-button" class="middle-button button">Fun Mode</button>
+                <button id="hell-button" class="right-button button">Evil Mode</button>
                 <p id="hint"><br>Try to find all of the fun mode changes on the site!<br>(hint: hover over my picture!)</p>
+                <p id="hell"><br>Why would you click that button, even if it's an option?</p>
             </div>
         </section>
         <section id="portfolio-header">
@@ -266,10 +269,11 @@
                 RoboDIAL 2.0 Paper Presentation <a href="https://www.youtube.com/watch?v=eB0yXORrRjw">Presented by one of my co-authors, Nikhil Krishnaswamy</a>
             </p>
         </section>
-        <footer>
+        <footer id="base">
             <ol>
                 <li>There might by typos on this page. Sorry.</li>
                 <li><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
+                <li><a href="https://hellveticafont.com/">Hell Mode Font: Hellvetica</a></li>
                 <li>Not Copyright Nate Dimick 2020</li>
             </ol>
         </footer>

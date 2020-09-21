@@ -69,16 +69,25 @@ a {
 .descriptors li {
     width: 17%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#rain {
+    width: 100%; 
+    z-index: 1; 
+    height: 100%; 
+    position: fixed; 
+    background-color: whitesmoke;
 }
 
 #holiday {
-    display: none;
     text-align: center;
     font-family: memoriesregular;
 }
 
 #holiday-box {
     text-align: center;
+    display: none;
 }
 
 .nav li {

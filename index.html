@@ -16,11 +16,11 @@
         <meta name="google-site-verification" content="BnYoA-aVkFrik3jKktLjn15F5xg37WsT3bz8l_m5g-U" />
     </head>
     <body>
-        <svg id="rain", style="width: 100%; z-index: 1; height: 100%; position: fixed; background-color: whitesmoke;">
+        <svg id="rain">
         </svg>
         <header>
             <h1 id="my-name">Nate Dimick</h1>
-            <ol class="descriptors" style="text-align: center;">
+            <ol class="descriptors">
                 <li><h2>Software Engineer.</h2></li>
                 <li><h2>Roboticist.</h2></li>
                 <li><h2>Camp Counselor.</h2></li>
@@ -41,6 +41,7 @@
         <section id="holiday-box">
             <div>
                 <h2 ><a href="https://fun-holiday-api.herokuapp.com" id="holiday"></a></h2>
+                <button style="display: none;" id="new-day">New Holiday!</button>
             </div>
         </section>
         <section class="flip">
@@ -174,7 +175,7 @@
                     Gazebo Fiducial Spawner
                 </h2>
                 <p>
-                    in the ARL we work with ArUco tags, or Fiducials often. Due to the circumstances of COVID-19, we couldn't use our normal lab environment, which has fiducials taped all over the walls. There was one good example of spawning a fiducial model in Gazebo, <a href="https://github.com/nicolov/aruco2_ros/tree/master/aruco2_gazebo_model_example" style="color: forestgreen;">here</a>, but it was only an example to spawn a single fiducial.
+                    in the ARL we work with ArUco tags, or Fiducials often. Due to the circumstances of COVID-19, we couldn't use our normal lab environment, which has fiducials taped all over the walls. There was one good example of spawning a fiducial model in Gazebo, <a href="https://github.com/nicolov/aruco2_ros/tree/master/aruco2_gazebo_model_example">here</a>, but it was only an example to spawn a single fiducial.
                 </p>
                 <p>
                     So, I created the Gazebo Fiducial Spawner, a catkinized ROS package with the ability to spawn multiple fiducials into the Gazebo simulator. It does this by generating all the model assets required of any given fiducial model when a request to spawn is made. Two utilities are included, one that spawns a single fiducial once, and the other is an active ROS node that accepts custom messages to spawn new fiducials on demand.
@@ -240,7 +241,7 @@
                     Other Small Projects
                 </h2>
                 <p>
-                    I'm constantly tinkering with something - trying to write small scripts for fun. Some examples include trying to analyze Pokemon datasets to create better teams for Smogon's Other Metagames, to trying to make a better Deal or No Deal banker algorithms than <a href="http://commcognition.blogspot.com/2007/06/deal-or-no-deal-bankers-formula.html" style="color: forestgreen;">this abomination</a> made by a guy who watched two episodes, to schemes involveing arduinos that don't pan out because I've forgotten most of the electrical engineering priniples I learned in ninth grade. I also wrote a classic text-based rpg for a fantasy literature class as a sophomore in university, but it wasn't that great - yet cool enough to impress the english professor who didn't know a lick of code.
+                    I'm constantly tinkering with something - trying to write small scripts for fun. Some examples include trying to analyze Pokemon datasets to create better teams for Smogon's Other Metagames, to trying to make a better Deal or No Deal banker algorithms than <a href="http://commcognition.blogspot.com/2007/06/deal-or-no-deal-bankers-formula.html">this abomination</a> made by a guy who watched two episodes, to schemes involveing arduinos that don't pan out because I've forgotten most of the electrical engineering priniples I learned in ninth grade. I also wrote a classic text-based rpg for a fantasy literature class as a sophomore in university, but it wasn't that great - yet cool enough to impress the english professor who didn't know a lick of code.
                 </p>
                 <p>
                     Pictured to the right - the one-day build of Deal or No Deal to go along with the banker algorithm

@@ -4,6 +4,7 @@
 var nofun = true;
 var onPage = true;
 var hell = false;
+var todayDays = [];
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -108,12 +109,27 @@ var webtitles = [
     "Yeah this is just one page why would there be more?",  // best choice I made. one quality page is all I need
     "Timelord will continue to punish linear conceptions of time",
     "Not the criminal Nate Dimick from upstate New York",  // he soils my good name
-    "There are 105 possible titles and you got the 100th!",
+    "There are 120 possible titles and you got the 100th!",
     "Where's my train? Take me away, choo choo!",
     "Hire me?",
     "REEEEEEE",
     "Take my by the hand lead me to the land",
     "This website is only available until March 31st",  // Choose between this site and super mario 3d all stars, I guess
+    "$5 Canadian Round Robin",
+    "SHHHH this is a LIBRARY",
+    "This website gets 59 miles per gallon",
+    "These faen Dredge keep coming from the north",
+    "EMPORIO!!!!",
+    "I'll take the over",
+    "Glub glub glub",
+    "Feeling good on a Wednesday",
+    "Let's spin the prize wheel!",
+    "Ralph Lawrence alumni room chair: do not remove",
+    "Back in my day...",
+    "No title for you",
+    "All hail the king of slow",
+    "The king of the castle and the dirty rascal",
+    "For Shovelry!"
 ];
 
 var personaltitles = [
@@ -177,7 +193,13 @@ var personaltitles = [
     "Riddler.",
     "WSI.",  // water safety instructor
     "Grillmaster.",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
-    "Reasoner."
+    "Reasoner.",
+    "Bettor.",  // and i'm surprisingly good at it too
+    "Mask Wearer.",
+    "Social Distancer.",
+    "Dungeon Crawler.",
+    "Champion.",
+    "Dodgeballer."
 ];
 
 function randInt(int) {
@@ -244,10 +266,19 @@ function happyDay() {
     .then(data => {
         const day_index = randInt(data.holidays.length);
         holidayDiv.innerHTML = `Happy ${data.holidays[day_index]}!`;
+        todayDays = data.holidays;
+        document.querySelector('#new-day').style.display = 'inline';
     });
     holidayDiv.innerHTML = "fetching today's holiday...";
 }
 
+function rerollHoliday(){
+    let holidayDiv = document.getElementById("holiday");
+    if (todayDays.length > 0){
+        const day_index = randInt(todayDays.length);
+        holidayDiv.innerHTML = `Happy ${todayDays[day_index]}!`;
+    }
+}
 
 var pics = ['./Pictures/me.jpg', './Pictures/sportz.jpg', './Pictures/ctf.jpg', './Pictures/hammock.jpg', './Pictures/swim.png']; // pictures that can appear in the profile-pic element
 var pic_ind = 1;
@@ -297,7 +328,7 @@ function enableFun () {
         nofun = false;
         document.getElementById("time-machine").style.display = "inline";
         document.getElementById("hint").style.display = "inline";
-        document.getElementById("holiday").style.display = "inline";
+        document.getElementById("holiday-box").style.display = "block";
         document.getElementsByTagName("html")[0].style.fontFamily = 'memoriesregular';
     }
     
@@ -311,7 +342,7 @@ function disableFun () {
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("time-machine").style.display = "none";
         document.getElementById("hint").style.display = "none";
-        document.getElementById("holiday").style.display = "none";
+        document.getElementById("holiday-box").style.display = "none";
         document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
     }
     
@@ -398,6 +429,7 @@ function onWindowLoad(){
         onPage = true;
     }
     happyDay();
+    document.querySelector('#new-day').onclick = rerollHoliday;
 };
 // set the onload function to run and set the page up
 window.onload = onWindowLoad;

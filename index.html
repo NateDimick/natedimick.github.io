@@ -82,172 +82,14 @@
             <p>
                 All source code is available on my Github page, with a few exceptions.
             </p>
-            <ol class="nav">
-                <li><a href="#RSB">Robot Service Bridges</a></li>
-                <li><a href="#CR4">Campus Rover 4 Core</a></li>
-                <li><a href="#CRS">Campus Rover Stack</a></li>
-                <li><a href="#CET">Twitterbot: @ChupEverything</a></li>
-                <li><a href="#GFS">Gazebo Fiducial Spawner</a></li>
-                <li><a href="#HOH">Horizons Office Homepage</a></li>
-                <li><a href="#WEB">natedimick.github.io</a></li>
-                <li><a href="#FHA">Fun Holidays API</a></li>
-                <li><a href="#OTHER">Other Project Scraps</a></li>
+            <ol class="nav" id="p-links">
+                
             </ol>
         </section>
-        <section>
-            <h1>Autonomous Robotics Lab</h1>
-        </section>
-        <section id="RSB"> 
-            <div class="project-img">
-                <img src="./Pictures/rsb.png" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Robot Services Bridges
-                </h2>
-                <p>
-                    RSB is a robust ROS package designed to provide an interface, through Redis, for non-ROS programmers to have an easy to understand interface with a robot without actually knowing the inner workings of the robot's system. 
-                </p>
-                <p>
-                    One of my bigger undetakings in this project was designing a method to turn a ROS map of an area into a set of line segments that represented the "walls" of the map. This was done using OpenCV Hough Transform and some proprietary algorithms to make consolidate noisy Hough output.
-                </p>
-                <p>
-                    This package was instrumental in research done at Brandeis which produced the paper "Situated Multimodal Control of a Mobile Robot: Navigation through a Virtual Environment" which was presented at RoboDIAL 2.0, part of SIGDIAL 2020. The video presentation is linked below in the <a href="#vids">video section</a> of this page.
-                </p>
-            </div>
-        </section>
-        <section id="CR4" class="flip">
-            <div class="project-img">
-                <img src="./Pictures/cr4.jpg" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Campus Rover 4 Core
-                </h2>
-                <p>
-                    This project set out to develop a Turtlebot3 replacement using custom, cheaper hardware selected and assembled by our lab's resident roboticist, Charlie Squires. The project required creating low-level software, through a combination of ROS nodes and embedded c code on an arduino using Rosserial, that would bring up a baseline configuration capable of accurate odometry and differential drive movement, robust sensor output, and full compatibility with standard ROS pacakges like SLAM and AMCL. 
-                </p>
-                <p>
-                    This project was not completed due to COVID-19. Picture to right is of a prototype model.
-                </p>
-            </div>
-        </section>
-        <section id="CRS">
-            <div class="project-img">
-                <img src="./Pictures/cr3.png" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Campus Rover Stack
-                </h2>
-                <p>
-                    The Campus Rover Project is an ongoing project based around a robot capable of making on-campus autonomous deliveries, prompted by speech and a Flask-based web app. I became involved with the project in "Generation 3", when the hardware evolved from a Kobuki Turtlebot2 to a custom "mutant" robot based on Robotis Turtlebot3.
-                </p>
-                <p>
-                    I was responsible for porting the Campus Rover Software Stack from Turtlebot2 hardware to Turtlebot3 hardware, along with acting as the intergration guru, assisting the voice recognition, facial detection and gesture recognition teams in integrating their features for our end-of-semester demo. Afterwards, I continued to work on improving the package, including adding a new state manager API, refactoring launch files into modules, navigation error handling, and text-to-speech interface improvements.
-                </p>
-            </div>
-        </section>
-        <section>
-            <h1>
-                Solo Projects
-            </h1>
-        </section>
-        <section id="CET" class="flip">
-            <div class="project-img">
-                <img src="./Pictures/colorfulchup.jpg" alt="" width="80%" style="border-radius: 10%;">
-            </div>
-            <div class="project-text">
-                <h2>
-                    @ChupEverything Twitterbot
-                </h2>
-                <p>
-                    The idea of this bot is to mock the terrible names of products like "mayochup" and "mayomust" by creating new types of "chup" and "must" that have random colors as well.
-                </p>
-            </div>
-        </section>
-        <section id="GFS">
-            <div class="project-img">
-                <img src="./Pictures/gazfid.png" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Gazebo Fiducial Spawner
-                </h2>
-                <p>
-                    in the ARL we work with ArUco tags, or Fiducials often. Due to the circumstances of COVID-19, we couldn't use our normal lab environment, which has fiducials taped all over the walls. There was one good example of spawning a fiducial model in Gazebo, <a href="https://github.com/nicolov/aruco2_ros/tree/master/aruco2_gazebo_model_example">here</a>, but it was only an example to spawn a single fiducial.
-                </p>
-                <p>
-                    So, I created the Gazebo Fiducial Spawner, a catkinized ROS package with the ability to spawn multiple fiducials into the Gazebo simulator. It does this by generating all the model assets required of any given fiducial model when a request to spawn is made. Two utilities are included, one that spawns a single fiducial once, and the other is an active ROS node that accepts custom messages to spawn new fiducials on demand.
-                </p>
-            </div>
-        </section>
-        <section id="HOH" class="flip">
-            <div class="project-img">
-                <img src="./Pictures/notehome.jpg" alt="" width="80%">
-                <p>Updated picture coming soon!</p>
-            </div>
-            <div class="project-text">
-                <h2>
-                    Horizons Office Homepage
-                </h2>
-                <p>
-                    The Horizons Office Homepage is the evolution of an idea I've had for a while called The Horizons Toolkit. The core idea behind both projects is to create an application that is user-friendly to anyone who has the technical literacy of an elementary school teacher. This materialized in the Homepage as a Flask-based web app, designed to run on the local network of our camp's office for the director, program director and office manager to easily access on their personal computers with an easy to understand and Aloha Foundation themed graphical user interface. This web app allows users to upload files like camper lists and master schedules in the standard formats that our office already uses, and quickly turn the information in those documents into the documents that we derive from them each session, such as schedule notes that get sent home, lunch table assignments and cabin groups. This information gets stored in a SQLite3 database for easy queries. Generated documents can be emailed using smtplib to the user. Most importantly, there is an open activity sign up tool, which streamlines the process of digitizing our daily afternoon activity sign-ups, a process that was in desparate need of improvement over manual input to Google Sheets.
-                </p>
-                <p>
-                    This is an ongoing project and has not been used in a summer yet.
-                </p>
-            </div>
-        </section>
-        <section id="WEB">
-            <div class="project-img">
-                <img src="./Pictures/metasite.jpg" alt="" width="80%">
-                <p>Updated picture coming soon!</p>
-            </div>
-            <div class="project-text">
-                <h2>
-                    This Website
-                </h2>
-                <p>
-                    In October of 2019, with graduation on the Horizon, I set out to build my own portfolio website to show off my abilities and showcase some projects to potential employers. The only problem was that I didn't know HTML, CSS, or Javascript, becuase I had always been working on back-end or similar applications! It was an easy problem to solve, but not quickly. I credit this project as a catalyst that triggered a wake up call to myself, exposing that I had a ton of gaps in my skillset that needed to be filled. Since then I've tightened the straps and become significantly more capable as a web developer.
-                </p>
-                <p>
-                    I also learned that  just don't have "it" when it comes to styling a website. As long as it's functional and not plain text on a white background, I'm okay with the product.
-                </p>
-            </div>
-        </section>
-        <section id="FHA" class="flip">
-            <div class="project-img">
-                <img src="./Pictures/holiday.png" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Fun Holidays API
-                </h2>
-                <p>
-                    This one started out selfishly. As part of "Fun Mode" on this page (have you <a href="#mode-toggle">tried it</a> yet?) I wanted to display a message that said "Happy {something} Day!" becuase every day there are multiple fake, under the radar "holidays" and a message like that is my idea of fun. I thought there would have already been an API for this sort of thing, but I couldn't find one, only API's that reported real holidays and API's that cost more per year then I thought was worth it. So I built it myself using Flask and hosted on Heroku. It only took ~24 hours in total to initially build - this included webscraping for data collection with beautifulsoup, compiling all data into a tsv file, putting said data into a PostgreSQL database, building and deploying the app. After about 4 days I had amassed over 7,000 unique holidays, which I believe is the most complete list on the internet. I'm very happy with how it turned out.
-                </p>
-                <p>
-                    You can use the Fun Holidays API for free at <a href="https://fun-holiday-api.herokuapp.com">fun-holiday-api.herokuapp.com</a>. Please be nice to it.
-                </p>
-            </div>
-        </section>
-        <section id="OTHER">
-            <div class="project-img">
-                <img src="./Pictures/nodeal.jpg" alt="" width="80%">
-            </div>
-            <div class="project-text">
-                <h2>
-                    Other Small Projects
-                </h2>
-                <p>
-                    I'm constantly tinkering with something - trying to write small scripts for fun. Some examples include trying to analyze Pokemon datasets to create better teams for Smogon's Other Metagames, to trying to make a better Deal or No Deal banker algorithms than <a href="http://commcognition.blogspot.com/2007/06/deal-or-no-deal-bankers-formula.html">this abomination</a> made by a guy who watched two episodes, to schemes involveing arduinos that don't pan out because I've forgotten most of the electrical engineering priniples I learned in ninth grade. I also wrote a classic text-based rpg for a fantasy literature class as a sophomore in university, but it wasn't that great - yet cool enough to impress the english professor who didn't know a lick of code.
-                </p>
-                <p>
-                    Pictured to the right - the one-day build of Deal or No Deal to go along with the banker algorithm
-                </p>
-            </div>
-        </section>
+        <div id="projects">
+
+        </div>
+        <script type="text/javascript" src="projects.js"></script>
         <section id="wayback-machine">
             <div id="time-machine">
                 <h1>Time Machine</h1>
@@ -274,7 +116,7 @@
             <ol>
                 <li>There might by typos on this page. Sorry.</li>
                 <li><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
-                <li><a href="https://hellveticafont.com/">Hell Mode Font: Hellvetica</a></li>
+                <li><a href="https://hellveticafont.com/">Evil Mode Font: Hellvetica</a></li>
                 <li>Not Copyright Nate Dimick 2020</li>
             </ol>
         </footer>

@@ -4,6 +4,7 @@ const projects = [
         content: [
             {
                 title: "Robot Services",
+                github: "https://github.com/campusrover/robot_services",
                 text: [
                     "RSB is a robust ROS package designed to provide an interface, through Redis, for non-ROS programmers to have an easy to understand interface with a robot without actually knowing the inner workings of the robot's system.", 
                     "One of my bigger undetakings in this project was designing a method to turn a ROS map of an area into a set of line segments that represented the \"walls\" of the map. This was done using OpenCV Hough Transform and some proprietary algorithms to make consolidate noisy Hough output.",
@@ -15,6 +16,7 @@ const projects = [
             },
             {
                 title: "Campus Rover Autonomous Stack",
+                github: "https://github.com/campusrover/cr_ros_3",
                 image: "./Pictures/cr3.png",
                 id: "CRS",
                 text: [
@@ -24,6 +26,7 @@ const projects = [
             },
             {
                 title: "Campus Rover 4 Hardware",
+                github: "https://github.com/campusrover/rover_4_core",
                 image: "./Pictures/cr4.jpg",
                 id: "CR4",
                 text: [
@@ -38,7 +41,8 @@ const projects = [
         content: [
             {
                 title: "Code for UV RuralNet",
-                image: "",
+                github: "https://github.com/codeforUV/ruralnet",
+                image: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/71831776_130992291613081_5766558619302625280_n.png?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=_QQ315JVr4kAX-m4nM7&_nc_ht=scontent-lga3-1.xx&oh=2be1c2f459f5fc14f05ffb17beacaedd&oe=5FA31254",
                 id: "RLN",
                 text: [
                     "Code for America is a great organization with a mission of ethical hacking and creating software the can assist and empower local communities. The Upper Valley Brigade was fairly new when I joined, and had a few projects in the early stages of development. I lept in to help with RuralNet.",
@@ -53,6 +57,7 @@ const projects = [
         content: [
             {
                 title: "Fun Holiday API",
+                github: "https://github.com/NateDimick/funholidaysapi",
                 image: "./Pictures/holiday.png",
                 id: "FHA",
                 text: [
@@ -62,15 +67,17 @@ const projects = [
             },
             {
                 title: "Gazebo Fiducial Spawner",
+                github: "https://github.com/NateDimick/gazebo_fiducial_spawner",
                 image: "./Pictures/gazfid.png",
                 id: "GFS",
                 text: [
-                    "In the ARL we work with ArUco tags, or Fiducials often. Due to the circumstances of COVID-19, we couldn't use our normal lab environment, which has fiducials taped all over the walls. There was one good example of spawning a fiducial model in Gazebo, <a href=\"https://github.com/nicolov/aruco2_ros/tree/master/aruco2_gazebo_model_example\">here</a>, but it was only an example to spawn a single fiducial.",
-                    "So, I created the Gazebo Fiducial Spawner, a catkinized ROS package with the ability to spawn multiple fiducials into the Gazebo simulator. It does this by generating all the model assets required of any given fiducial model when a request to spawn is made. Two utilities are included, one that spawns a single fiducial once, and the other is an active ROS node that accepts custom messages to spawn new fiducials on demand."
+                    "In the ARL we worked with ArUco tags, or Fiducials often. Due to the circumstances of COVID-19, we couldn't use our normal lab environment, which had fiducials taped all over the walls. There was one good example of spawning a fiducial model in Gazebo, <a href=\"https://github.com/nicolov/aruco2_ros/tree/master/aruco2_gazebo_model_example\">here</a>, but it was only an example to spawn a single fiducial.",
+                    "So, I created the Gazebo Fiducial Spawner, a catkinized ROS package with the ability to spawn multiple fiducials into the Gazebo simulator. It does this by generating all the model assets required of any given fiducial model when a request to spawn is made. The user never has to dive into the messy model code, the spawner handles all of it for them. Two utilities are included, one that spawns a single fiducial once, and the other is an active ROS node that accepts custom messages to spawn new fiducials on demand."
                 ]
             },
             {
                 title: "@ChupEverything",
+                github: "https://github.com/NateDimick/chupeverything",
                 image: "./Pictures/colorfulchup.jpg",
                 id: "CET",
                 text: [
@@ -81,12 +88,13 @@ const projects = [
             },
             {
                 title: "Other Projects",
-                image: "./Pictures/metasite.jpg",
+                github: "",
+                image: "./Pictures/metasite.png",
                 id: "OTHER",
                 text: [
-                    "<b>Horizons Office Homepage</b> is a productivity web app designed to automate a summer day camp's paperwork.",
-                    "<b>Home Base</b> is a local web interface to my rasberry pi, for monitoring hosted bots, system hardware, and other useful tools.",
-                    "<b>natedimick.com</b> is this website! I try to keep it up-to-date and add new features regularly."
+                    "<b>Horizons Office Homepage</b> is a productivity web app designed to automate a summer day camp's paperwork, like schedule making and camper group formation.",
+                    "<b>Home Base</b> is a local web interface to my raspberry pi, for monitoring hosted bots, system hardware, and other useful tools.",
+                    "<b>natedimick.com</b> is this website! I use it as a sandbox to play with javascripty ideas that I have. I also try to keep the content up-to-date with regular updates!"
                 ]
             }
         ]
@@ -123,7 +131,7 @@ projects.forEach(section => {
         let textDiv = document.createElement('div');
         textDiv.className = "project-text"
         let pName = document.createElement('h2');
-        pName.textContent = project.title;
+        pName.innerHTML = `<a href="${project.github}">${project.title}</a>`;
         textDiv.appendChild(pName);
         project.text.forEach(paragraph => {
             let para = document.createElement('p');

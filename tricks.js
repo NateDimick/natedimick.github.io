@@ -213,8 +213,8 @@ function titleloop() {
     };
     var maxlen = personaltitles.sort(compareFunction)[0].length;
     if (!nofun) {
-        var ts = document.getElementById('my-titles');
-        ts.innerHTML = personaltitles[randInt(personaltitles.length)];
+        var ts = document.querySelectorAll('.my-titles');
+        ts[randInt(4)].innerHTML = personaltitles[randInt(personaltitles.length)];
         
     };
 };
@@ -338,12 +338,15 @@ function disableFun () {
     if (!nofun) {
         nofun = true;
         document.title = "Nate Dimick's Webpage";
-        document.getElementById('my-titles').innerHTML = "Lifeguard.";
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("time-machine").style.display = "none";
         document.getElementById("hint").style.display = "none";
         document.getElementById("holiday-box").style.display = "none";
         document.getElementsByTagName("html")[0].style.fontFamily = "Arial, Helvetica, sans-serif";
+        let defaultTitles = ["Software Engineer.", "Roboticist.", "Camp Counselor.", "Lifeguard."];
+        Array.from(document.querySelectorAll(".my-titles")).forEach((t, i) => {
+            t.textContent = defaultTitles[i];
+        })
     }
     
 }

@@ -358,7 +358,6 @@ function enableHell () {
         hell = true;
         document.title = "Nate Dimick's Infernal Cave of Secrets";
         document.getElementById("hell").style.display = "inline";
-        document.getElementById('my-titles').innerHTML = "Hellspawn.";
         document.getElementsByTagName("html")[0].style.fontFamily = "hellveticaregular";
         Array.from(document.getElementsByTagName("a")).forEach(e => isInHeader(e) ? null : e.style.color = hc);
         Array.from(document.getElementsByTagName("h1")).forEach(e => isInHeader(e) ? null : e.style.color = hc);
@@ -368,6 +367,10 @@ function enableHell () {
         document.querySelector("#rain").style.backgroundColor = "black";
         document.getElementById('my-picture').src = './Pictures/meF.jpg'; 
         document.getElementById("base").style.backgroundImage = "url(./Pictures/roadinv.png)";
+        let evilTitles = ["Chaotic.", "Miscreant.", "Devious.", "Hellspawn."];
+        Array.from(document.querySelectorAll(".my-titles")).forEach((t, i) => {
+            t.textContent = evilTitles[i];
+        })
     }
     
 }
@@ -388,6 +391,10 @@ function disableHell () {
         document.querySelector("#rain").style.backgroundColor = "whitesmoke";
         document.getElementById('my-picture').src = './Pictures/me.jpg';
         document.getElementById("base").style.backgroundImage = "url(./Pictures/road.jpg)";
+        let defaultTitles = ["Software Engineer.", "Roboticist.", "Camp Counselor.", "Lifeguard."];
+        Array.from(document.querySelectorAll(".my-titles")).forEach((t, i) => {
+            t.textContent = defaultTitles[i];
+        })
     }
     
 }

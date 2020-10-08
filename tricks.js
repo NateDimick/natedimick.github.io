@@ -5,6 +5,7 @@ var nofun = true;
 var onPage = true;
 var hell = false;
 var todayDays = [];
+var prevTitle = -1;
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 };
@@ -214,8 +215,12 @@ function titleloop() {
     var maxlen = personaltitles.sort(compareFunction)[0].length;
     if (!nofun) {
         var ts = document.querySelectorAll('.my-titles');
-        ts[randInt(4)].innerHTML = personaltitles[randInt(personaltitles.length)];
-        
+        let ind = randInt(4);
+        if (ind == prevTitle) { 
+            ind = (ind + 1) % 4;
+        };
+        ts[ind].innerHTML = personaltitles[randInt(personaltitles.length)];
+        prevTitle = ind;
     };
 };
 

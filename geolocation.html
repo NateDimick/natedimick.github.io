@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation Test</title>
+    </head>
+    <body>
+        <script>
+            function getLocation() {
+                let loc = document.getElementById("location");
+                async function successCallback (position) {
+                    let req = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${position.coords.latitude},${position.coords.longitude}`);
+                    let res = await req.json();
+                    res = res.results[0].locations[0];
+                    loc.innerHTML = `lat: ${position.coords.latitude} <br> long: ${position.coords.longitude} <br> acc: ${position.coords.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
+                }
+
+                function errorCallback (message) {
+                    console.log("There was an error with geolocation " + message);
+                }
+
+                let options = {
+                    enableHighAccuracy: true,
+                    timeout: 5000,
+                    maximumAge: 10000
+                }
+
+                let geo = navigator.geolocation;
+                if (geo) {
+                    geo.getCurrentPosition(successCallback, errorCallback, options);
+                } else {
+                    loc.innerHTML = "geolocation either not supported or denied";
+                }
+
+                let loc2 = document.getElementById("location2");
+                async function ipLocation() {
+                    let req = await fetch("https://ipinfo.io/json");
+                    let res = await req.json();
+
+                    let req2 = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${res.loc}`);
+                    let res2 = await req2.json();
+                    res2 = res2.results[0].locations[0];
+                    loc2.innerHTML =  `lat: ${res.loc.split(",")[0]} <br> long: ${res.loc.split(",")[1]} <br> isp: ${res.org} <br> loc: ${res2.street} ${res2.adminArea5}, ${res2.adminArea3} ${res2.postalCode}`;
+                }
+                ipLocation();
+                document.getElementById("the-button").disabled = true;
+                document.getElementById("results").style.display = "block";
+            }
+        </script>
+        <div style="align-content: center;">
+            <h1>
+                Your location
+            </h1>
+            <button onclick="getLocation()" id="the-button">Click for Location</button>
+            <div id="results" style="display: none;">
+                <h2>Result A</h2>
+                <input type="radio" name="loc" id="a">
+                <label for="a" id="location"></label>
+                <br>
+                <h2>Result B</h2>
+                <input type="radio" name="loc" id="b">
+                <label for="b" id="location2"></label>
+            </div>
+            <h2 id="location"></h2>
+            <h2 id="location2"></h2>
+        </div>
+    </body>
+</html>

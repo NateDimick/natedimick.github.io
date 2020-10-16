@@ -8,7 +8,7 @@
             function getLocation() {
                 let loc = document.getElementById("location");
                 async function successCallback (position) {
-                    let req = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${position.coords.latitude},${position.coords.longitude}`);
+                    let req = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${position.coords.latitude},${position.coords.longitude}`);
                     let res = await req.json();
                     res = res.results[0].locations[0];
                     loc.innerHTML = `lat: ${position.coords.latitude} <br> long: ${position.coords.longitude} <br> acc: ${position.coords.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
@@ -36,7 +36,7 @@
                     let req = await fetch("https://ipinfo.io/json");
                     let res = await req.json();
 
-                    let req2 = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${res.loc}`);
+                    let req2 = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${res.loc}`);
                     let res2 = await req2.json();
                     res2 = res2.results[0].locations[0];
                     loc2.innerHTML =  `lat: ${res.loc.split(",")[0]} <br> long: ${res.loc.split(",")[1]} <br> isp: ${res.org} <br> loc: ${res2.street} ${res2.adminArea5}, ${res2.adminArea3} ${res2.postalCode}`;

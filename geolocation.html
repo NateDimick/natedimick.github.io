@@ -5,31 +5,50 @@
     </head>
     <body>
         <script>
-            function getLocation() {
+            function getBrowserLocation (accuracy) {
+                let geo = navigator.geolocation;  // geolocation gets more accurate over time once enabled??? so by placing this line ahead of geo.getCurrentPosition buys time (milliseconds) for the browser to be accurate
+                return new Promise((resolve, reject) => {
+                    function successCallback(position) {
+                        let pos = position.coords;
+                        if (pos.accuracy < accuracy) {
+                            resolve(pos);
+                        } else {
+                            console.log("bad accuracy", pos.accuracy);
+                            resolve(getBrowserLocation(accuracy * 1.5));  // recursive locationing - bad idea or terrible idea???
+                        }
+                    }
+                    function errorCallback(error) {
+                        reject(error.message);
+                    }
+                    const options = {
+                        enableHighAccuracy: true // removed timeout and max age because browsers like Edge are SLOW on geoloaction
+                    }
+                    try {
+                        geo.getCurrentPosition(successCallback, errorCallback, options);
+                    } catch (error) {
+                        reject(error);
+                    }
+                    
+                })
+            } 
+            async function getLocation() {
                 let loc = document.getElementById("location");
-                async function successCallback (position) {
-                    let req = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${position.coords.latitude},${position.coords.longitude}`);
+
+                let browserPosition;
+                try {
+                    browserPosition = await getBrowserLocation(500);
+                } catch (error) {
+                    browserPosition = "Geolocation either diabled or denied. Please allow geolocation";
+                }
+                if (typeof browserPosition !== "string") {
+                    let req = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${browserPosition.latitude},${browserPosition.longitude}`);
                     let res = await req.json();
                     res = res.results[0].locations[0];
-                    loc.innerHTML = `lat: ${position.coords.latitude} <br> long: ${position.coords.longitude} <br> acc: ${position.coords.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
-                }
-
-                function errorCallback (message) {
-                    console.log("There was an error with geolocation " + message);
-                }
-
-                let options = {
-                    enableHighAccuracy: true,
-                    timeout: 5000,
-                    maximumAge: 10000
-                }
-
-                let geo = navigator.geolocation;
-                if (geo) {
-                    geo.getCurrentPosition(successCallback, errorCallback, options);
+                    loc.innerHTML = `lat: ${browserPosition.latitude} <br> long: ${browserPosition.longitude} <br> acc: ${browserPosition.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
                 } else {
-                    loc.innerHTML = "geolocation either not supported or denied";
+                    loc.innerHTML = browserPosition;
                 }
+                
 
                 let loc2 = document.getElementById("location2");
                 async function ipLocation() {

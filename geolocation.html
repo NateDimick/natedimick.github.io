@@ -5,23 +5,23 @@
     </head>
     <body>
         <script>
+            let geo = navigator.geolocation;  // geolocation gets more accurate over time once enabled??? so by placing this line ahead of geo.getCurrentPosition buys time (milliseconds) for the browser to be accurate
+            function errorCallback(error) {
+                reject(error.message);
+            }
+            const options = {
+                enableHighAccuracy: true // removed timeout and max age because browsers like Edge are SLOW on geoloaction
+            }
             function getBrowserLocation (accuracy) {
-                let geo = navigator.geolocation;  // geolocation gets more accurate over time once enabled??? so by placing this line ahead of geo.getCurrentPosition buys time (milliseconds) for the browser to be accurate
                 return new Promise((resolve, reject) => {
                     function successCallback(position) {
                         let pos = position.coords;
                         if (pos.accuracy < accuracy) {
                             resolve(pos);
                         } else {
-                            console.log("bad accuracy", pos.accuracy);
-                            resolve(getBrowserLocation(accuracy * 1.5));  // recursive locationing - bad idea or terrible idea???
+                            console.warn("bad accuracy", pos.accuracy);
+                            resolve(pos);  // recursive locationing - bad idea or terrible idea???
                         }
-                    }
-                    function errorCallback(error) {
-                        reject(error.message);
-                    }
-                    const options = {
-                        enableHighAccuracy: true // removed timeout and max age because browsers like Edge are SLOW on geoloaction
                     }
                     try {
                         geo.getCurrentPosition(successCallback, errorCallback, options);
@@ -31,6 +31,17 @@
                     
                 })
             } 
+            let watchCount = 1
+            function watchLocation () {
+                function watch(position) {
+                    console.log("watching update" + `${watchCount}`);
+                    watchCount += 1;
+                    let l3 = document.getElementById("location3");
+                    l3.innerHTML = `${position.coords.latitude},${position.coords.longitude},${position.coords.accuracy}`;
+                }
+                geo.watchPosition(watch, errorCallback, options);
+                
+            }
             async function getLocation() {
                 let loc = document.getElementById("location");
 
@@ -44,7 +55,7 @@
                     let req = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${browserPosition.latitude},${browserPosition.longitude}`);
                     let res = await req.json();
                     res = res.results[0].locations[0];
-                    loc.innerHTML = `lat: ${browserPosition.latitude} <br> long: ${browserPosition.longitude} <br> acc: ${browserPosition.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
+                    loc.innerHTML = `<a href="https://google.com/maps/search/${browserPosition.latitude},${browserPosition.longitude}">lat: ${browserPosition.latitude} <br> long: ${browserPosition.longitude}</a> <br> acc: ${browserPosition.accuracy} meters <br> loc: ${res.street} ${res.adminArea5}, ${res.adminArea3} ${res.postalCode}`;
                 } else {
                     loc.innerHTML = browserPosition;
                 }
@@ -58,11 +69,12 @@
                     let req2 = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=v4AYOi4EK5CrixkWHmGcPCfeA20X7P8y&location=${res.loc}`);
                     let res2 = await req2.json();
                     res2 = res2.results[0].locations[0];
-                    loc2.innerHTML =  `lat: ${res.loc.split(",")[0]} <br> long: ${res.loc.split(",")[1]} <br> isp: ${res.org} <br> loc: ${res2.street} ${res2.adminArea5}, ${res2.adminArea3} ${res2.postalCode}`;
+                    loc2.innerHTML =  `<a href="https://google.com/maps/search/${res.loc}">lat: ${res.loc.split(",")[0]} <br> long: ${res.loc.split(",")[1]} </a> <br> isp: ${res.org} <br> loc: ${res2.street} ${res2.adminArea5}, ${res2.adminArea3} ${res2.postalCode}`;
                 }
                 ipLocation();
                 document.getElementById("the-button").disabled = true;
                 document.getElementById("results").style.display = "block";
+                watchLocation();
             }
         </script>
         <div style="align-content: center;">
@@ -71,13 +83,16 @@
             </h1>
             <button onclick="getLocation()" id="the-button">Click for Location</button>
             <div id="results" style="display: none;">
-                <h2>Result A</h2>
+                <h2>Result A (browser api)</h2>
                 <input type="radio" name="loc" id="a">
                 <label for="a" id="location"></label>
                 <br>
-                <h2>Result B</h2>
+                <h2>Result B (ipinfo.io)</h2>
                 <input type="radio" name="loc" id="b">
                 <label for="b" id="location2"></label>
+                <h2>Live</h2>
+                <input type="radio" name="loc" id="c">
+                <label for="c" id="location3"></label>
             </div>
             <h2 id="location"></h2>
             <h2 id="location2"></h2>

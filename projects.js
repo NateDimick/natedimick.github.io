@@ -47,7 +47,8 @@ const projects = [
                 text: [
                     "Code for America is a great organization with a mission of ethical hacking and creating software the can assist and empower local communities. The Upper Valley Brigade was fairly new when I joined, and had a few projects in the early stages of development. I lept in to help with RuralNet.",
                     "The core idea of RuralNet is to measure internet speeds in rural Vermont communities to determine if the speeds customers are paying for are the speeds that they are getting, and to input measured speeds to an ArcGIS database and compare against advertised ISP speeds. The goal is to advocate for our rural communities who need reliable, fast broadband connections.",
-                    "This project introduced me to Node.js as back-end framework, which has made contributing to this project both rewarding and a fantastic learning experience."
+                    "This project introduced me to Node.js as back-end framework, which has made contributing to this project both rewarding and a fantastic learning experience.",
+                    "We've got two deployments to check out if you're interested, both are still in very early stages of development - the <a href=\"ruralnet.herokuapp.com\">Master Deploy for CodeforUV</a> and my <a href=\"ruralnetbeta.herokuapp.com\">Testing Deployment</a>"
                 ]
             }
         ]

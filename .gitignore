@@ -2,3 +2,4 @@
 *.zip
 ignore/*
 v2/*
+*.py

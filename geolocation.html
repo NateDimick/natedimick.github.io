@@ -10,7 +10,8 @@
                 reject(error.message);
             }
             const options = {
-                enableHighAccuracy: true // removed timeout and max age because browsers like Edge are SLOW on geoloaction
+                enableHighAccuracy: true, // removed timeout and max age because browsers like Edge are SLOW on geoloaction
+                maximumAge: 3000
             }
             function getBrowserLocation (accuracy) {
                 return new Promise((resolve, reject) => {
@@ -96,6 +97,11 @@
             </div>
             <h2 id="location"></h2>
             <h2 id="location2"></h2>
+        </div>
+        <div>
+            <p>
+                this page serves as a simple demo/ comparison of browser geolocation api vs geolocation via ip lookup. no information is recorded. 
+            </p>
         </div>
     </body>
 </html>

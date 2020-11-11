@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'memoriesregular';
-    src: url('memories-w8xo-webfont.woff2') format('woff2'),
-         url('memories-w8xo-webfont.woff') format('woff');
+    src: url('fonts/memories-w8xo-webfont.woff2') format('woff2'),
+         url('fonts/memories-w8xo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

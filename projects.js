@@ -42,13 +42,13 @@ const projects = [
             {
                 title: "Code for UV RuralNet",
                 github: "https://github.com/codeforUV/ruralnet",
-                image: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/71831776_130992291613081_5766558619302625280_n.png?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=_QQ315JVr4kAX-m4nM7&_nc_ht=scontent-lga3-1.xx&oh=2be1c2f459f5fc14f05ffb17beacaedd&oe=5FA31254",
+                image: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/71831776_130992291613081_5766558619302625280_n.png?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=WX5VZfF29mEAX9Bvskb&_nc_ht=scontent-lga3-1.xx&oh=f4a8e04f2d6b8cbf9a71c21dc82a0622&oe=5FD28854",
                 id: "RLN",
                 text: [
                     "Code for America is a great organization with a mission of ethical hacking and creating software the can assist and empower local communities. The Upper Valley Brigade was fairly new when I joined, and had a few projects in the early stages of development. I lept in to help with RuralNet.",
                     "The core idea of RuralNet is to measure internet speeds in rural Vermont communities to determine if the speeds customers are paying for are the speeds that they are getting, and to input measured speeds to an ArcGIS database and compare against advertised ISP speeds. The goal is to advocate for our rural communities who need reliable, fast broadband connections.",
                     "This project introduced me to Node.js as back-end framework, which has made contributing to this project both rewarding and a fantastic learning experience.",
-                    "We've got two deployments to check out if you're interested, both are still in very early stages of development - the <a href=\"ruralnet.herokuapp.com\">Master Deploy for CodeforUV</a> and my <a href=\"ruralnetbeta.herokuapp.com\">Testing Deployment</a>"
+                    "We've got two deployments to check out if you're interested, both are still in very early stages of development - the <a href=\"https://ruralnet.herokuapp.com\">Master Deploy for CodeforUV</a> and my <a href=\"https://ruralnetbeta.herokuapp.com\">Testing Deployment</a>"
                 ]
             }
         ]
@@ -95,7 +95,8 @@ const projects = [
                 text: [
                     "<b>Horizons Office Homepage</b> is a productivity web app designed to automate a summer day camp's paperwork, like schedule making and camper group formation.",
                     "<b>Home Base</b> is a local web interface to my raspberry pi, for monitoring hosted bots, system hardware, and other useful tools.",
-                    "<b>natedimick.com</b> is this website! I use it as a sandbox to play with javascripty ideas that I have. I also try to keep the content up-to-date with regular updates!"
+                    "<b>natedimick.com</b> is this website! I use it as a sandbox to play with javascripty ideas that I have. I also try to keep the content up-to-date with regular updates!",
+                    "<b>Top 100 Bookmarks</b> is a chromium extension that automatically sorts you bookmarks bar by most visited"
                 ]
             }
         ]

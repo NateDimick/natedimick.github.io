@@ -67,6 +67,17 @@ const projects = [
                 ]
             },
             {
+                title: "Hot Bookmarks Extension",
+                github: "https://github.com/NateDimick/mostusedbookmarks",
+                image: "https://lh3.googleusercontent.com/xmR0dkUDFanO3LBW1CDPbQxnUBk461Ly0uUF4EvjZ5308oBNpXhkTkR52GuKCPvwc4WaFLRg=w640-h400-e365-rj-sc0x00ffffff",
+                id: "HBE",
+                text: [
+                    "Like a lot of the smaller projects I build, they are derived of some <a href=\"#GFS\">need I have</a> or a <a href=\"#CET\">hairbrained idea</a> that I want to make reality (<a href=\"#FHA\">or both</a>). The need I had hee was that I felt that my bookmarks bar could be better organized, perhaps with my most used bookmarks first and ordered by how often I visited each bookmark. So I took off and learned everything I needed to build an extension that was up to my spec.",
+                    "The end result? The extension is <a href=\"https://chrome.google.com/webstore/detail/hot-bookmarks-bar/phblakaaemoplglehiajpfhbadiphnof\">published on the Chrome Web Store</a> and compatible with all Chromium-based browsers! Just because It's published doesn't mean I'm done with it, though. I hope to add a few more features, round the project out and get it to a finished state soon.",
+                    "While I'm very proud of having a published extension, I would like to state that I am not an artist and the media accompanying my extension could use improvement"
+                ]
+            },
+            {
                 title: "Gazebo Fiducial Spawner",
                 github: "https://github.com/NateDimick/gazebo_fiducial_spawner",
                 image: "./Pictures/gazfid.png",
@@ -93,10 +104,9 @@ const projects = [
                 image: "./Pictures/metasite.png",
                 id: "OTHER",
                 text: [
-                    "<b>Horizons Office Homepage</b> is a productivity web app designed to automate a summer day camp's paperwork, like schedule making and camper group formation.",
+                    "<b>Horizons Note Schedule Tool</b> is a productivity web app designed to automate a summer day camp's paperwork related to the schedule notes sent home at the beginning of every session.",
                     "<b>Home Base</b> is a local web interface to my raspberry pi, for monitoring hosted bots, system hardware, and other useful tools.",
-                    "<b>natedimick.com</b> is this website! I use it as a sandbox to play with javascripty ideas that I have. I also try to keep the content up-to-date with regular updates!",
-                    "<b>Top 100 Bookmarks</b> is a chromium extension that automatically sorts you bookmarks bar by most visited"
+                    "<b>natedimick.com</b> is this website! I use it as a sandbox to play with javascripty ideas that I have. I also try to keep the content up-to-date with regular updates!"
                 ]
             }
         ]

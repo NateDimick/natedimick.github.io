@@ -57,13 +57,13 @@ const projects = [
         section: "Solo Projects",
         content: [
             {
-                title: "Fun Holiday API",
+                title: "National API Day",
                 github: "https://github.com/NateDimick/funholidaysapi",
                 image: "./Pictures/holiday.png",
                 id: "FHA",
                 text: [
                     "This one started out selfishly. As part of \"Fun Mode\" on this page (have you <a href=\"#mode-toggle\">tried it</a> yet?) I wanted to display a message that said \"Happy {something} Day!\" becuase every day there are multiple fake, under the radar \"holidays\" and a message like that is my idea of fun. I thought there would have already been an API for this sort of thing, but I couldn't find one, only API's that reported real holidays and API's that cost more per year then I thought was worth it. So I built it myself using Flask and hosted on Heroku. It only took ~24 hours in total to initially build - this included webscraping for data collection with beautifulsoup, compiling all data into a tsv file, putting said data into a PostgreSQL database, building and deploying the app. After about 4 days I had amassed over 7,000 unique holidays, which I believe is the most complete list on the internet. I'm very happy with how it turned out.",
-                    "You can use the Fun Holidays API for free at <a href=\"https://fun-holiday-api.herokuapp.com\">fun-holiday-api.herokuapp.com</a>. Please be nice to it."
+                    "You can use the Fun Holidays API for free at <a href=\"https://national-api-day.herokuapp.com\">national-api-day.herokuapp.com</a>. Please be nice to it."
                 ]
             },
             {

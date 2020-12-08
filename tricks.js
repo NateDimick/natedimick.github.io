@@ -45,7 +45,7 @@ var webtitles = [
     "Go dinosaur or go home!",
     "Nate Pate Tuven",  // @Jackson Packson Tuven
     "The Legend of Nate: A Link to the Source",
-    "Tyler, no! You're susceptable to damage!",
+    "Tyler, no! You're susceptible to damage!",
     "Tastes like Home Depot",
     "Look into the sun with zero fear",  // it's the best time of the year, christmas is here!
     "Hover over the my picture",
@@ -70,12 +70,12 @@ var webtitles = [
     "You are the ocean's gray waves",  // destined to reach life beyond the shore
     "Oh no there's an AFR in the pool",  // don't google afr
     "Open 24 hours 7 days a week",  // come here anytime
-    "Pepperspray? That sounds delicious!",
+    "Pepper spray? That sounds delicious!",
     "PICK A GOD AND PRAY",
     "Drake... Where's the door hole?",
     "Cock-a-doodle-do the cow goes moo!",
     "A unique assortment of inside jokes and media references",
-    "A dollap will do",
+    "A dollop will do",
     "Time to tip the scales",
     "A seven nation army couldn't hold me back",
     "Jet puffed mar-sham-ma-loos",  // @Preston
@@ -110,7 +110,7 @@ var webtitles = [
     "Yeah this is just one page why would there be more?",  // best choice I made. one quality page is all I need
     "Timelord will continue to punish linear conceptions of time",
     "Not the criminal Nate Dimick from upstate New York",  // he soils my good name
-    "There are 120 possible titles and you got the 100th!",
+    "There are 125 possible titles and you got the 100th!",
     "Where's my train? Take me away, choo choo!",
     "Hire me?",
     "REEEEEEE",
@@ -130,7 +130,11 @@ var webtitles = [
     "No title for you",
     "All hail the king of slow",
     "The king of the castle and the dirty rascal",
-    "For Shovelry!"
+    "For Shovelry!",
+    "Nate Dimick: The Person: The Website",  // High School Musical: The Musical: The Series
+    "We're all roughly the same width",
+    "Still hunting for the perfect fried chicken sandwich",
+    "What you just said: that was my nickname in high school"
 ];
 
 var personaltitles = [
@@ -144,7 +148,7 @@ var personaltitles = [
     "Tweeter.",
     "Omnivore.",
     "Brandeisian.",
-    "Power Forward.", // in middel school
+    "Power Forward.", // in middle school
     "Bug Slayer.",  // they have no place in my house. arachnids too. 
     "Raffle Winner.",
     "Mistake Maker.",  // everyone is. admitting is strong.
@@ -153,7 +157,7 @@ var personaltitles = [
     "Hooligan.",
     "Critic.",
     "Inexorable.",
-    "Indominable.",
+    "Indomitable.",
     "Stump Jumper.",  // Urban Dictionary has an unflattering result for this, I swear it's a reference to a joke made by VT-based comedian The Logger 
     "Cheeseburger Fan.",
     "Kayaker.",
@@ -162,7 +166,7 @@ var personaltitles = [
     "Risk Taker.",
     "Zoomer.",
     "Observer.",
-    "Independant.",  // actually, I've been a registered democrat since 2/2020
+    "Independent.",  // actually, I've been a registered democrat since 2/2020
     "Human.",
     "Voter.",
     "Decider.",  // "I am the decider"
@@ -200,7 +204,10 @@ var personaltitles = [
     "Social Distancer.",
     "Dungeon Crawler.",
     "Champion.",
-    "Dodgeballer."
+    "Dodgeballer.",
+    "Explorer.",
+    "Brainstormer.",
+    "Overthinker."
 ];
 
 function randInt(int) {
@@ -385,7 +392,7 @@ function disableHell () {
         let nc = "forestgreen";
         let bc = "white";
         hell = false;
-        document.title = "Nate Dimick's Webpage";
+        document.title = "Nate Dimick";
         document.getElementById("hell").style.display = "none";
         Array.from(document.getElementsByTagName("a")).forEach(e => isInHeader(e) ? null : e.style.color = nc);
         Array.from(document.getElementsByTagName("h1")).forEach(e => isInHeader(e) ? null : e.style.color = nc);

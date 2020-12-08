@@ -110,7 +110,7 @@ var webtitles = [
     "Yeah this is just one page why would there be more?",  // best choice I made. one quality page is all I need
     "Timelord will continue to punish linear conceptions of time",
     "Not the criminal Nate Dimick from upstate New York",  // he soils my good name
-    "There are 125 possible titles and you got the 100th!",
+    "There are 126 possible titles and you got the 100th!",
     "Where's my train? Take me away, choo choo!",
     "Hire me?",
     "REEEEEEE",
@@ -134,7 +134,8 @@ var webtitles = [
     "Nate Dimick: The Person: The Website",  // High School Musical: The Musical: The Series
     "We're all roughly the same width",
     "Still hunting for the perfect fried chicken sandwich",
-    "What you just said: that was my nickname in high school"
+    "What you just said: that was my nickname in high school",
+    "A man, but not a myth nor a legend"
 ];
 
 var personaltitles = [
@@ -272,7 +273,7 @@ function happyDay() {
     let holidayDiv = document.getElementById("holiday");
     let date = new Date();
     //let url = `https://192.168.1.23/api/date?month=${date.getMonth() + 1}&day=${date.getDate()}`;
-    let url = `https://fun-holiday-api.herokuapp.com/api/date?month=${date.getMonth() + 1}&day=${date.getDate()}`;
+    let url = `https://national-api-day.herokuapp.com/api/date?month=${date.getMonth() + 1}&day=${date.getDate()}`;
     fetch(url)
     .then(response => response.json())
     .then(data => {

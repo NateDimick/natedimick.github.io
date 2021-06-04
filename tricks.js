@@ -19,7 +19,7 @@ var webtitles = [
     "This is not the droid you're looking for",
     "No wheat = defeat",
     "No ore? 7 point score.",
-    "That celebrated, cultivated, under-rated nobleman",  // the duke of plaze toro!
+    "That celebrated, cultivated, under-rated nobleman",  // the duke of plaza toro!
     "Have you noticed that there's a different title every time?",
     "JSON > pickle, change my mind",
     "STONKS",
@@ -41,7 +41,7 @@ var webtitles = [
     "You fell for one of the classic blunders!",  // @ Wilson
     "This isn't my world.. DISAPPOINTED!",
     "Yee",
-    "There is no good or evil, only flavor",  // thatnks, @Yetee
+    "There is no good or evil, only flavor",  // thanks, @Yetee
     "Go dinosaur or go home!",
     "Nate Pate Tuven",  // @Jackson Packson Tuven
     "The Legend of Nate: A Link to the Source",
@@ -62,7 +62,7 @@ var webtitles = [
     "The best thing that Aloha means...",
     "What's new pussycat?",  // woah 
     "It's over. I have the high ground!",
-    "You killed my cactus!",  // which was practically industrucable!
+    "You killed my cactus!",  // which was practically indestrucable!
     "Hello? my eyes are down there",
     "Haha most of my javascript is just arrays of strings",  // whatever it takes for github to recognize this as a JS repo and not a HTML repo
     "The Ice Clown from Ice Town",
@@ -105,14 +105,14 @@ var webtitles = [
     "THREE sandwiches!?",
     "Mothman!",
     "You probably need to drink more water",
-    "Leader of the \"Nate needs a job\" task force",
+    //"Leader of the \"Nate needs a job\" task force",
     "Hooray for Horizons",
     "Yeah this is just one page why would there be more?",  // best choice I made. one quality page is all I need
     "Timelord will continue to punish linear conceptions of time",
     "Not the criminal Nate Dimick from upstate New York",  // he soils my good name
-    "There are 126 possible titles and you got the 100th!",
+    "This title was originally the 100th!",
     "Where's my train? Take me away, choo choo!",
-    "Hire me?",
+    //"Hire me?",
     "REEEEEEE",
     "Take my by the hand lead me to the land",
     "This website is only available until March 31st",  // Choose between this site and super mario 3d all stars, I guess
@@ -187,7 +187,7 @@ var personaltitles = [
     "Happy Camper.",  // most of the time
     "Idealist.",  // sadly
     "Debugger.",
-    "Job Searcher.",  // hire me?
+    //"Job Searcher.",  // hire me?
     "Title Maker.",  // evidence submitted
     "Dream Weaver.",  // I believe you can carry me through the niiiight
     "List Writer.",
@@ -197,7 +197,7 @@ var personaltitles = [
     "Navigator.",  // I call shotgun
     "Puzzle Solver.",
     "Riddler.",
-    "WSI.",  // water safety instructor
+    "Former WSI.",  // water safety instructor
     "Grillmaster.",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
     "Reasoner.",
     "Bettor.",  // and i'm surprisingly good at it too

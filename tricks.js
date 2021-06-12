@@ -239,12 +239,12 @@ function rain() {
     // checks on page first - if on page wasn't here, lines would spawn but wouldn't animate when the page is out of focus. it was actually a really cool bug to see a ton of lines go at once, but I didn't like the possible side effects
     if (onPage) {
         const svg = d3.select("#rain");
-        let startHeight = randInt(window.innerHeight * 1.5) - window.innerHeight / 2;  
         let startPosMod = 1 + randInt(2);
+        let startHeight = randInt(window.innerHeight * 1.75) - window.innerHeight / 2;  
         let startX = window.innerWidth / startPosMod;  // lines can start either off the right hand side of the page, or in the middle (spawning is hidden by the content)
         // speed and size variable to make it seem more organic
         let animateTime = 5000 + randInt(10000); 
-        let size = 100 + randInt(1500);  // size should probably scale by window size - long lines are massive on mobile
+        let size = 100 + randInt(window.innerWidth / 4);  // size should probably scale by window size - long lines are massive on mobile
         let color = hell ? "firebrick" : "forestgreen";
         
         // create a line 
@@ -412,6 +412,16 @@ function disableHell () {
     
 }
 function onWindowLoad(){
+    // set up looping functions to run in the background
+    setInterval(rain, 1000);
+    window.onblur = () => {
+        onPage = false;
+    }
+    window.onfocus = () => {
+        onPage = true;
+    }
+    setInterval(titleloop, 3000);
+    
     // set up the business/fun mode buttons
     document.getElementById("business-button").addEventListener("click", function (event) {
         document.querySelectorAll(".button").forEach(button => button.style.backgroundColor = "gainsboro");
@@ -437,20 +447,11 @@ function onWindowLoad(){
         
     
     })
-    // set up looping functions to run in the background
-    setInterval(titleloop, 3000);
-    setInterval(rain, 1000);
     // event listeners
     var mypic = document.getElementById('my-picture');
     mypic.addEventListener("mouseover", myPictureSlideshow);
     var timeButton = document.getElementById("time-button");
     timeButton.addEventListener("click", revealPast);
-    window.onblur = () => {
-        onPage = false;
-    }
-    window.onfocus = () => {
-        onPage = true;
-    }
     happyDay();
     document.querySelector('#new-day').onclick = rerollHoliday;
 };

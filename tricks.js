@@ -135,7 +135,10 @@ var webtitles = [
     "We're all roughly the same width",
     "Still hunting for the perfect fried chicken sandwich",
     "What you just said: that was my nickname in high school",
-    "A man, but not a myth nor a legend"
+    "A man, but not a myth nor a legend",
+    "How do you like that silver?",
+    "Code Monkey very simple man",
+    "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND"
 ];
 
 var personaltitles = [

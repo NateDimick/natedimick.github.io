@@ -1,0 +1,68 @@
+/*
+Style for plain containers, no special class or id based style
+*/
+body {
+    background-color:white;
+    margin: 0%;
+}
+
+footer {
+    z-index: 2;
+    position: relative;
+}
+section, header {
+    /*background-color: white;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1% 0%;
+    z-index: 2;
+    position: relative;
+}
+
+section {
+    width: 75%;
+    margin: 0% 12.5%;
+    padding: 1%;
+}
+
+section h1 {
+    color: forestgreen;
+    border-style: none none solid none;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+
+li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1% 1%;
+    width: 15%;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+footer {
+    width: 75%;
+    margin: 0% 12.5%;
+    padding: 1%; 
+    height: 2%; 
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer li {
+    padding: 1%;
+}

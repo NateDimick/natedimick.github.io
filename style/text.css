@@ -1,0 +1,17 @@
+/*
+Style for text-containing elements
+*/
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, header li, header ol, header ul, header div, button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    align-content: center;
+}
+
+a {
+    text-decoration: none;
+    color:forestgreen;
+}

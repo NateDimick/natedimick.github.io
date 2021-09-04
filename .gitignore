@@ -4,3 +4,4 @@ ignore/*
 v2/*
 *.py
 .vscode/settings.json
+garbage

@@ -5,21 +5,21 @@ const work = [
         link: "https://dekaresearch.com",
         image: "https://findvectorlogo.com/wp-content/uploads/2019/03/deka-research-and-development-corp-vector-logo.png",
         id: "deka",
-        text: "Deka is my current employer and I really enjoy working for them &#"
+        text: "Deka is my current employer and I really enjoy working for them &#128513;"
     },
     {
         name: "Code for UV",
         link: "https://github.com/codeforUV",
         image: "https://codeforuv.org/wp-content/uploads/2019/10/CfAStates.png",
         id: "c4uv",
-        text: "I've volunteered with Code for UV off and on working on their RuralNet project"
+        text: "I've volunteered with Code for UV off and on working on their RuralNet project."
     },
     {
         name: "Brandeis ARL",
         link: "https://github.com/campusrover",
-        image: "",
+        image: "./Pictures/auton.png",
         id: "deis",
-        text: "Worked on autonomous robot projects with ROS"
+        text: "Worked on autonomous robot projects with ROS."
     },
     {
         name: "National Api Day",
@@ -37,10 +37,10 @@ const work = [
     },
     {
         name: "Blazing Bookmarks",
-        link: "",
+        link: "https://chrome.google.com/webstore/detail/hot-bookmarks-bar/phblakaaemoplglehiajpfhbadiphnof",
         image: "https://lh3.googleusercontent.com/xmR0dkUDFanO3LBW1CDPbQxnUBk461Ly0uUF4EvjZ5308oBNpXhkTkR52GuKCPvwc4WaFLRg=w640-h400-e365-rj-sc0x00ffffff",
         id: "bb",
-        text: "Currently called 'Hot Bookmarks Bar' but someday I'll update the title when I work on the extension again."
+        text: "Currently called 'Hot Bookmarks Bar' but someday I'll update the title when I work on the extension again. OMG it has 2 users!"
     }
 ]
 
@@ -70,6 +70,7 @@ work.forEach(project => {
     textDiv.appendChild(pName);
     let para = document.createElement('p');
     para.innerHTML = project.text;
+    para.style.textAlign = "center";
     textDiv.appendChild(para);
     pSection.appendChild(textDiv);
     pSection.id = project.id;

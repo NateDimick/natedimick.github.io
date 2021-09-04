@@ -3,7 +3,7 @@ const work = [
     {
         name: "DEKA",
         link: "https://dekaresearch.com",
-        image: "https://findvectorlogo.com/wp-content/uploads/2019/03/deka-research-and-development-corp-vector-logo.png",
+        image: "https://media.glassdoor.com/sqll/24636/deka-research-squarelogo-1389127173503.png",
         id: "deka",
         text: "Deka is my current employer and I really enjoy working for them &#128513;"
     },
@@ -58,8 +58,8 @@ work.forEach(project => {
     picDiv.className = "project-img"
     let pImg = document.createElement('img');
     pImg.src = project.image;
-    pImg.style.width = "30%";
-    pImg.style.height = "30%";
+    pImg.style.width = "125px";
+    pImg.style.height = "125px";
     picDiv.appendChild(pImg);
     pSection.appendChild(picDiv);
     // the text div comes second

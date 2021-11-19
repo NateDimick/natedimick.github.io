@@ -138,7 +138,8 @@ var webtitles = [
     "A man, but not a myth nor a legend",
     "How do you like that silver?",
     "Code Monkey very simple man",
-    "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND"
+    "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND",
+    "All nightmares start as dreams"
 ];
 
 var personaltitles = [

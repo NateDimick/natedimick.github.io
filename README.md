@@ -1,14 +1,11 @@
 
-# everyone should know how to make a website
+# I wanted a website to call my own
 
-This project is has two guiding principles:
-
-1. learn and become proficiant with front end web technologies, expecially JavaScript
-2. create a personal web portfolio
-
-Why? Somehow, these languages had eveaded me until I persued them on my own accord in October of 2019 (Thanks, Brandeis). So using resources like Codecademy, cd50, W3school, and stackexchange I learned everything that you see on my site. 
+But there I was, a college senior, CS major, and I had never touched a lick of html, css, javascript... none of it. Not sure if this was my fault or my university's fault but let's not throw stones. I was motivated and capable and so I used all the free resouces available to me to start putting together a bio/portfolio site.
 
 ![thanos meme](https://i.imgflip.com/356zn0.png)
+
+This page has evolved a lot since then, and nowadays its less of a portfolio/bio and more of a place to experiment, host some helpful files and other things, and most importantly make sure the domain name I paid for goes to good use. I'm not really selling myself right now, so it can act as more of a pure representation of myself.
 
 So here it is.
 
@@ -22,9 +19,8 @@ Timeline:
 * 1/18/20: natedimick.github.io launches
 * 6/15/20: simplification facelift
 * 8/26/20: page became mobile friendly
+* 9/4/21: refreshed the look and stripped down content
 
 Planned features:
 
-* more Fun Mode JS tricks
-* more portfolio pieces
-* refresh with React/Vue/Angular, maybe
+* None. I like where this website is now. I'll update peridoically and when inspiration strikes.

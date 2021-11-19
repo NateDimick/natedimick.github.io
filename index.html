@@ -2,12 +2,14 @@
 <html>
     <head>
         <title id="title">Nate Dimick</title>
-        <link rel="stylesheet" href="./cloudyv2.css">
-        <link rel="stylesheet" href="./memfont.css">
-        <link rel="stylesheet" href="./hellvetica.css">
+        <link rel="stylesheet" href="./style/containers.css">
+        <link rel="stylesheet" href="./style/text.css">
+        <link rel="stylesheet" href="./style/special.css">
+        <link rel="stylesheet" href="./style/background.css">
+        <link rel="stylesheet" href="./style/memfont.css">
+        <link rel="stylesheet" href="./style/hellvetica.css">
         <link rel="icon" href="./Pictures/icon.png">
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src="tricks.js"></script>
+        
         <meta charset="UTF-8">
         <meta name="description" content="Everything you need to know about Nathaniel (Nate) Dimick - Portfolio and More! (but not too much)">
         <meta name="keywords" content="Nate Nathaniel J. Dimick Website Portfolio Orford Rivendell Brandeis Aloha Horizons Deka">
@@ -15,113 +17,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="BnYoA-aVkFrik3jKktLjn15F5xg37WsT3bz8l_m5g-U" />
     </head>
-    <body>
-        <svg id="rain">
-        </svg>
-        <header>
-            <h1 id="my-name">Nate Dimick</h1>
-            <ol class="descriptors">
-                <li><h2 class="my-titles one">Software Engineer.</h2></li>
-                <li><h2 class="my-titles two">Roboticist.</h2></li>
-                <li><h2 class="my-titles three">Camp Counselor.</h2></li>
-                <li><h2 class="my-titles four">Lifeguard.</h2></li>
-            </ol>
-            <ol class="social-media">
-                <li><a href="https://twitter.com/NateDimick">Twitter</a></li>
-                <li><a href="https://github.com/NateDimick">Github</a></li>
-                <li><a href="https://giphy.com/channel/fourthincommand">Giphy</a></li>
-                <li><a href="https://linkedin.com/in/natedimick">Linkedin</a></li>
-            </ol>
-        </header>
-        <section>
-            <h1>
-                
-            </h1>
-        </section>
-        <section id="holiday-box">
-            <div>
-                <h2 ><a href="https://national-api-day.herokuapp.com" id="holiday"></a></h2>
-                <button style="display: none;" id="new-day">New Holiday!</button>
-            </div>
-        </section>
-        <section class="flip">
-            <div class="project-img">
-                <img src="./Pictures/me.jpg" alt="me" id="my-picture">
-            </div>
-            <div class="project-text">
-                <h1>About Me</h1>
-                <p>
-                    I like to write code that turns silly ideas into fun realities. Those don't pay the bills, though, so I work at a R & D company to turns compassionate ideas into realities that dramatically change lives. 
-                </p>
-                <p>
-                    I grew up in Orford, New Hampshire next to the Connecticut River and attended Rivendell Academy for high school. At Rivendell I got my first taste of robotics with Vex, where I won the 2015 Vermont and New Hampshire Region Championship. During my summers, I worked at Horizons Day Camp as a lifeguard and swimming instructor and loved every single day of it. I received my Bachelor's Degree from Brandeis University in May of 2020. At Brandeis, I played a few club sports and rekindled my relationship with robotics in the Autonomous Robotics Lab. I continued to spend my summers at Horizons as well, where I climbed the ranks and became the youngest Kahuna (Senior counselor in the director's inner advisory circle) in camp history. 
-                </p>
-                <p>
-                    I also like to play video games, go on hikes, play board games, and try new sports. I really enjoy frisbee, basketball and spikeball. 
-                </p>
-            </div>
-        </section>
-        <section>
-            <div id="mode-toggle">  <!-- Stack overflow says font-size: 0 is a good way to remove gaps between objects-->
-                <button id="business-button" class="left-button button">Business Mode</button>
-                <button id="fun-button" class="middle-button button">Fun Mode</button>
-                <button id="hell-button" class="right-button button">Evil Mode</button>
-                <p id="hint"><br>Try to find all of the fun mode changes on the site!<br>(hint: hover over my picture!)</p>
-                <p id="hell"><br>Why would you click that button, even if it's an option?<br>In case it's not painfully obvious, this mode is a huge joke.</p>
-            </div>
-        </section>
-        <section id="portfolio-header">
-            <h1>
-                Portfolio
-            </h1>
-            <p>
-                Keep scrolling to see a selection of some of my best projects, or click one of the links
-            </p>
-            <p>
-                The titles of each project are links to the source code on Github!
-            </p>
-            <p>
-                <strong>Warning!</strong> I am not a talented artist, nor do I consider myself good at naming things.
-            </p>
-            <ol class="nav" id="p-links">
-                <!-- Will be populated with links to projects when rendered-->
-            </ol>
-        </section>
-        <div id="projects">
-            <!-- will be populated with projects when rendered -->
+    <body lang="en">
+        <div id="background">
+            <svg id="canvas">
+
+            </svg>
+            <script type="text/javascript" src="./scripts/background.js"></script>
         </div>
-        <script type="text/javascript" src="projects.js"></script>
-        <section id="wayback-machine">
-            <div id="time-machine">
-                <h1>Time Machine</h1>
-                <button id="time-button">Push to see what this website use to look like</button>
+        <div id="foreground">
+            <header>
+                <h1 id="my-name">Nate Dimick</h1>
+                <h3 id="subtitle"></h3>
+                <ol class="social-media">
+                    <li><a href="https://twitter.com/NateDimick">Twitter</a></li>
+                    <li><a href="https://github.com/NateDimick">Github</a></li>
+                    <li><a href="https://giphy.com/channel/fourthincommand">Giphy</a></li>
+                    <li><a href="https://linkedin.com/in/natedimick">Linkedin</a></li>
+                </ol>
+            </header>
+            <section id="bio" class="flip">
+                <div class="project-img">
+                    <img src="./Pictures/me.jpg" alt="me" id="my-picture">
+                </div>
+                <div class="project-text">
+                    <h1>About Me</h1>
+                    <p>I'm a software engineer. This page is undergoing upgrades. I'll write this section later</p>
+                </div>
+
+            </section>
+            <section id="slider-zone">
+
+            </section>
+            <section>
+                <h1>Things I've Worked On</h1>
+            </section>
+            <div id="work">
+                
+
             </div>
-            <h1 id="vids">Old Videos</h1>
-            <p>
-                2015 NH Wrap-Up Finals @ Pembroke Academy <a href="https://www.youtube.com/watch?v=BRisN3cG82U">Game 1</a>
-            </p>
-            <p>
-                2015 NH-VT Vex Regional Championship Finals @ NHTI <a href="https://www.youtube.com/watch?v=FaivtX--fIk">Game 1</a> <a href="https://www.youtube.com/watch?v=p9OGVos6y8I">Game 2</a> <a href="https://www.youtube.com/watch?v=0JM2hulhctw&t=5s">Game 3</a>
-            </p>
-            <p>
-                2015 Vex Holiday Classic Finals @ Pembroke Academy <a href="https://www.youtube.com/watch?v=4njjiA2V-X0">Game 2</a>
-            </p>
-            <p>
-                Horizons Day Camp Promo <a href="https://www.youtube.com/watch?v=_aQeMbTnXzo">I make a few cameos</a>
-            </p>
-            <p>
-                RoboDIAL 2.0 Paper Presentation <a href="https://www.youtube.com/watch?v=eB0yXORrRjw">Presented by one of my co-authors, Nikhil Krishnaswamy</a>
-            </p>
-        </section>
-        <footer id="base">
-            <ol>
-                <li>Hosted by Github Pages</li>
-                <li><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
-                <li><a href="https://hellveticafont.com/">Evil Mode Font: Hellvetica</a></li>
-                <li>Not Copyright Nate Dimick 2020</li>
-                <li>Last updated 6/11/21</li>
-                <li><a href="umbrellas">My Umbrella Manifesto</a></li>
-            </ol>
-        </footer>
+            <script type="text/javascript" src="./scripts/work.js"></script>
+            <footer>
+                <ol>
+                    <li>Hosted by Github Pages</li>
+                    <li><a href="https://www.fontspace.com/memories-font-f25917">Fun Mode Font: MemoriesRegular</a></li>
+                    <li><a href="https://hellveticafont.com/">Evil Mode Font: Hellvetica</a></li>
+                    <li>Not Copyright Nate Dimick 2021</li>
+                    <li>Last updated 9/4/21</li>
+                    <li><a href="umbrellas">My Umbrella Manifesto</a></li>
+                </ol>
+            </footer>
+        </div>
     </body>
 </html>

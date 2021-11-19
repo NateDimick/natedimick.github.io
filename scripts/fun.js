@@ -1,0 +1,1 @@
+// Script for logic pertaining to the fun mode slider

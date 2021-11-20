@@ -27,3 +27,11 @@ circle {
         transform: rotate(360deg);
     } 
 }
+@keyframes growRot {
+    0% {
+        transform: scale(0) rotate(0deg);
+    }
+    100% {
+        transform: scale(5) rotate(360deg);
+    }
+}

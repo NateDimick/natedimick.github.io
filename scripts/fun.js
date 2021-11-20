@@ -85,6 +85,7 @@ function funMode() {
     document.title = webtitles[randInt(webtitles.length)];
     wholePage.style.setProperty('--NormalFont', 'memoriesregular');
     wholePage.style.setProperty('--HeaderFont', 'memoriesregular');
+    Array.from(document.getElementsByTagName("circle")).forEach(e => e.style.animation = `growRot ${randInt(10) + 5}s normal linear infinite`);
 
 
 }
@@ -96,6 +97,7 @@ function unfunMode() {
     wholePage.style.setProperty('--HeaderFont', 'hellveticaregular');
     changeColors(badColor, badBackground, badCanvas);
     myPicture.src = './Pictures/meF.jpg';
+    Array.from(document.getElementsByTagName("circle")).forEach(e => e.style.animation = `growRot ${randInt(10) + 5}s reverse linear infinite`);
 
 }
 
@@ -108,6 +110,7 @@ function resetMode() {
     wholePage.style.setProperty('--HeaderFont', "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif");
     changeColors(goodColor, goodBackground, goodCanvas);
     myPicture.src = './Pictures/me.jpg';
+    Array.from(document.getElementsByTagName("circle")).forEach(e => e.style.animation = `rot ${randInt(10) + 5}s ${randInt(2) === 1 ? "normal" : "reverse"} linear infinite`);
 
 }
 

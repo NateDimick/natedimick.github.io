@@ -17,6 +17,34 @@ Special class and id based styles
     vertical-align: middle;
 }
 
+#fun-select {
+    -webkit-appearance: none;
+    --SliderColor: forestgreen;
+    width: 25%;
+    height: 10px;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    background: linear-gradient(to right, var(--SliderColor) 0%, var(--SliderColor) 50%, gainsboro 50%, gainsboro 100%);
+    border-radius: 5px;
+}
+
+#fun-select::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: var(--SliderColor);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
+#fun-select::-moz-range-thumb {
+    cursor: pointer;
+    background: var(--SliderColor);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
 .project-text {
     width: 69%;
     display: inline-block;

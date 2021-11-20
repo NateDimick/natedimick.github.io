@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'hellveticaregular';
-    src: url('fonts/hellvetica-webfont.woff2') format('woff2'),
-         url('fonts/hellvetica-webfont.woff') format('woff');
+    src: url('../fonts/hellvetica-webfont.woff2') format('woff2'),
+         url('../fonts/hellvetica-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

@@ -127,78 +127,82 @@ var webtitles = [
     "A man, but not a myth nor a legend",
     "How do you like that silver?",
     "Code Monkey very simple man",
-    "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND"
+    "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND",
+    "All nightmares start as dreams"
 ];
 
 var personaltitles = [
-    "Economist.",  // this is an inside joke  with my senior year roommates
-    "Celtics Fan.",
-    "Steelers Fan.",
-    "Kahuna.",  // silly title, but I love it and it's important to me
-    "Educator.",
-    "Lifeguard.",  // since 2015
-    "Redditor.",
-    "Tweeter.",
-    "Omnivore.",
-    "Brandeisian.",
-    "Power Forward.", // in middle school
-    "Bug Slayer.",  // they have no place in my house. arachnids too. 
-    "Raffle Winner.",
-    "Mistake Maker.",  // everyone is. admitting is strong.
-    "Heavy Sleeper.",  // one time my parents chased a bat into my room, swatted it with a broom, broke said broom, and did not wake me.
-    "Joker.",
-    "Hooligan.",
-    "Critic.",
-    "Inexorable.",
-    "Indomitable.",
-    "Stump Jumper.",  // Urban Dictionary has an unflattering result for this, I swear it's a reference to a joke made by VT-based comedian The Logger 
-    "Cheeseburger Fan.",
-    "Kayaker.",
-    "Canoer.",  // I've got a mean J stroke
-    "Perdedor.",
-    "Risk Taker.",
-    "Zoomer.",
-    "Observer.",
-    "Independent.",  // actually, I've been a registered democrat since 2/2020
-    "Human.",
-    "Voter.",
-    "Decider.",  // "I am the decider"
-    "Rule Follower.",
-    "Commuter.",
-    "Truth Seeker.",  // truth, even unto it's innermost parts
-    "Settler (of Catan).",
-    "Mastermind.",
-    "Tactician.",  // Fire Emblem changed my life
-    "Mug Collector.",
-    "Night Owl.",  // 6am? what's that?
-    "Juggernaut.",
-    "Handyman.",  // clever and great at discovering kludge solutions
-    "Developer.",
-    "Negotiator.",
-    "Tinkerer.",
-    "Happy Camper.",  // most of the time
-    "Idealist.",  // sadly
-    "Debugger.",
+    "Software Engineer",
+    "Roboticist",
+    "Camp Counselor",
+    "Economist",  // this is an inside joke  with my senior year roommates
+    "Celtics Fan",
+    "Steelers Fan",
+    "Kahuna",  // silly title, but I love it and it's important to me
+    "Educator",
+    "Lifeguard",  // since 2015
+    "Redditor",
+    "Tweeter",
+    "Omnivore",
+    "Brandeisian",
+    "Power Forward", // in middle school
+    "Bug Slayer",  // they have no place in my house. arachnids too. 
+    "Raffle Winner",
+    "Mistake Maker",  // everyone is. admitting is strong.
+    "Heavy Sleeper",  // one time my parents chased a bat into my room, swatted it with a broom, broke said broom, and did not wake me.
+    "Joker",
+    "Hooligan",
+    "Critic",
+    "Inexorable Being",
+    "Indomitable Being",
+    "Stump Jumper",  // Urban Dictionary has an unflattering result for this, I swear it's a reference to a joke made by VT-based comedian The Logger 
+    "Cheeseburger Enthusiast",
+    "Kayaker",
+    "Canoer",  // I've got a mean J stroke
+    "Perdedor",
+    "Risk Taker",
+    "Zoomer",
+    "Observer",
+    "Independent Mind",  // actually, I've been a registered democrat since 2/2020
+    "Human",
+    "Voter",
+    "Decider",  // "I am the decider"
+    "Rule Follower",
+    "Commuter",
+    "Truth Seeker",  // truth, even unto it's innermost parts
+    "Settler (of Catan)",
+    "Mastermind",
+    "Tactician",  // Fire Emblem changed my life
+    "Mug Collector",
+    "Night Owl",  // 6am? what's that?
+    "Juggernaut",
+    "Handyman",  // clever and great at discovering kludge solutions
+    "Developer",
+    "Negotiator",
+    "Tinkerer",
+    "Happy Camper",  // most of the time
+    "Idealist",  // sadly
+    "Debugger",
     //"Job Searcher.",  // hire me?
-    "Title Maker.",  // evidence submitted
-    "Dream Weaver.",  // I believe you can carry me through the niiiight
-    "List Writer.",
-    "Competitor.",
-    "Gambler.", // it's not a problem, though
-    "Waxing Poet.",
-    "Navigator.",  // I call shotgun
-    "Puzzle Solver.",
-    "Riddler.",
-    "Former WSI.",  // water safety instructor
-    "Grillmaster.",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
-    "Reasoner.",
-    "Bettor.",  // and i'm surprisingly good at it too
-    "Mask Wearer.",
-    "Social Distancer.",
-    "Dungeon Crawler.",
-    "Champion.",
-    "Dodgeballer.",
-    "Explorer.",
-    "Brainstormer.",
-    "Overthinker."
+    "Title Maker",  // evidence submitted
+    "Dream Weaver",  // I believe you can carry me through the niiiight
+    "List Writer",
+    "Competitor",
+    "Gambler", // it's not a problem, though
+    "Waxing Poet",
+    "Navigator",  // I call shotgun
+    "Puzzle Solver",
+    "Riddler",
+    "Former WSI",  // water safety instructor
+    "Grillmaster",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
+    "Reasoner",
+    "Bettor",  // and i'm surprisingly good at it too
+    "Mask Wearer",
+    "Social Distancer",
+    "Dungeon Crawler",
+    "Champion",
+    "Dodgeballer",
+    "Explorer",
+    "Brainstormer",
+    "Overthinker"
 ];

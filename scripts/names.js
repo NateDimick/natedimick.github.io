@@ -128,7 +128,8 @@ var webtitles = [
     "How do you like that silver?",
     "Code Monkey very simple man",
     "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND",
-    "All nightmares start as dreams"
+    "All nightmares start as dreams",
+    "When are we finally getting rid of daylight savings?"
 ];
 
 var personaltitles = [
@@ -200,9 +201,14 @@ var personaltitles = [
     "Mask Wearer",
     "Social Distancer",
     "Dungeon Crawler",
-    "Champion",
+    "Champion",  // it's true I've been champion of a couple of things
     "Dodgeballer",
     "Explorer",
     "Brainstormer",
-    "Overthinker"
+    "Overthinker",
+    "Map Enthusiast",
+    "Procrastinator",
+    "Pollster",
+    "Hoodie Fanatic",
+    "Fantasy Football Manager"
 ];

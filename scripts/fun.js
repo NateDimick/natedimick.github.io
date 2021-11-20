@@ -83,7 +83,8 @@ document.querySelector('#fun-select').addEventListener('input', (event) => {
 function funMode() {
     fun = true;
     document.title = webtitles[randInt(webtitles.length)];
-    wholePage.style.fontFamily = 'memoriesregular';
+    wholePage.style.setProperty('--NormalFont', 'memoriesregular');
+    wholePage.style.setProperty('--HeaderFont', 'memoriesregular');
 
 
 }
@@ -91,7 +92,8 @@ function funMode() {
 function unfunMode() {
     unfun = true;
     document.title = "Nate Dimick's Infernal Cave of Secrets";
-    wholePage.style.fontFamily = 'hellveticaregular';
+    wholePage.style.setProperty('--NormalFont', 'hellveticaregular');
+    wholePage.style.setProperty('--HeaderFont', 'hellveticaregular');
     changeColors(badColor, badBackground, badCanvas);
     myPicture.src = './Pictures/meF.jpg';
 
@@ -102,7 +104,8 @@ function resetMode() {
     unfun = false;
     document.title = "Nate Dimick";
     rotatingTitle.innerHTML = 'Software Engineer';
-    wholePage.style.fontFamily = 'Arial, helvetica, sans-serif';
+    wholePage.style.setProperty('--NormalFont', 'Arial, helvetica, sans-serif');
+    wholePage.style.setProperty('--HeaderFont', "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif");
     changeColors(goodColor, goodBackground, goodCanvas);
     myPicture.src = './Pictures/me.jpg';
 

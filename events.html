@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event test</title>
+        <script>
+            let myEvent = new Event("nate");
+            
+            function dispatchNate() {
+                console.log("pressed button");
+                document.body.dispatchEvent(myEvent);
+            }
+            window.onload = () => {
+                document.getElementById('nate').onclick = dispatchNate;
+                document.body.addEventListener("nate", () => {
+                alert("NATE");
+            })
+            }
+        </script>
+    </head>
+    <body>
+        <button id='nate'>NATE</button>
+    </body>
+</html>

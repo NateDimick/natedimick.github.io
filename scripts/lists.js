@@ -1,5 +1,5 @@
 // scripts for all the name-based shenanigans on my page
-var webtitles = [
+const webtitles = [
     "Portfolio, Starboardflio",  // this is the best title. it was the first one I came up with too. it's all downhill from here
     "Good Stuff!",  // @Hank
     "RTFM",
@@ -132,7 +132,7 @@ var webtitles = [
     "When are we finally getting rid of daylight savings?"
 ];
 
-var personaltitles = [
+const personaltitles = [
     "Software Engineer",
     "Roboticist",
     "Camp Counselor",
@@ -154,8 +154,8 @@ var personaltitles = [
     "Joker",
     "Hooligan",
     "Critic",
-    "Inexorable Being",
-    "Indomitable Being",
+    // "Inexorable Being",
+    // "Indomitable Being",
     "Stump Jumper",  // Urban Dictionary has an unflattering result for this, I swear it's a reference to a joke made by VT-based comedian The Logger 
     "Cheeseburger Enthusiast",
     "Kayaker",
@@ -212,3 +212,56 @@ var personaltitles = [
     "Hoodie Fanatic",
     "Fantasy Football Manager"
 ];
+
+const facts = [
+    "My current car is a 2012 Prius and I hate it.",
+    "I have no siblings and all my first cousins are 25+ years older than me.",
+    "I don't drink coffee or soda.",
+    "My favorite video game genres are RPGs, Adventure, Strategy, and Platformers.",
+    "When Ben & Jerry's re-released Candy Bar Pie as slices I got way too excited and was super let down by how they tasted nothing like the original limited batch from 2014.",
+    "This website's background is inspired by the title screen for Metroid Prime Trilogy.",
+    "The only episode of Breaking Bad I ever watched was the last one.",
+    "I drove an hour through a snowstorm on St. Patrick's day to get my first driver's license. But the test proctor was at his mother's funeral so I had to come back a few days later.",
+    "On my first day at my first real job, there was an insurrection at the United States Capitol Building.",
+    "I was born dehydrated.",
+    "I've been a certified lifeguard since 2015.",
+    "Arby's, Game informer and Ben & Jerry's all follow me on Twitter. I'm only a customer for one of them though.",
+    "My favorite movie is Hot Rod.",
+    "Multiple people have told me I look like John Mulaney and I've told multiple people that they are wrong.",
+    "I have all 4 wisdom teeth.",
+    "I think laser thermometers are really really cool.",
+    "The only thing I can bring myself to order and Molly's in Hanover NH is their Chicken Carbonara",
+    "I was banned on Twitter for 6 months in 2018 for lying about my age in 2011.",
+    "If my high school didn't use the \"Olympic System\", then I would have been the Salutatorian.",
+    "I won the civil war Jeopardy tournament in fifth grade and the prize was bragging rights. So there.",
+    "My greatest video game achievement is beating Pikmin 3 100% in one day.",
+    "I was both the first former camper and the youngest person to ever join the director's leadership team at my summer camp.",
+    "I am 6' 2\" tall.",
+    "I got an invitation to apply to St. Paul's School summer program but they addressed it to \"Hate Dimick\". I did not apply.",
+    "I did a polar plunge once.",
+    "I don't use TikTok or Instagram and I never used Vine.",
+    "Someday I want a lake house.",
+    "My favorite cut of steak is filet mignon, but I also love the deckle on a ribeye.",
+    "I really want to learn Go (the programming language) but never have the time or project for it.",
+    "I really don't like to rewatch movies or replay video games.",
+    "My favorite song is Everlong.",
+    "I've never been arrested or ticketed.",
+    "Lemonade is good but Arnie Palmies and strawberry lemonade are better.",
+    "I'm pretty bad at lying."
+]
+
+function setFacts() {
+    const parent = document.querySelector('#bio-body');
+    const fact_ids = new Set();
+    while (fact_ids.size < 5) {
+        fact_ids.add(randInt(facts.length));
+    }
+    let n = 1;
+    fact_ids.forEach(i => {
+        const p = document.createElement('p')
+        p.innerHTML = `${n++}. ${facts[i]}`;
+        parent.appendChild(p);
+    })
+}
+
+setFacts();

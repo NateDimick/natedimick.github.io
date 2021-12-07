@@ -170,7 +170,7 @@ const personaltitles = [
     "Decider",  // "I am the decider"
     "Rule Follower",
     "Commuter",
-    "Truth Seeker",  // truth, even unto it's innermost parts
+    "Truther",  // I ain't calling you a truther
     "Settler (of Catan)",
     "Mastermind",
     "Tactician",  // Fire Emblem changed my life
@@ -196,7 +196,6 @@ const personaltitles = [
     "Riddler",
     "Former WSI",  // water safety instructor
     "Grillmaster",  // I'm not actually a grillmaster, but I think it's an awesome title. Someday though
-    "Reasoner",
     "Bettor",  // and i'm surprisingly good at it too
     "Mask Wearer",
     "Social Distancer",
@@ -210,7 +209,8 @@ const personaltitles = [
     "Procrastinator",
     "Pollster",
     "Hoodie Fanatic",
-    "Fantasy Football Manager"
+    "Fantasy Football Manager",
+    "Introvert"
 ];
 
 const facts = [
@@ -247,7 +247,9 @@ const facts = [
     "My favorite song is Everlong.",
     "I've never been arrested or ticketed.",
     "Lemonade is good but Arnie Palmies and strawberry lemonade are better.",
-    "I'm pretty bad at lying."
+    "I'm pretty bad at lying.",
+    "If I notice a 4 or 5 digit license plate, I feel the urge to point it out.",
+    "I've lost more money investing in Draftkings than betting in Draftkings."
 ]
 
 function setFacts() {

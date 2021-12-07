@@ -56,7 +56,9 @@ async function myPictureSlideshow(){
 
 function titleLoop() {
     if (fun) {
-        rotatingTitle.innerHTML = personaltitles[randInt(personaltitles.length)]; 
+        const title = personaltitles[randInt(personaltitles.length)];
+        const article = "a" + ( ['a', 'e', 'i', 'o', 'u'].find(i => i === title[0].toLowerCase()) ? "n" : "");
+        rotatingTitle.innerHTML = `${article} ${title}`; 
     };
 };
 
@@ -105,7 +107,7 @@ function resetMode() {
     fun = false;
     unfun = false;
     document.title = "Nate Dimick";
-    rotatingTitle.innerHTML = 'Software Engineer';
+    rotatingTitle.innerHTML = 'a Software Engineer';
     wholePage.style.setProperty('--NormalFont', 'Arial, helvetica, sans-serif');
     wholePage.style.setProperty('--HeaderFont', "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif");
     changeColors(goodColor, goodBackground, goodCanvas);

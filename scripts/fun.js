@@ -58,24 +58,33 @@ function titleLoop() {
     if (fun) {
         const title = personaltitles[randInt(personaltitles.length)];
         const article = "a" + ( ['a', 'e', 'i', 'o', 'u'].find(i => i === title[0].toLowerCase()) ? "n" : "");
-        rotatingTitle.innerHTML = `${article} ${title}`; 
+        rotatingTitle.innerHTML = `${article} ${title}`;
+        document.querySelector('#rotating-title-s12n').innerHTML = convertParagraph(`${article} ${title}`); 
     };
 };
+
+function S12nModeOn() {
+    const s12nElement = document.querySelectorAll(".s12n")[0]
+    return s12nElement.style.display !== "none";
+}
 
 
 setInterval(titleLoop, 3000);
 myPicture.addEventListener("mouseover", myPictureSlideshow);
 
-document.querySelector('#fun-select').addEventListener('input', (event) => {
+modeSlider.addEventListener('input', (event) => {
     const percent = (event.target.value - 1) / 2 * 100;
     modeSlider.style.background = `linear-gradient(to right, forestgreen 0%, forestgreen ${percent}%, gainsboro ${percent}%, gainsboro 100%)`;
     document.querySelector('#fun-level').innerHTML = `Current Level: ${levels[event.target.value]}`;
+    document.querySelector('#fun-level-s12n').innerHTML = convertParagraph(`Current Level: ${levels[event.target.value]}`)
 
     if (percent === 0) {
+        resetMode()
         unfunMode();
     } else if (percent === 50) {
         resetMode();
     } else if (percent === 100) {
+        resetMode()
         funMode();
     } else {
         console.log("bad percent");
@@ -108,6 +117,7 @@ function resetMode() {
     unfun = false;
     document.title = "Nate Dimick";
     rotatingTitle.innerHTML = 'a Software Engineer';
+    document.querySelector('#rotating-title-s12n').innerHTML = convertParagraph('a Software Engineer');
     wholePage.style.setProperty('--NormalFont', 'Arial, helvetica, sans-serif');
     wholePage.style.setProperty('--HeaderFont', "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif");
     changeColors(goodColor, goodBackground, goodCanvas);

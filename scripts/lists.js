@@ -129,7 +129,9 @@ const webtitles = [
     "Code Monkey very simple man",
     "This isn't Nate Dimick, this is a website! I THREW IT ON THE GROUND",
     "All nightmares start as dreams",
-    "When are we finally getting rid of daylight savings?"
+    "When are we finally getting rid of daylight savings?",
+    "It'll play",
+    "W2t t1e f2k is s12n m2e?"
 ];
 
 const personaltitles = [

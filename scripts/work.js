@@ -5,7 +5,7 @@ const work = [
         link: "https://dekaresearch.com",
         image: "https://media.glassdoor.com/sqll/24636/deka-research-squarelogo-1389127173503.png",
         id: "deka",
-        text: "Deka is my current employer and I really enjoy working for them &#128513;"
+        text: "Deka is my current employer and I really enjoy working with them &#128513;"
     },
     {
         name: "Code for UV",
@@ -33,7 +33,14 @@ const work = [
         link: "https://twitter.com/ChupEverything",
         image: "./Pictures/colorfulchup.jpg",
         id: "chup",
-        text: "My best twitter bot, conjuring up bad competitors to mayochup. It's been shut down for a while though."
+        text: "My best twitter bot, conjuring up bad competitors to mayochup. It's back! Tweeting every 7 hours on the half hour."
+    },
+    {
+        name: "Daily Hockey Digest",
+        link: "/hockey",
+        image: "./Pictures/hockemail.png",
+        id: "dhd",
+        text: "An automated script to send me stats to my email inbox about NHL games that day. Helpful for my hockey betting strategy."
     },
     {
         name: "Blazing Bookmarks",

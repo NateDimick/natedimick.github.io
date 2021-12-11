@@ -1,0 +1,41 @@
+.s12n {
+    display: none;
+}
+
+label {
+	display: inline;
+}
+
+#s12n-toggle {
+	display: none;
+}
+
+#s12n-toggle + label {
+	background-color: gainsboro;
+	border: 1% solid forestgreen;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 20px;
+	border-radius: 25%;
+	display: inline-block;
+	position: relative;
+}
+
+#s12n-toggle + label:active, #s12n-toggle:checked + label:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+#s12n-toggle:checked + label {
+	background-color: forestgreen;
+	border: 1% solid gainsboro;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: gainsboro;
+}
+
+#s12n-toggle:checked + label:after {
+	content: '\2714';
+	font-size: inherit;
+	position:absolute;
+	top: 10px;
+    left: 14px;
+	color: gainsboro;
+}

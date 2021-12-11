@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./style/background.css">
         <link rel="stylesheet" href="./style/memfont.css">
         <link rel="stylesheet" href="./style/hellvetica.css">
+        <link rel="stylesheet" href="./style/s12n.css">
         <link rel="icon" href="./Pictures/icon.png">
         
         <meta charset="UTF-8">
@@ -16,12 +17,11 @@
         <meta name=”robots” content="index, follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="BnYoA-aVkFrik3jKktLjn15F5xg37WsT3bz8l_m5g-U" />
+        <script src="./scripts/s12n.js"></script>
     </head>
     <body lang="en">
         <div id="background">
-            <svg id="canvas">
-
-            </svg>
+            <svg id="canvas"></svg>
             <script type="text/javascript" src="./scripts/background.js"></script>
         </div>
         <div id="foreground">
@@ -52,12 +52,17 @@
                 <script src="./scripts/fun.js"></script>
             </section>
             <section>
+                <h1 class="s12n">S12n M2e</h1>
+                <h1 class="not-s12n">S12n Mode</h1>
+                <div style="text-align: center;">
+                    <input type="checkbox" name="s12n" id="s12n-toggle"><label for="s12n-toggle"></label>
+                    <a href="https://en.wikipedia.org/wiki/Numeronym" class="s12n">W2t t1e f2k is S12n?</a>
+                </div>
+            </section>
+            <section>
                 <h1>Things I've Worked On</h1>
             </section>
-            <div id="work">
-                
-
-            </div>
+            <div id="work"></div>
             <script type="text/javascript" src="./scripts/work.js"></script>
             <footer>
                 <ol>

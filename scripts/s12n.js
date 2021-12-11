@@ -20,7 +20,7 @@ function convert(regularString) {
     }
     word = word.replaceAll(/['-]/g, "");
     //console.log(leadingPunc, word, trailingPunc);
-    if (word.length > 2) {
+    if (word.length > 3) {
         return `${leadingPunc}${word.charAt(0)}${word.length-2}${word.charAt(word.length -1)}${trailingPunc}`;
     } else {
         return regularString;
@@ -29,7 +29,7 @@ function convert(regularString) {
 
 function convertParagraph(paragraph) {
     const rewrittenParagraph = []
-    paragraph.split(" ").forEach(word => {
+    paragraph.split(/\s+/).forEach(word => {
         rewrittenParagraph.push(convert(word));
     });
     return rewrittenParagraph.join(" ");

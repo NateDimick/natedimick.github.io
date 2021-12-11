@@ -6,16 +6,19 @@
 
 function convert(regularString) {
     // split into 3 parts, leading punc, word, trailing punc
-    if (regularString.match(/[0-9\/]*/)[0] === regularString) {
+    if (regularString.match(/[0-9\/.]*/)[0] === regularString) {
         return regularString; // ignore numbers and dates
     }
-    const leadingPuncRegexp = /^[^a-zA-z]*/;
-    const trailingPuncRegexp = /[^a-zA-Z]*$/;
+    const leadingPuncRegexp = /^[^a-zA-z0-9]*/;
+    const trailingPuncRegexp = /[^a-zA-Z0-9]*$/;
     let leadingPunc = regularString.match(leadingPuncRegexp)[0];
     let trailingPunc = regularString.match(trailingPuncRegexp)[0];
     //console.log(leadingPunc.length, trailingPunc.length);
     let word = regularString.substring(leadingPunc.length, regularString.length - trailingPunc.length);
-    word.replaceAll(/['-]/g, "");
+    if (word.match(/[0-9\/.]*/)[0] === word) {
+        return regularString; // ignore numbers and dates
+    }
+    word = word.replaceAll(/['-]/g, "");
     //console.log(leadingPunc, word, trailingPunc);
     if (word.length > 2) {
         return `${leadingPunc}${word.charAt(0)}${word.length-2}${word.charAt(word.length -1)}${trailingPunc}`;
@@ -38,9 +41,7 @@ function convertNode2(node) {
         if (!node.classList.contains("s12n") 
             && !node.classList.contains("not-s12n") 
             && !node.classList.contains("s12n-protected") 
-            && node.textContent !== "") {
-            // console.log(node.textContent);
-            // console.log(node.tagName);
+            && node.textContent.trim() !== "") {
             let s12nCopy = node.cloneNode();
             s12nCopy.textContent = convertParagraph(node.textContent);
             s12nCopy.classList.add("s12n");
@@ -85,17 +86,10 @@ function hasMixedChildNodes(node) {
     Array.from(node.childNodes).forEach(n => {
         if (n.nodeType == 1) {
             elementChildren = true;
-        } else if (n.nodeType === 3) {
-            const match = n.textContent.match(/\s+/);
-            if (match) {
-                if (match[0] !== n.textContent) {
-                    nonEmptyTextChildren = true;
-                }
-            }
-            
+        } else if (n.nodeType === 3 && n.textContent.trim() !== "") {
+            nonEmptyTextChildren = true;
         }
     })
-
     return elementChildren && nonEmptyTextChildren;
 }
 

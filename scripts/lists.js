@@ -131,7 +131,15 @@ const webtitles = [
     "All nightmares start as dreams",
     "When are we finally getting rid of daylight savings?",
     "It'll play",
-    "W2t t1e f2k is s12n m2e?"
+    "W2t t1e f2k is s12n m2e?",
+    "Rocco's just a rock! Rocco's not alive!", 
+    "My whole life is thunder",
+    "I'll never forget you, Rural Juror",
+    "King Bappalappashappalappadingdong",
+    "My bones never hardened, but my spirit did!",
+    "Bingo knows everyone's name-o",
+    "It's faster if you drive!",
+    "Do you want to pretend to be Ringo?"
 ];
 
 const personaltitles = [

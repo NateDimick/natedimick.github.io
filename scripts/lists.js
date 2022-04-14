@@ -139,7 +139,9 @@ const webtitles = [
     "My bones never hardened, but my spirit did!",
     "Bingo knows everyone's name-o",
     "It's faster if you drive!",
-    "Do you want to pretend to be Ringo?"
+    "Do you want to pretend to be Ringo?",
+    "They think I'm in the shadows - but I am the shadows",
+    "Unload the toad, unclog the frog"
 ];
 
 const personaltitles = [

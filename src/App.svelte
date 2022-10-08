@@ -7,6 +7,7 @@ import Pizza from "./pages/Pizza.svelte"
 import Umbrella from "./pages/Umbrella.svelte"
 import Router from "svelte-spa-router"
 import ZoomWithMe from "./pages/ZoomWithMe.svelte";
+    import Title from "./misc/Title.svelte";
 
 const routes = {
 	"/": Home,
@@ -18,6 +19,7 @@ const routes = {
 </script>
 
 <main>
+	<Title/>
 	<Font>
 		<Background slot="bg"/>
 		<Router {routes} slot="router"/>

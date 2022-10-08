@@ -20,6 +20,21 @@ function mouseoverImage() {
 function focusImage() {
     console.log("focus event on a picture of Nate")
 }
+
+$: {
+    let currentLevel: FunState = $funStateStore
+    switch (currentLevel) {
+        case FunState.Fun:
+            currentImage = allImages[currentIndex]
+            break
+        case FunState.Normal:
+            currentImage = allImages[0]
+            break
+        case FunState.Unfun:
+            currentImage = "./Pictures/meF.jpg"
+            break
+    }
+}
 </script>
 
 <img src="{currentImage}" alt="me" on:mouseover={mouseoverImage} on:focus={focusImage}>

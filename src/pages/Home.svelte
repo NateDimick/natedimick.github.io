@@ -63,4 +63,13 @@ section {
     -o-transform: rotate(-180deg);
     transform: rotate(-180deg);
 }
+@media (max-aspect-ratio: 1/1) {
+    /*
+    css changes for tall displays (e.g. phones) 
+    */
+    section {
+        width: 90%;
+        margin: 0% 5%;
+    }
+}
 </style>

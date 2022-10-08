@@ -16,7 +16,7 @@ onMount(() => {
 </script>
 
 <footer>
-    <ul>
+    <ol>
         {#each items as f }
             {#if f.isLink}
                 <li><a href="{f.url}">{f.text}</a></li>
@@ -24,7 +24,7 @@ onMount(() => {
                 <li>{f.text}</li>
             {/if}
         {/each}
-    </ul>
+    </ol>
 </footer>
 
 <style>
@@ -37,8 +37,13 @@ footer {
     height: 2%; 
     background-color: rgba(255, 255, 255, 0.5);
 }
-ul {
+ol {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0%;
 }
 li {
     padding: 1%;
@@ -46,5 +51,14 @@ li {
     vertical-align: middle;
     margin: 1% 1%;
     width: 15%;
+}
+@media (max-aspect-ratio: 1/1) {
+    /*
+    css changes for tall displays (e.g. phones) 
+    */
+    li {
+        width: 40%;
+        margin: 1%;
+    }
 }
 </style>

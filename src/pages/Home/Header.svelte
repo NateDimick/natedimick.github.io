@@ -50,4 +50,13 @@ a {
 h1 {
     text-align: center;
 }
+@media (max-aspect-ratio: 1/1) {
+    /*
+    css changes for tall displays (e.g. phones) 
+    */
+    li {
+        width: 40%;
+        margin: 1%;
+    }
+}
 </style>

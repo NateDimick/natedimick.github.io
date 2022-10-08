@@ -39,4 +39,26 @@ h1 {
     border-style: none none solid none;
     text-align: center;
 }
+@media (max-aspect-ratio: 1/1) {
+    /*
+    css changes for tall displays (e.g. phones) 
+    */
+    .project-text, .project-img {
+        width: 99%;
+    }
+    .flip {
+        -webkit-transform:  rotate(0deg);
+        -moz-transform:  rotate(0deg);
+        -ms-transform:  rotate(0deg);
+        -o-transform:  rotate(0deg);
+        transform:  rotate(0deg);
+    }    
+    .flip > div {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
 </style>

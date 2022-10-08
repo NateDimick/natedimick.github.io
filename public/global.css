@@ -1,9 +1,8 @@
 html {
     --NormalFont: Arial, Helvetica, sans-serif;
-    --HeaderFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --NormalHeaderFont: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	--FunFont: 'memoriesregular';
 	--UnFunFont: 'hellveticaregular';
-    font-family: var(--NormalFont);
 }
 
 html, body {

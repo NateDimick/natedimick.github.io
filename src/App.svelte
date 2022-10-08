@@ -1,5 +1,6 @@
 <script lang="ts">
 import Background from "./misc/Background.svelte"
+import Font from "./misc/Font.svelte"
 import Hockey from "./pages/Hockey.svelte"
 import Home from "./pages/Home.svelte"
 import Pizza from "./pages/Pizza.svelte"
@@ -17,8 +18,11 @@ const routes = {
 </script>
 
 <main>
-	<Background/>
-	<Router {routes}/>
+	<Font>
+		<Background slot="bg"/>
+		<Router {routes} slot="router"/>
+	</Font>
+	
 </main>
 
 <style>

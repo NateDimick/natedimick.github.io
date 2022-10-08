@@ -1,7 +1,10 @@
-
 *.zip
 ignore/*
 v2/*
 *.py
 .vscode/settings.json
 garbage
+/node_modules/
+/public/build/
+.DS_Store
+.vscode

@@ -12,8 +12,8 @@ import S12n from './Home/S12n.svelte';
     <Header/>
     <section>
         <About/>
-        <!-- <FunSlider/>
-        <S12n/> -->
+        <FunSlider/>
+        <!-- <S12n/> -->
         <Projects/>
     </section>
     <Footer/>

@@ -10,11 +10,9 @@ onMount(() => {
     fetch("/json/facts.json")
     .then(resp => resp.json())
     .then(json => {
-        console.log("generate 5 random index number")
         while (factIds.size < 5) {
             factIds.add(randInt(json.length));
         }
-        console.log("get 5 random facts")
         json.forEach((f, i) => { if (factIds.has(i)) {facts = [...facts, f]}})
     })
 })

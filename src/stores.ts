@@ -1,9 +1,9 @@
 import { writable } from "svelte/store";
 
 export enum FunState {
-    Normal,
-    Fun,
-    Unfun
+    Unfun = "UnFun",
+    Normal = "Standard",
+    Fun = "Fun"
 }
 
 export const funStateStore = writable(FunState.Normal)

@@ -1,6 +1,6 @@
 <script lang="ts">
 import { onMount } from "svelte/internal";
-import { funStateStore } from "../../stores"
+import { FunState, funStateStore } from "../../stores"
 
 let currentImage: string
 let currentIndex: number = 0
@@ -11,7 +11,7 @@ onMount(() => {
 })
 
 function mouseoverImage() {
-    if ($funStateStore) {
+    if ($funStateStore === FunState.Fun) {
         currentIndex++
         currentImage = allImages[currentIndex % allImages.length]
     }

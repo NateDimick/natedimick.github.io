@@ -38,11 +38,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-<<<<<<< HEAD
-      - run: npm ci
-=======
       - run: npm install
->>>>>>> 43813ce7651249306d6273efc90ed6247449fed4
       - run: npm run build --if-present
       - name: Setup Pages
         uses: actions/configure-pages@v2
@@ -53,8 +49,4 @@ jobs:
           path: './public'
       - name: Deploy to GitHub Pages
         id: deployment
-<<<<<<< HEAD
         uses: actions/deploy-pages@v1
-=======
-        uses: actions/deploy-pages@v1
->>>>>>> 43813ce7651249306d6273efc90ed6247449fed4

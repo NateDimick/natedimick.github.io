@@ -20,6 +20,7 @@ Timeline:
 * 6/15/20: simplification facelift
 * 8/26/20: page became mobile friendly
 * 9/4/21: refreshed the look and stripped down content
+* 10/7/22: converted to Svelte SPA
 
 Planned features:
 

@@ -7,7 +7,7 @@ type LinkSpec = {
 }
 let links: LinkSpec[] = []
 onMount(() => {
-    fetch("/social.json")
+    fetch("/json/social.json")
     .then(resp => resp.json())
     .then(json => json.forEach(l => links = [...links, {name: l[0], url: l[1]}]))
 })

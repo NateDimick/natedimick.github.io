@@ -9,7 +9,7 @@ type FooterItemSpec = {
 let items: FooterItemSpec[] = []
 
 onMount(() => {
-    fetch("/footer.json")
+    fetch("/json/footer.json")
     .then(resp => resp.json())
     .then(json => json.forEach(f => items = [...items, {isLink: f[0], text: f[1], url: f[2]}]))
 })

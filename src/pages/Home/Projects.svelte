@@ -11,7 +11,7 @@ type ProjectSpec = {
 let projects: ProjectSpec[] = []
 
 onMount(() => {
-    fetch("/projects.json").then(resp => resp.json()).then(json => projects = json)
+    fetch("/json/projects.json").then(resp => resp.json()).then(json => projects = json)
 })
 </script>
 

@@ -7,7 +7,7 @@ let currentIndex: number = 0
 let allImages: string[] = []
 
 onMount(() => {
-    fetch("/portraits.json").then(resp => resp.json()).then(json => {allImages = json; currentImage = json[0]})
+    fetch("/json/portraits.json").then(resp => resp.json()).then(json => {allImages = json; currentImage = json[0]})
 })
 
 function mouseoverImage() {

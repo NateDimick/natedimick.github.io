@@ -7,7 +7,7 @@ let facts: string[] = []
 
 onMount(() => {
     let factIds: Set<number> = new Set()
-    fetch("/facts.json")
+    fetch("/json/facts.json")
     .then(resp => resp.json())
     .then(json => {
         console.log("generate 5 random index number")

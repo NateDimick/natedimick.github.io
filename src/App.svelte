@@ -37,5 +37,31 @@ main {
 }
 :global(h1) {
 	font-family: var(--HeaderFont);
+	color:forestgreen;
+    border-style: none none solid none;
 }
+:global(section) {
+	width: 75%;
+    margin: 0% auto;
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1% 0%;
+    z-index: 2;
+    position: relative;
+}
+:global(ol) {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0%;
+}
+:global(li) {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1%;
+    margin: 1% 1%;
+    width: 15%;
+}  
 </style>

@@ -16,14 +16,14 @@ onMount(() => {
 </script>
 
 <div>
-    <h1 id="ptitle">Things I've Worked On</h1>
+    <h1>Things I've Worked On</h1>
     {#each projects as p, i}
         <div class="{i % 2 == 1 ? 'flip': ''}" id="wrapper">
             <div class="project-img">
                 <img src="{p.image}" alt="{p.id}">
             </div>
             <div class="project-text">
-                <h1><a href="{p.link}">{p.name}</a></h1>
+                <h1 class="innerH1"><a href="{p.link}">{p.name}</a></h1>
                 <p>{@html p.text}</p>`
             </div>
         </div>
@@ -31,8 +31,9 @@ onMount(() => {
 </div>
 
 <style>
-h1 {
+.innerH1 {
     color: forestgreen;
+    border-style: none;
     text-align: center;
 }
 div {
@@ -44,9 +45,6 @@ img {
 }
 #wrapper {
     padding: 1%;
-}
-#ptitle {
-    border-style: none none solid none;
 }
 @media (max-aspect-ratio: 1/1) {
     /*

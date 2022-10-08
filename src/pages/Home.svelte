@@ -20,15 +20,6 @@ import S12n from './Home/S12n.svelte';
 </div>
 
 <style>
-section {
-    width: 75%;
-    margin: 0% auto;
-    padding: 1%;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 1% 0%;
-    z-index: 2;
-    position: relative;
-}
 :global(img) {
     width: 80%;
     height: 80%;

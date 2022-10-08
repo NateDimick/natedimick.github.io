@@ -29,26 +29,19 @@ header {
     z-index: 2;
     position: relative;
 }
-ol {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0%;
-}
 li {
-    display: inline-block;
-    vertical-align: middle;
     margin: 0% 1%;
     width: 4%;
-}   
+    padding: 0%;
+}  
 a {
     color: black;
     text-decoration: none;
 }
 h1 {
     text-align: center;
+    border-style: none;
+    color: black;
 }
 @media (max-aspect-ratio: 1/1) {
     /*

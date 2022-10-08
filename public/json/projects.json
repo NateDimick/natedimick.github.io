@@ -14,11 +14,11 @@
         "text": "I've volunteered with Code for UV off and on working on their RuralNet project."
     },
     {
-        "name": "Brandeis ARL",
-        "link": "https://github.com/campusrover",
-        "image": "./Pictures/auton.png",
-        "id": "deis",
-        "text": "Worked on autonomous robot projects with ROS."
+        "name": "Sliggooey",
+        "link": "https://github.com/NateDimick/Sliggooey",
+        "image": "./Pictures/staten_island_slowkings.png",
+        "id": "pkmn",
+        "text": "A custom client for Pokemon Showdown"
     },
     {
         "name": "National Api Day",
@@ -35,11 +35,11 @@
         "text": "My best twitter bot, conjuring up bad competitors to mayochup. It's back! Tweeting every 7 hours on the half hour."
     },
     {
-        "name": "Daily Hockey Digest",
-        "link": "/#/hockey",
-        "image": "./Pictures/hockemail.png",
-        "id": "dhd",
-        "text": "An automated script to send me stats to my email inbox about NHL games that day. Helpful for my hockey betting strategy."
+        "name": "Thanos Tabs",
+        "link": "https://github.com/NateDimick/thanos-tabs",
+        "image": "./Pictures/staten_island_slowkings.png",
+        "id": "tt",
+        "text": "Thanos Tabs randomly deletes half of your open tabs. Great for clearing clutter!"
     },
     {
         "name": "Blazing Bookmarks",
@@ -47,5 +47,12 @@
         "image": "https://lh3.googleusercontent.com/xmR0dkUDFanO3LBW1CDPbQxnUBk461Ly0uUF4EvjZ5308oBNpXhkTkR52GuKCPvwc4WaFLRg=w640-h400-e365-rj-sc0x00ffffff",
         "id": "bb",
         "text": "Currently called 'Hot Bookmarks Bar' but someday I'll update the title when I work on the extension again. OMG it has 2 users!"
+    },
+    {
+        "name": "Numeronym the Web",
+        "link": "",
+        "image": "./Pictures/staten_island_slowkings.png",
+        "id": "s12n",
+        "text": "Converts all text on a web page to numeronyms"
     }
 ]

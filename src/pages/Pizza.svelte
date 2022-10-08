@@ -1,3 +1,20 @@
+<script lang="ts">
+import { onMount } from "svelte";
+
+type PizzaScore = {
+    name: string,
+    location: string, 
+    score: string
+}
+
+let pizzaScores: PizzaScore[] = []
+onMount(() => {
+    fetch("/json/pizza.json")
+    .then(resp => resp.json())
+    .then(json => json.forEach(p => pizzaScores = [...pizzaScores, {name: p[0], location: p[1], score: p[2]}]))
+})
+</script>
+
 <header>
     <a href="/"><div><p>Back to the main page</p></div></a>
     <h1>The Colatina Index</h1>
@@ -58,121 +75,32 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>The Colatina Exit</td>
-                <td>Bradford, VT</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>Ramunto's Brick and Brew</td>
-                <td>Hanover, NH</td>
-                <td>0.95</td>
-            </tr>
-            <tr>
-                <td>Cantore's Pizza</td>
-                <td>West Lebanon, NH</td>
-                <td>1.2</td>
-            </tr>
-            <tr>
-                <td>Stella's Italian Kitchen and Market</td>
-                <td>Lyme, NH</td>
-                <td>0.87</td>
-            </tr>
-            <tr>
-                <td>Ziggy's Pizza</td>
-                <td>West Lebanon, NH</td>
-                <td>0.55</td>
-            </tr>
-            <tr>
-                <td>Leda's Pizza</td>
-                <td>Fairlee, VT</td>
-                <td>0.45</td>
-            </tr>
-            <tr>
-                <td>The Little Deli at Baker's General Store</td>
-                <td>Post Mills, VT</td>
-                <td>0.54</td>
-            </tr>
-            <tr>
-                <td>Woodsville Village Pizza</td>
-                <td>Woodsville, NH</td>
-                <td>0.67</td>
-            </tr>
-            <tr>
-                <td>Lebanon Village Pizza</td>
-                <td>Lebanon, NH</td>
-                <td>0.64</td>
-            </tr>
-            <tr>
-                <td>Domino's</td>
-                <td>Everywhere</td>
-                <td>0.34</td>
-            </tr>
-            <tr>
-                <td>Little Caesar's</td>
-                <td>Everywhere</td>
-                <td>0.11</td>
-            </tr>
-            <tr>
-                <td>NY Pie</td>
-                <td>Waltham, MA</td>
-                <td>0.70</td>
-            </tr>
-            <tr>
-                <td>The Prime Deli</td>
-                <td>Waltham, MA</td>
-                <td>0.60</td>
-            </tr>
-            <tr>
-                <td>Natalie's Pizza</td>
-                <td>Natick, MA</td>
-                <td>0.78</td>
-            </tr>
-            <tr>
-                <td>Lower Sherman Dining Hall</td>
-                <td>Waltham, MA</td>
-                <td>0.52</td>
-            </tr>
-            <tr>
-                <td>Lower Usdan Dining Hall</td>
-                <td>Waltham, MA</td>
-                <td>0.52</td>
-            </tr>
-            <tr>
-                <td>The Pizza Man</td>
-                <td>Hooksett, NH</td>
-                <td>0.56</td>
-            </tr>
-            <tr>
-                <td>Pappy's Pizza</td>
-                <td>Manchester, NH</td>
-                <td>0.48</td>
-            </tr>
-            <tr>
-                <td>Alley Cat Pizza</td>
-                <td>Manchester, NH</td>
-                <td>0.68</td>
-            </tr>
-            <tr>
-                <td>South End Tavern</td>
-                <td>Manchester, NH</td>
-                <td>0.64</td>
-            </tr>
-            <tr>
-                <td>Elm House of Pizza</td>
-                <td>Manchester, NH</td>
-                <td>0.69</td>
-            </tr>
-            <tr>
-                <td>Hot Stone Pizza</td>
-                <td>Manchester, NH</td>
-                <td>0.71</td>
-            </tr>
-            <tr>
-                <td>Sal's Pizza</td>
-                <td>Manchester, NH</td>
-                <td>0.90</td>
-            </tr>
+            {#each pizzaScores as p}
+                <tr>
+                    <td>{p.name}</td>
+                    <td>{p.location}</td>
+                    <td>{p.score}</td>
+                </tr>
+            {/each}
         </tbody>
     </table>
 </section>
+
+<style>
+table {
+    align-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 2pt solid forestgreen;
+}
+td {
+    width:225px;
+    word-wrap: normal;
+    margin-left: 1%;
+    margin-right: 1%;
+}   
+</style>

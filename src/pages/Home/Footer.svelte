@@ -37,18 +37,8 @@ footer {
     height: 2%; 
     background-color: rgba(255, 255, 255, 0.5);
 }
-ol {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0%;
-}
 li {
     padding: 1%;
-    display: inline-block;
-    vertical-align: middle;
     margin: 1% 1%;
     width: 15%;
 }

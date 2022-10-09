@@ -23,7 +23,7 @@
     {
         "name": "National Api Day",
         "link": "https://national-api-day.herokuapp.com",
-        "image": "./Pictures/holiday.png",
+        "image": "./Pictures/holidayv2.png",
         "id": "day",
         "text": "A fun api for obscure holidays every day of the year, with data scraped from all over the internet."
     },
@@ -37,21 +37,21 @@
     {
         "name": "Thanos Tabs",
         "link": "https://github.com/NateDimick/thanos-tabs",
-        "image": "./Pictures/staten_island_slowkings.png",
+        "image": "./Pictures/gauntlet128.png",
         "id": "tt",
         "text": "Thanos Tabs randomly deletes half of your open tabs. Great for clearing clutter!"
     },
     {
         "name": "Blazing Bookmarks",
         "link": "https://chrome.google.com/webstore/detail/hot-bookmarks-bar/phblakaaemoplglehiajpfhbadiphnof",
-        "image": "https://lh3.googleusercontent.com/xmR0dkUDFanO3LBW1CDPbQxnUBk461Ly0uUF4EvjZ5308oBNpXhkTkR52GuKCPvwc4WaFLRg=w640-h400-e365-rj-sc0x00ffffff",
+        "image": "./Pictures/bb128.png",
         "id": "bb",
         "text": "Currently called 'Hot Bookmarks Bar' but someday I'll update the title when I work on the extension again. OMG it has 2 users!"
     },
     {
         "name": "Numeronym the Web",
         "link": "",
-        "image": "./Pictures/staten_island_slowkings.png",
+        "image": "./Pictures/s12n128.png",
         "id": "s12n",
         "text": "Converts all text on a web page to numeronyms"
     }

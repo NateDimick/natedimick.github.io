@@ -1,12 +1,14 @@
 <script lang="ts">
 import { FunState, funStateStore } from "../../stores"
 
-let funSliderLevel: number = 2
-let funSliderPercent: number = 50
+let funSliderLevel: number = Object.values(FunState).indexOf($funStateStore)
+let funSliderPercent: number = 50 
+$: {
+    funSliderPercent = funSliderLevel / 2 * 100
+}
 
 function updateFunState() {
-    let newFunState: FunState = Object.values(FunState)[funSliderLevel - 1]
-    funSliderPercent = (funSliderLevel - 1) / 2 * 100
+    let newFunState: FunState = Object.values(FunState)[funSliderLevel]
     funStateStore.set(newFunState)
 }
 </script>
@@ -14,7 +16,7 @@ function updateFunState() {
 <div style="--SliderPercent: {`${funSliderPercent}%`}">
     <h1>Fun Level</h1>
     <h2 id="fun-level">Current Level: {$funStateStore}</h2>
-    <input type="range" name="" min="1" max="3" bind:value={funSliderLevel} on:input={updateFunState}>
+    <input type="range" name="" min="0" max="2" bind:value={funSliderLevel} on:input={updateFunState}>
 </div>
 
 

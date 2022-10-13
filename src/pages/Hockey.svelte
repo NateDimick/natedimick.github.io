@@ -1,5 +1,5 @@
 <header>
-    <a href="/"><div><p>Back to the main page</p></div></a>
+    <a href="/#"><div><p>Back to the main page</p></div></a>
     <h1>Compounding Returns with High Probability Hockey Outcomes</h1>
 </header>
 <section>

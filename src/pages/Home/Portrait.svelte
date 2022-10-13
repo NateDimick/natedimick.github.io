@@ -12,8 +12,8 @@ onMount(() => {
 
 function mouseoverImage() {
     if ($funStateStore === FunState.Fun) {
-        currentIndex++
-        currentImage = allImages[currentIndex % allImages.length]
+        currentIndex = (currentIndex + 1) % allImages.length
+        currentImage = allImages[currentIndex]
     }
 }
 

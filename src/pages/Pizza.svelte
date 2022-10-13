@@ -16,7 +16,7 @@ onMount(() => {
 </script>
 
 <header>
-    <a href="/"><div><p>Back to the main page</p></div></a>
+    <a href="/#"><div><p>Back to the main page</p></div></a>
     <h1>The Colatina Index</h1>
 </header>
 <section>

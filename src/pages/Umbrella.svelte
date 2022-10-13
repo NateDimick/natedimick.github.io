@@ -1,5 +1,5 @@
 <header>
-    <a href="/"><div><p>Back to the main page</p></div></a>
+    <a href="/#"><div><p>Back to the main page</p></div></a>
     <h1>I Hate Umbrellas</h1>
     <h2>This page stands as my umbrella manifesto, the strongest opinion that I have on any subject matter</h2>
 </header>

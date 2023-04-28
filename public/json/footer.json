@@ -1,10 +1,12 @@
 [
     [false, "Hosted by Github Pages"],
+    [true, "Subtitle Font: Feraldine", "https://www.fontspace.com/feraldinescript-font-f85940"],
     [true, "Fun Mode Font: MemoriesRegular", "https://www.fontspace.com/memories-font-f25917"],
     [true, "Un-fun Mode Font: Hellvetica", "https://hellveticafont.com/"],
     [false, "Not Copyright Nate Dimick 2022"],
     [false, "Last updated 10/10/22"],
     [true, "My Umbrella Manifesto", "/#/umbrellas"],
     [true, "Pizza Ratings", "/#/pizza"],
-    [true, "Hockey Betting Strategy", "/#/hockey"]
+    [true, "Hockey Betting Strategy", "/#/hockey"],
+    [true, "[Archive] - Zoom Link Lyle Lovett Tribute", "/#/zoomwithme"]
 ]

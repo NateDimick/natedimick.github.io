@@ -4,7 +4,6 @@ import Footer from './Home/Footer.svelte'
 import FunSlider from './Home/FunSlider.svelte';
 import Header from './Home/Header.svelte'
 import Projects from './Home/Projects.svelte'
-import S12n from './Home/S12n.svelte';
 
 </script>
 

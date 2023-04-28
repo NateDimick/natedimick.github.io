@@ -34,3 +34,12 @@ body {
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'feraldineregular';
+    src: url('/fonts/feraldinescript-doxg9-webfont.woff2') format('woff2'),
+         url('/fonts/feraldinescript-doxg9-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

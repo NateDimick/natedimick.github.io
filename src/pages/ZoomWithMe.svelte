@@ -17,5 +17,4 @@
 </section>
 <section>
     <h4>LOL I don't pay for Zoom anymore</h4>
-    <h4>But maybe this still works in 40 minute mode? <a href="https://us02web.zoom.us/j/8289292778?pwd=QXBkckl2dkhETXk4bTdUamJsNGhadz09">click here</a></h4>
 </section>

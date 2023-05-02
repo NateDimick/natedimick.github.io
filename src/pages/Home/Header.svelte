@@ -19,10 +19,9 @@ onMount(() => {
 </script>
 
 <header>
-    <h1>Nate Dimick</h1>
-    <h2>
-        <span class="subtitletext" title="{subtitle}">"{subtitle}"</span>
-    </h2>
+    <h1>
+        <span class="titletext" title="{subtitle}">"{subtitle}"</span>
+    </h1>
     
     <ol>
         {#each links as l}
@@ -52,7 +51,7 @@ h1 {
     border-style: none;
     color: black;
 }
-.subtitletext {
+.titletext {
     font-family: "feraldineregular";
     font-size: xx-large;
 }

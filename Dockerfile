@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:18-alpine
+FROM node:22-alpine
 
 WORKDIR /build
 
@@ -12,4 +12,4 @@ RUN npm run build
 
 FROM lipanski/docker-static-website:latest
 
-COPY --from=0 /build/public .
+COPY --from=0 /build .

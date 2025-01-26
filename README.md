@@ -13,3 +13,4 @@ This site has a custom github action that performs npm build to compile the svel
 * 8/26/20: page became mobile friendly
 * 9/4/21: refreshed the look and stripped down content
 * 10/7/22: converted to Svelte SPA
+* 1/25/25: rewrote almost the whole website again with SvelteKit and DaisyUI (100th commit too, seemed meaningful)

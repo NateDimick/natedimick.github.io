@@ -1,2 +1,4 @@
 User-Agent: *
-Disallow: /zoomwithme.html
+Disallow: /me
+Disallow: /quotebook
+Disallow: /cheeseburger

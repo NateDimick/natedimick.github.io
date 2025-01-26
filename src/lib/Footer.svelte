@@ -1,7 +1,7 @@
 <!--https://daisyui.com/components/footer/-->
-<div class="footer bg-primary text-neutral justify-self-end p-4">
+<div class="footer flex justify-between bg-primary text-neutral justify-self-end p-4 ">
     <aside class="grid-flow-col items-center">
-        <h1 class="text-xl">Thanks for visiting!</h1>
+        <h1 class="text-xl align-middle">Thanks for visiting!</h1>
     </aside>
     <nav class="grid grid-flow-col gap-4 justify-self-end">
         <a href="https://github.com/NateDimick" aria-label="NateDimick GitHub Profile">

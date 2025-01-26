@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="navbar-end">
-        <h1 class="text-5xl">You Are Here -> {page.url}</h1>
+        <h1 class="lg:text-5xl text-xl">You Are Here &#8594; {page.url.hostname}{page.url.pathname}</h1>
     </div>
 </div>
 

@@ -3,7 +3,7 @@
 
     const colors = new Map<string, string>([
         ["go", "bg-[#00ADD8]"],
-        ["svelte", "bg-[#AA1E1E]"],
+        ["svelte", "bg-[#FF3E00]"],
         ["aws", "bg-[#FF9900]"],
         ["azure", "bg-[#0078D4]"],
         ["kubernetes", "bg-[#326CE5]"],
@@ -23,10 +23,25 @@
         ["docker", "bg-[#1D63ED]"],
         ["nodejs", "bg-[#6CC24A]"]
     ])
+    const whiteText: string[] = [
+        "azure",
+        "bash",
+        "docker",
+        "helm",
+        "kubernetes",
+        "python",
+        "surrealdb",
+        "redis",
+        "wails"
+    ]
     let color: string | undefined = colors.get(text)
     if (color === undefined) {
         color = "bg-accent"
     }
+    let textColor: string = "text-black"
+    if (whiteText.includes(text)) {
+        textColor = "text-neutral"
+    }
 </script>
 
-<span class="badge {color}">{text}</span>
+<span class="badge {color} {textColor}">{text}</span>

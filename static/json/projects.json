@@ -4,7 +4,7 @@
         "link": "https://dekaresearch.com",
         "image": "https://media.glassdoor.com/sqll/24636/deka-research-squarelogo-1389127173503.png",
         "id": "deka",
-        "text": "Deka is my current employer and I really enjoy working with them &#128513;",
+        "text": "DEKA is my current employer and they're cool. &#128513;",
         "tech": ["aws", "azure", "go", "docker", "kubernetes", "helm", "redis", "java", "python", "bash", "IoT", "event-driven", "oauth2"],
         "state": "In Progress"
     },
@@ -13,7 +13,7 @@
         "link": "https://github.com/codeforUV",
         "image": "https://codeforuv.org/wp-content/uploads/2019/10/CfAStates.png",
         "id": "c4uv",
-        "text": "I've volunteered with Code for UV off and on working on their RuralNet project.",
+        "text": "I volunteered with Code for UV on their RuralNet project.",
         "tech": ["nodejs", "javascript", "svelte"],
         "state": "No longer affiliated"
     },
@@ -22,7 +22,7 @@
         "link": "https://github.com/NateDimick/Sliggooey",
         "image": "./img/staten_island_slowkings.png",
         "id": "pkmn",
-        "text": "A custom client for Pokemon Showdown",
+        "text": "A custom desktop client for Pokemon Showdown",
         "tech": ["go", "svelte", "typescript", "wails", "websockets"],
         "state": "In Progress - Suspended"
     },
@@ -31,7 +31,7 @@
         "link": "https://github.com/NateDimick/fun-holiday-api",
         "image": "./img/holidayv2.png",
         "id": "hday",
-        "text": "A fun api for obscure holidays every day of the year, with data scraped from all over the internet.",
+        "text": "A fun api for obscure holidays every day of the year, with data scraped from all over the internet. <br> Was deployed to Heroku before the free tier was discontinued.",
         "tech": ["go", "svelte", "docker", "mongodb", "webscraping"],
         "state": "Finished, Inactive"
     },
@@ -40,7 +40,7 @@
         "link": "https://twitter.com/ChupEverything",
         "image": "./img/colorfulchup.jpg",
         "id": "chup",
-        "text": "My best twitter bot, conjuring up bad competitors to mayochup. It's back! Tweeting every 7 hours on the half hour.",
+        "text": "My best twitter bot, conjuring up bad competitors to mayochup. <br> Shut down when Twitter changed ownership.",
         "tech": ["python"],
         "state": "Finished, Inactive"
     },

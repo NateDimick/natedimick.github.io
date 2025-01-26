@@ -17,9 +17,9 @@
             return
         }
         let baseDiameter: number = img.clientWidth - 96 // based on p-16 and --spacing 6
-        let innerDiameter = baseDiameter + 6
+        let innerDiameter = baseDiameter
         innerRadius = innerDiameter / 2
-        let outerDiameter = baseDiameter + 12
+        let outerDiameter = baseDiameter + 10
         outerRadius = outerDiameter / 2
         let innerCircumference = Math.ceil( innerDiameter * Math.PI)
         let outerCircumference = Math.ceil( outerDiameter * Math.PI)

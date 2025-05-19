@@ -1,5 +1,6 @@
 <script lang="ts">
     import ProjectCard from "$lib/ProjectCard.svelte";
+    import FancyFrame from "$lib/FancyFrame.svelte";
 
     let carouselProjects: string[] = [
         "c4uv",
@@ -25,6 +26,9 @@
     }
 </script>
 
+<div class="w-full justify-items-center">
+    <FancyFrame pic="/img/whatif.jpg" name="what-if" size="w-96 h-96"/>
+</div>
 <h2 class="text-primary text-center text-3xl">What I'm working on right now...</h2>
 <div class="flex lg:flex-row flex-col w-full my-2">
     <ProjectCard id="deka"/>

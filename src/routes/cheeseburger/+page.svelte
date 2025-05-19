@@ -2,7 +2,7 @@
     import FancyFrame from "$lib/FancyFrame.svelte";
 </script>
 <div class="w-full justify-items-center text-primary">
-    <FancyFrame pic="/img/closed.jpg" name="me" size="w-96 h-96"/>
+    <FancyFrame pic="/img/closed.jpg" name="closed" size="w-96 h-96"/>
     <h1 class="text-4xl">Look</h1>
     <h2 class="text-3xl">I understand too little, too late</h2>
     <h3 class="text-2xl">I realize there are things you say and do</h3>

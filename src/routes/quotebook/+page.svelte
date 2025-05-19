@@ -9,7 +9,7 @@
     }
 </script>
 <div class="w-full justify-items-center">
-    <FancyFrame pic="/img/cute.jpg" name="me" size="w-96 h-96"/>
+    <FancyFrame pic="/img/cute.jpg" name="cute-rock" size="w-96 h-96"/>
     <div class="flex flex-col justify-items-center justify-center gap-y-4 my-4 w-full ">
         {#await fetchQuotes()}
             <p>loading...</p>

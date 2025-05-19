@@ -4,5 +4,5 @@
 </script>
 
 <div class="w-full justify-items-center">
-    <FancyFrame pic="/img/pardon.jpg" name="me" size="size-[50em]"/>
+    <FancyFrame pic="/img/pardon.jpg" name="pardon" size="size-[50em]"/>
 </div>

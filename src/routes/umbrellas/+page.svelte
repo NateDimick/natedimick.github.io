@@ -3,7 +3,7 @@
 </script>
 <div class="w-full justify-items-center text-primary text-center">
     <figure>
-        <FancyFrame pic="/img/beaver.jpg" name="me" size="w-96 h-96"/>
+        <FancyFrame pic="/img/beaver.jpg" name="beaver" size="w-96 h-96"/>
         <figcaption>This is a photo of a painting from the Montreal Museum of Contemporary Art</figcaption>
     </figure>
     <br>
